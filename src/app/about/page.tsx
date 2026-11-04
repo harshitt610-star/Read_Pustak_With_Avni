@@ -15,14 +15,20 @@ import {
   Library,
   Palette,
   Globe2,
+  Smartphone,
+  Laptop,
   Users,
+  Share2,
 } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { teamData } from "@/data/team";
+import { TeamCard } from "@/components/team/TeamCard";
+import { PublishWithUsButton } from "@/components/publishing/PublishWithUsButton";
 
 export const metadata: Metadata = {
-  title: "Publishing & Editorial | Read Pustak Publications",
+  title: "Publishing, Digital Innovation & Team | Read Pustak Publications",
   description:
-    "Explore the editorial mandate, our story, bilingual publishing vision, and manuscript development journey of Read Pustak Publications in New Delhi.",
+    "Explore the editorial mandate, our story, digital innovation, and the dedicated team behind Read Pustak Publications in New Delhi.",
 };
 
 const publishingStages = [
@@ -92,6 +98,34 @@ const editorialStandards = [
     description:
       "Books designed to last — tactile pages, warm typography, and artistic covers that make turning physical pages a treasured daily ritual away from screens.",
     badge: "Print Longevity",
+  },
+];
+
+const digitalAspirations = [
+  {
+    icon: BookOpen,
+    title: "Accessible Resources",
+    description: "Make books and reading resources more accessible across devices, homes, and community learning spaces.",
+  },
+  {
+    icon: Feather,
+    title: "Young Writers Showcase",
+    description: "Create opportunities for young aspiring authors to showcase their stories, poetry, and creative reflections.",
+  },
+  {
+    icon: Palette,
+    title: "Creative Programmes",
+    description: "Share literary activities, interactive workshops, and creative learning modules directly with schools and clubs.",
+  },
+  {
+    icon: Users,
+    title: "Interactive Community",
+    description: "Build a vibrant, supportive digital community connecting young readers, parents, educators, and authors.",
+  },
+  {
+    icon: Sparkles,
+    title: "Digital Storytelling",
+    description: "Explore immersive digital publishing and multimedia storytelling experiences without losing literary depth.",
   },
 ];
 
@@ -267,7 +301,96 @@ export default function PublishingEditorialPage() {
         </div>
       </section>
 
-      {/* 3. THE BILINGUAL PUBLISHING PHILOSOPHY */}
+      {/* 3. DIGITAL PRESENCE & FUTURE INNOVATIONS */}
+      <section id="digital-innovations" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full scroll-mt-24">
+        <div className="rounded-2xl bg-gradient-to-br from-primary via-[#260B46] to-primary text-white p-6 sm:p-10 lg:p-14 border-2 border-gold/50 shadow-editorial-hover relative overflow-hidden flex flex-col gap-10">
+          {/* Subtle Glow */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-gold/10 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="relative z-10 flex flex-col gap-4 max-w-3xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-gold/40 text-gold text-xs font-sans font-semibold uppercase tracking-wider self-start">
+              <Laptop className="w-3.5 h-3.5" />
+              <span>Technology &amp; Literary Evolution</span>
+            </div>
+            <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+              Digital Presence &amp; Future Innovations
+            </h2>
+            <p className="font-sans text-sm sm:text-base text-white/90 leading-relaxed">
+              At Read Pustak with Avni, we believe that the future of reading lies in combining the timeless charm of books with the possibilities of technology.
+            </p>
+            <p className="font-sans text-sm sm:text-base text-white/80 leading-relaxed">
+              As we grow, we are exploring digital platforms to make reading, writing and creative learning more accessible to everyone. Our vision includes developing a dedicated website and mobile application that will bring readers, aspiring writers and literary enthusiasts together in one interactive space.
+            </p>
+          </div>
+
+          {/* 5 Aspiration Pillars */}
+          <div className="relative z-10 flex flex-col gap-4">
+            <span className="font-serif text-lg font-bold text-gold">
+              Through these digital initiatives, we aspire to:
+            </span>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {digitalAspirations.map((item, idx) => {
+                const Icon = item.icon;
+                return (
+                  <div
+                    key={idx}
+                    className="p-5 rounded-xl bg-white/10 border border-white/15 backdrop-blur-sm flex flex-col gap-2 hover:border-gold/50 transition-colors"
+                  >
+                    <div className="flex items-center gap-2.5">
+                      <div className="w-8 h-8 rounded-lg bg-gold/20 flex items-center justify-center text-gold">
+                        <Icon className="w-4 h-4" />
+                      </div>
+                      <h3 className="font-serif text-base font-bold text-white">
+                        {item.title}
+                      </h3>
+                    </div>
+                    <p className="font-sans text-xs text-white/80 leading-relaxed pl-10">
+                      {item.description}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Closing Vision & Interactive Publish with Us CTA */}
+          <div className="relative z-10 p-6 sm:p-8 rounded-xl bg-white/10 border border-gold/40 backdrop-blur-md flex flex-col lg:flex-row items-center justify-between gap-6">
+            <div className="flex flex-col gap-1.5 text-center lg:text-left">
+              <span className="font-sans text-xs font-bold uppercase tracking-widest text-gold">
+                The Unified Digital Vision
+              </span>
+              <p className="font-serif italic text-base sm:text-lg text-white font-medium max-w-2xl leading-relaxed">
+                “Our vision is to bring books, creativity and technology together – making reading accessible in every space and on every screen.”
+              </p>
+            </div>
+
+            <div className="shrink-0 flex flex-col sm:flex-row items-center gap-3">
+              <PublishWithUsButton />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. OUR TEAM: Meet the Team Behind Read Pustak with Avni */}
+      <section id="our-team" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full scroll-mt-24">
+        <div className="flex flex-col gap-10">
+          <SectionHeading
+            eyebrow="Our Team"
+            title="Meet the Team Behind Read Pustak with Avni"
+            subtitle="The passionate minds driving technical innovation, community outreach, and public communications."
+            align="center"
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {teamData.map((member) => (
+              <TeamCard key={member.id} member={member} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. THE BILINGUAL PUBLISHING PHILOSOPHY */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="bg-white rounded-2xl border border-border/80 shadow-editorial p-6 sm:p-10 lg:p-12 flex flex-col gap-8">
           <SectionHeading
@@ -355,7 +478,7 @@ export default function PublishingEditorialPage() {
         </div>
       </section>
 
-      {/* 4. FROM MANUSCRIPT TO BOOKSHELF: 5-STEP PUBLISHING JOURNEY */}
+      {/* 6. FROM MANUSCRIPT TO BOOKSHELF: 5-STEP PUBLISHING JOURNEY */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="flex flex-col gap-10">
           <SectionHeading
@@ -407,7 +530,7 @@ export default function PublishingEditorialPage() {
         </div>
       </section>
 
-      {/* 5. EDITORIAL STANDARDS & WHAT WE CHAMPION */}
+      {/* 7. EDITORIAL STANDARDS & WHAT WE CHAMPION */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="bg-primary text-white rounded-2xl p-6 sm:p-10 lg:p-12 shadow-editorial-hover relative overflow-hidden border border-gold/40">
           <div className="relative z-10 flex flex-col gap-8">
@@ -448,7 +571,7 @@ export default function PublishingEditorialPage() {
         </div>
       </section>
 
-      {/* 6. YOUNG WRITERS MENTORSHIP & EDITORIAL INQUIRIES */}
+      {/* 8. YOUNG WRITERS MENTORSHIP & EDITORIAL INQUIRIES */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="bg-gradient-to-r from-lavender/80 via-ivory to-lavender/80 border border-gold/40 rounded-2xl p-8 sm:p-12 text-center flex flex-col items-center gap-5 shadow-editorial">
           <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-primary border border-gold/30">
@@ -470,19 +593,13 @@ export default function PublishingEditorialPage() {
           </div>
 
           <div className="flex flex-wrap gap-4 justify-center pt-2">
+            <PublishWithUsButton />
             <Link
               href="/contact"
-              className="px-6 py-3.5 rounded-lg bg-primary text-white font-sans text-sm font-semibold hover:bg-primary-hover shadow-editorial hover:shadow-editorial-hover transition-all flex items-center gap-2 border border-gold/40"
-            >
-              <Send className="w-4 h-4 text-gold" />
-              <span>Connect with Our Editorial Board</span>
-            </Link>
-            <Link
-              href="/books"
               className="px-6 py-3.5 rounded-lg bg-white text-primary font-sans text-sm font-semibold hover:bg-lavender/50 border border-border shadow-xs transition-colors flex items-center gap-2"
             >
-              <BookOpen className="w-4 h-4 text-gold" />
-              <span>Browse Published Catalogue</span>
+              <Send className="w-4 h-4 text-gold" />
+              <span>Contact Editorial Team</span>
             </Link>
           </div>
         </div>

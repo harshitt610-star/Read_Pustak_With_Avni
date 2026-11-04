@@ -1,15 +1,17 @@
 import React from "react";
 import Link from "next/link";
 import { Metadata } from "next";
-import { Sparkles, Quote, BookOpen, ArrowRight, Heart } from "lucide-react";
+import { Sparkles, Quote, BookOpen, ArrowRight, Heart, Users } from "lucide-react";
 import { foundersData } from "@/data/founders";
+import { teamData } from "@/data/team";
 import { FounderCard } from "@/components/founders/FounderCard";
+import { TeamCard } from "@/components/team/TeamCard";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export const metadata: Metadata = {
-  title: "Meet Our Founders | Read Pustak with Avni",
+  title: "Meet Our Founders & Team | Read Pustak with Avni",
   description:
-    "Meet young author Avni Chaturvedi and publisher Neena Chaturvedi, the visionaries behind Read Pustak Publications.",
+    "Meet young author Avni Chaturvedi, publisher Neena Chaturvedi, and the dedicated team behind Read Pustak Publications.",
 };
 
 export default function FoundersPage() {
@@ -83,7 +85,24 @@ export default function FoundersPage() {
           </div>
         </div>
       </section>
+
+      {/* 5. OUR TEAM: Meet the Team Behind Read Pustak with Avni */}
+      <section id="our-team" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full scroll-mt-24">
+        <div className="flex flex-col gap-10">
+          <SectionHeading
+            eyebrow="Our Team"
+            title="Meet the Team Behind Read Pustak with Avni"
+            subtitle="The passionate minds driving technical innovation, community outreach, and public communications."
+            align="center"
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {teamData.map((member) => (
+              <TeamCard key={member.id} member={member} />
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
-
