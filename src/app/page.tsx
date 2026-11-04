@@ -42,52 +42,54 @@ export default function HomePage() {
               {/* Eyebrow Badge */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-lavender border border-primary/10 text-primary text-xs font-sans font-semibold tracking-wider uppercase">
                 <Sparkles className="w-3.5 h-3.5 text-gold fill-gold" />
-                <span>Our Vision &amp; Mission</span>
+                <span>Read Pustak with Avni</span>
               </div>
 
-              {/* Main Brand Title */}
+              {/* Main Headline */}
               <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-primary tracking-tight leading-[1.12]">
-                Read Pustak with Avni
+                Turn Pages, Not Just Screens.
               </h1>
 
-              {/* Supporting Slogan / Vision */}
+              {/* Supporting Title */}
               <p className="font-serif italic text-xl sm:text-2xl text-gold font-medium leading-snug">
-                “Every Child Has a Story Worth Sharing.”
+                Rediscover the Joy of Reading.
               </p>
 
-              {/* Mission Statement */}
+              {/* Description */}
               <p className="font-sans text-base sm:text-lg text-charcoal leading-relaxed max-w-2xl">
-                A heartwarming platform dedicated to cultivating lifelong reading,
-                inspiring expressive writing, and nurturing the imaginative
-                spirit of young authors. Founded by young author{" "}
-                <strong className="text-primary font-semibold">
-                  Avni Chaturvedi
-                </strong>{" "}
-                and publisher{" "}
-                <strong className="text-primary font-semibold">
-                  Neena Chaturvedi
-                </strong>
-                , our mission is to empower children to see themselves as
-                creators of meaningful stories.
+                In a world where screens compete for our attention, we bring books
+                back into everyday life. We believe everyone deserves the joy of
+                reading, the freedom to imagine and the opportunity to discover a
+                new world through every book.
               </p>
 
-              {/* Dual Action Buttons */}
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto pt-2">
+              {/* Standout Mission Box */}
+              <div className="p-4 rounded-xl bg-white border-l-4 border-gold shadow-editorial border border-border/70 flex flex-col gap-1 w-full max-w-xl">
+                <p className="font-serif italic text-sm sm:text-base text-primary font-medium leading-relaxed">
+                  “Our mission is simple: Make reading a habit for everyone, not a lost art in the digital age.”
+                </p>
+                <span className="font-sans text-xs font-bold text-gold uppercase tracking-wider pt-0.5">
+                  Read More. Imagine More. Grow More.
+                </span>
+              </div>
+
+              {/* Suggested Action Buttons */}
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto pt-1">
                 <Link
-                  href="/avni-journey"
+                  href="/books"
                   className="px-6 py-3.5 rounded-lg bg-primary text-white font-sans text-sm font-semibold hover:bg-primary-hover shadow-editorial hover:shadow-editorial-hover transition-all flex items-center justify-center gap-2 border border-gold/40 group"
                 >
-                  <Feather className="w-4 h-4 text-gold group-hover:rotate-12 transition-transform" />
-                  <span>Explore Our Journey</span>
+                  <BookOpen className="w-4 h-4 text-gold group-hover:scale-110 transition-transform" />
+                  <span>Explore Our Books</span>
                   <ArrowRight className="w-4 h-4 text-white/70 group-hover:translate-x-1 transition-transform" />
                 </Link>
 
                 <Link
-                  href="/books"
+                  href="/about"
                   className="px-6 py-3.5 rounded-lg bg-white text-primary font-sans text-sm font-semibold hover:bg-lavender/50 border border-border shadow-xs hover:shadow-editorial transition-all flex items-center justify-center gap-2"
                 >
-                  <BookOpen className="w-4 h-4 text-gold" />
-                  <span>Discover Our Books</span>
+                  <Heart className="w-4 h-4 text-gold" />
+                  <span>Discover Our Mission</span>
                 </Link>
               </div>
 
@@ -95,7 +97,7 @@ export default function HomePage() {
               <div className="grid grid-cols-3 gap-4 pt-6 border-t border-border/80 w-full max-w-xl">
                 <div>
                   <span className="font-serif text-2xl sm:text-3xl font-bold text-primary block">
-                    3
+                    4
                   </span>
                   <span className="font-sans text-xs text-charcoal-muted">
                     Published Books
@@ -375,11 +377,12 @@ export default function HomePage() {
                 Expanding Horizons
               </span>
               <h3 className="font-serif text-lg font-bold text-primary">
-                3 Acclaimed Titles
+                4 Published Titles
               </h3>
               <p className="font-sans text-xs sm:text-sm text-charcoal leading-relaxed">
-                Expanding into Indian cosmic philosophy with <em>Pancha Tatva Tales</em>{" "}
-                and <em>Ancient Answers for Modern Problems</em>.
+                From children&apos;s fables to cosmic elements and ancient wisdom—spanning
+                <em>Emma Finds Her Solution</em>, <em>Pancha Tatva Tales</em>,
+                <em>Ancient Answers</em>, and <em>Incredible Bharat</em>.
               </p>
             </div>
           </div>
@@ -406,7 +409,7 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {booksData.map((book) => (
               <BookCard key={book.id} book={book} />
             ))}
@@ -496,10 +499,10 @@ export default function HomePage() {
                   Publishing Record
                 </span>
                 <span className="font-serif text-xl font-bold">
-                  3 Published Books
+                  4 Published Books
                 </span>
                 <span className="text-xs text-white/70">
-                  Authored starting at age 10
+                  Authored between 2023 &amp; 2026
                 </span>
               </div>
 

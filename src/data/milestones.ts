@@ -10,28 +10,36 @@ export const milestonesData: Milestone[] = [
     badge: "Genesis",
   },
   {
-    yearOrAge: "Milestone",
-    title: "Publication of 'Emma Finds Her Solution'",
+    yearOrAge: "2023",
+    title: "Publication of 'Emma Finds Her Solution : Power of Books'",
     description:
       "Avni publishes her debut book, a tender story centered on youth curiosity, everyday problem-solving, and resilience that resonated deeply with young school readers.",
     category: "publication",
     badge: "Debut Book",
   },
   {
-    yearOrAge: "Milestone",
-    title: "Publication of 'Pancha Tatva Tales'",
+    yearOrAge: "2025",
+    title: "Publication of 'The Panch Tatva Tales: Stories of Joy and Wisdom'",
     description:
       "Explores India's classical five cosmic elements—Earth, Water, Fire, Air, and Space—in a rich collection of joyful and wisdom-filled moral allegories for children.",
     category: "publication",
     badge: "Second Book",
   },
   {
-    yearOrAge: "Milestone",
-    title: "Publication of 'Ancient Answers for Modern Problems'",
+    yearOrAge: "2026",
+    title: "Publication of 'Ancient Answers for Modern Problems: Finding Calm in a Noisy World'",
     description:
       "Synthesizes profound philosophical principles from timeless epics and traditional teachings to address modern student dilemmas, focus, and digital mindfulness.",
     category: "publication",
     badge: "Third Book",
+  },
+  {
+    yearOrAge: "2026",
+    title: "Publication of 'Incredible Bharat: Ek Desh, Anek Kahaniyaan'",
+    description:
+      "Takes young readers across India's vibrant landscapes, folklore, heroic figures, and living cultural traditions that unite a diverse nation in one heart.",
+    category: "publication",
+    badge: "Fourth Book",
   },
   {
     yearOrAge: "2026",
@@ -58,4 +66,3 @@ export const milestonesData: Milestone[] = [
     badge: "Outreach",
   },
 ];
-

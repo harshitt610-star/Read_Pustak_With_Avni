@@ -5,6 +5,9 @@ export interface Book {
   author: string;
   coverImage: string;
   ageRange: string;
+  publishedYear?: string;
+  amazonUrl?: string;
+  flipkartUrl?: string;
   summary: string;
   fullDescription: string;
   themes: string[];

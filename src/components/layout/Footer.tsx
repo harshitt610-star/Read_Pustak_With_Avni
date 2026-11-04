@@ -159,7 +159,19 @@ export const Footer: React.FC = () => {
                   <span>Ancient Answers for Modern Problems</span>
                 </Link>
                 <span className="text-xs text-white/60 pl-5">
-                  Philosophical Insights for Youth
+                  Finding Calm in a Noisy World • 2026
+                </span>
+              </li>
+              <li className="flex flex-col">
+                <Link
+                  href="/books#incredible-bharat"
+                  className="text-white hover:text-gold transition-colors font-medium flex items-center gap-1"
+                >
+                  <BookOpen className="w-3.5 h-3.5 text-gold shrink-0" />
+                  <span>Incredible Bharat</span>
+                </Link>
+                <span className="text-xs text-white/60 pl-5">
+                  Ek Desh, Anek Kahaniyaan • 2026
                 </span>
               </li>
             </ul>

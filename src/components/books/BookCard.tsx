@@ -3,7 +3,15 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { Book } from "@/types";
-import { BookOpen, Sparkles, ChevronRight, X, CheckCircle2 } from "lucide-react";
+import {
+  BookOpen,
+  Sparkles,
+  ChevronRight,
+  X,
+  CheckCircle2,
+  ExternalLink,
+  ShoppingBag,
+} from "lucide-react";
 
 interface BookCardProps {
   book: Book;
@@ -17,13 +25,13 @@ export const BookCard: React.FC<BookCardProps> = ({ book, featured = false }) =>
     <>
       <article
         id={book.id}
-        className={`bg-white rounded-xl border border-border/80 shadow-editorial hover:shadow-editorial-hover transition-all duration-300 flex flex-col overflow-hidden group ${
+        className={`bg-white rounded-2xl border border-border/80 shadow-editorial hover:shadow-editorial-hover transition-all duration-300 flex flex-col overflow-hidden group ${
           featured ? "ring-2 ring-gold/40" : ""
         }`}
       >
         {/* Book Jacket Cover Display */}
         <div className="relative aspect-[3/4] w-full bg-[#FAF0FF] overflow-hidden flex items-center justify-center p-6 border-b border-border/40">
-          <div className="relative w-full h-full max-h-[320px] shadow-[0_12px_28px_rgba(53,16,95,0.18)] rounded-md overflow-hidden transition-transform duration-500 group-hover:scale-105 border border-primary/10">
+          <div className="relative w-full h-full max-h-[320px] shadow-[0_12px_28px_rgba(53,16,95,0.18)] rounded-md overflow-hidden transition-transform duration-500 group-hover:scale-105 border border-primary/10 bg-white">
             <Image
               src={book.coverImage}
               alt={book.title}
@@ -33,20 +41,28 @@ export const BookCard: React.FC<BookCardProps> = ({ book, featured = false }) =>
             />
           </div>
 
-          <div className="absolute top-4 right-4">
+          <div className="absolute top-4 right-4 flex flex-col items-end gap-1.5">
             <span className="px-3 py-1 rounded-full bg-primary/90 backdrop-blur-sm text-gold font-sans text-xs font-semibold shadow-xs">
               {book.ageRange}
             </span>
+            {book.publishedYear && (
+              <span className="px-2.5 py-0.5 rounded-full bg-gold text-primary font-sans text-[11px] font-bold shadow-xs">
+                {book.publishedYear}
+              </span>
+            )}
           </div>
         </div>
 
         {/* Content Container */}
         <div className="p-6 flex-1 flex flex-col justify-between gap-4">
           <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-2">
-              <span className="text-xs font-sans text-gold font-semibold uppercase tracking-wider">
-                By {book.author}
-              </span>
+            <div className="flex items-center justify-between text-xs font-sans text-gold font-semibold uppercase tracking-wider">
+              <span>By {book.author}</span>
+              {book.publishedYear && (
+                <span className="text-charcoal-muted font-normal lowercase">
+                  pub. {book.publishedYear}
+                </span>
+              )}
             </div>
 
             <h3 className="font-serif text-xl sm:text-2xl font-bold text-primary group-hover:text-primary-hover transition-colors leading-snug">
@@ -64,7 +80,7 @@ export const BookCard: React.FC<BookCardProps> = ({ book, featured = false }) =>
             </p>
           </div>
 
-          {/* Themes Tags */}
+          {/* Themes Tags & Actions */}
           <div className="flex flex-col gap-3 pt-3 border-t border-border/60">
             <div className="flex flex-wrap gap-1.5">
               {book.themes.slice(0, 3).map((theme) => (
@@ -77,13 +93,43 @@ export const BookCard: React.FC<BookCardProps> = ({ book, featured = false }) =>
               ))}
             </div>
 
+            {/* Purchase Direct Links (Amazon & Flipkart) */}
+            {(book.amazonUrl || book.flipkartUrl) && (
+              <div className="grid grid-cols-2 gap-2 pt-1">
+                {book.amazonUrl && (
+                  <a
+                    href={book.amazonUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="py-2 px-3 rounded-lg bg-[#FF9900]/10 hover:bg-[#FF9900]/20 text-[#8C4A00] font-sans text-xs font-bold flex items-center justify-center gap-1.5 transition-colors border border-[#FF9900]/30"
+                  >
+                    <span>Amazon</span>
+                    <ExternalLink className="w-3 h-3 text-[#8C4A00]" />
+                  </a>
+                )}
+                {book.flipkartUrl && (
+                  <a
+                    href={book.flipkartUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`py-2 px-3 rounded-lg bg-[#2874F0]/10 hover:bg-[#2874F0]/20 text-[#1250B8] font-sans text-xs font-bold flex items-center justify-center gap-1.5 transition-colors border border-[#2874F0]/30 ${
+                      !book.amazonUrl ? "col-span-2" : ""
+                    }`}
+                  >
+                    <span>Flipkart</span>
+                    <ExternalLink className="w-3 h-3 text-[#1250B8]" />
+                  </a>
+                )}
+              </div>
+            )}
+
             {/* Read Details Action */}
             <button
               onClick={() => setModalOpen(true)}
-              className="w-full mt-2 py-2.5 px-4 rounded-lg bg-surface-container hover:bg-lavender text-primary font-sans text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 transition-all border border-primary/10 hover:border-primary/20"
+              className="w-full py-2.5 px-4 rounded-lg bg-surface-container hover:bg-lavender text-primary font-sans text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 transition-all border border-primary/10 hover:border-primary/20"
             >
               <BookOpen className="w-4 h-4 text-gold" />
-              <span>Read Synopsis & Themes</span>
+              <span>Read Synopsis &amp; Themes</span>
               <ChevronRight className="w-4 h-4 text-charcoal-muted group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
@@ -106,14 +152,19 @@ export const BookCard: React.FC<BookCardProps> = ({ book, featured = false }) =>
               <div className="flex flex-col gap-1.5 pr-8">
                 <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-gold uppercase tracking-wider">
                   <Sparkles className="w-3.5 h-3.5" />
-                  <span>Published by Read Pustak Publications</span>
+                  <span>Published by Read Pustak Publications • {book.publishedYear}</span>
                 </div>
                 <h3 className="font-serif text-2xl sm:text-3xl font-bold text-primary">
                   {book.title}
                 </h3>
-                <p className="font-serif italic text-base text-gold">
+                {book.subtitle && (
+                  <p className="font-serif italic text-base text-gold font-medium">
+                    {book.subtitle}
+                  </p>
+                )}
+                <span className="text-xs text-charcoal-muted">
                   Authored by {book.author} • {book.ageRange}
-                </p>
+                </span>
               </div>
 
               <div className="border-t border-b border-border/80 py-4 flex flex-col gap-3">
@@ -141,7 +192,42 @@ export const BookCard: React.FC<BookCardProps> = ({ book, featured = false }) =>
                 </div>
               )}
 
-              <div className="flex flex-wrap gap-2 pt-2">
+              {/* Order Online Buttons inside Modal */}
+              {(book.amazonUrl || book.flipkartUrl) && (
+                <div className="p-4 rounded-xl bg-ivory-warm border border-gold/30 flex flex-col gap-2.5">
+                  <span className="font-sans text-xs font-bold uppercase tracking-wider text-primary">
+                    Get Your Copy Online:
+                  </span>
+                  <div className="flex flex-wrap gap-3">
+                    {book.amazonUrl && (
+                      <a
+                        href={book.amazonUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="py-2.5 px-5 rounded-lg bg-[#FF9900] text-black font-sans text-xs font-bold flex items-center gap-2 hover:bg-[#e68a00] shadow-xs transition-colors"
+                      >
+                        <ShoppingBag className="w-4 h-4" />
+                        <span>Order on Amazon</span>
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    )}
+                    {book.flipkartUrl && (
+                      <a
+                        href={book.flipkartUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="py-2.5 px-5 rounded-lg bg-[#2874F0] text-white font-sans text-xs font-bold flex items-center gap-2 hover:bg-[#1a5bc7] shadow-xs transition-colors"
+                      >
+                        <ShoppingBag className="w-4 h-4" />
+                        <span>Order on Flipkart</span>
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              <div className="flex flex-wrap gap-2 pt-1">
                 {book.themes.map((theme) => (
                   <span
                     key={theme}
@@ -152,7 +238,7 @@ export const BookCard: React.FC<BookCardProps> = ({ book, featured = false }) =>
                 ))}
               </div>
 
-              <div className="pt-4 flex justify-end">
+              <div className="pt-2 flex justify-end">
                 <button
                   onClick={() => setModalOpen(false)}
                   className="px-6 py-2.5 rounded-lg bg-primary text-white font-sans text-sm font-semibold hover:bg-primary-hover transition-colors"
@@ -167,4 +253,3 @@ export const BookCard: React.FC<BookCardProps> = ({ book, featured = false }) =>
     </>
   );
 };
-

@@ -10,7 +10,7 @@ export const foundersData: Founder[] = [
     quote: "“Young in Age, Limitless in Imagination.”",
     bio: [
       "Avni embarked on her literary voyage at the tender age of ten, inspired by ancient Indian folk fables, mythology, and modern childhood wonder. Her stories echo an uninhibited freshness that speaks directly to peers and grown-ups alike.",
-      "Having authored three published works—'Emma Finds Her Solution', 'Pancha Tatva Tales', and 'Ancient Answers for Modern Problems'—Avni brings a vibrant, reflective voice to young Indian literature.",
+      "Having authored four published works—'Emma Finds Her Solution', 'The Panch Tatva Tales', 'Ancient Answers for Modern Problems', and 'Incredible Bharat'—Avni brings a vibrant, reflective voice to young Indian literature.",
       "Deeply passionate about reading and regional lore, she champions the belief that every young mind holds an authentic story. Her voice is the living spark behind Read Pustak with Avni—an inviting realm built to reassure young readers that their pens hold true creative power.",
     ],
     responsibilities: [

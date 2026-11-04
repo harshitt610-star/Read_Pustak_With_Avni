@@ -65,9 +65,9 @@ export default function BooksPage() {
             subtitle="Carefully written, thoughtfully edited, and crafted for growing minds"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {booksData.map((book) => (
-              <BookCard key={book.id} book={book} featured={book.id === "pancha-tatva-tales"} />
+              <BookCard key={book.id} book={book} featured={book.id === "incredible-bharat"} />
             ))}
           </div>
         </div>
