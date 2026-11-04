@@ -6,7 +6,7 @@ export const foundersData: Founder[] = [
     name: "Avni Chaturvedi",
     role: "Young Author | Storyteller | Creative Inspiration",
     title: "Young Author & Creative Visionary",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAy6rfQKLtMw4oSyMcy-mkbjGKLXH3HFFD06W16rM4Gpd8zUCoirg3eXl9HHcBaIhf7KhKAzLqzPdgcxfV-uk8CiipiZreAcW21SVXH_sJRgURQhppPLEzApvuxEUJfixtwIlXJuSA4cjAipYO5Yh2oQpO93Qo_gLbNe0Bl4aKkrIUx3_dgRufw8pNVo_fwiE5lemjCvbPT90snhIaI86rTvbcV5_tQVwDi_gyBD4c",
+    image: "/images/avni/hero-slide-1.jpg",
     quote: "“Young in Age, Limitless in Imagination.”",
     bio: [
       "Avni embarked on her literary voyage at the tender age of ten, inspired by ancient Indian folk fables, mythology, and modern childhood wonder. Her stories echo an uninhibited freshness that speaks directly to peers and grown-ups alike.",

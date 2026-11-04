@@ -26,6 +26,7 @@ import { partnersData } from "@/data/partners";
 import { BookCard } from "@/components/books/BookCard";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GlimpsesGallery } from "@/components/glimpses/GlimpsesGallery";
+import { HeroPortraitCarousel } from "@/components/home/HeroPortraitCarousel";
 
 export default function HomePage() {
   const avni = foundersData.find((f) => f.id === "avni-chaturvedi")!;
@@ -124,33 +125,9 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right Column: Avni's Portrait */}
+            {/* Right Column: Avni's Dynamic Auto-Scrolling Portrait Carousel */}
             <div className="lg:col-span-5 flex justify-center">
-              <div className="relative w-full max-w-md aspect-[4/5] rounded-2xl overflow-hidden shadow-editorial-hover border-2 border-gold/30 bg-ivory-warm">
-                <Image
-                  src={avni.image}
-                  alt="Avni Chaturvedi portrait"
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
-
-                {/* Ambient Quote Card Overlay */}
-                <div className="absolute bottom-5 inset-x-5 bg-white/95 backdrop-blur-md rounded-xl p-4 shadow-lg border border-gold/40 flex flex-col gap-1">
-                  <div className="flex items-center gap-1.5 text-gold text-xs font-semibold uppercase tracking-wider">
-                    <Sparkles className="w-3.5 h-3.5" />
-                    <span>Creative Inspiration</span>
-                  </div>
-                  <p className="font-serif italic text-sm sm:text-base text-primary font-medium">
-                    “Young in Age, Limitless in Imagination.”
-                  </p>
-                  <span className="font-sans text-xs text-charcoal-muted self-end">
-                    — Avni Chaturvedi
-                  </span>
-                </div>
-              </div>
+              <HeroPortraitCarousel />
             </div>
           </div>
         </div>
