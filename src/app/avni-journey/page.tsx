@@ -56,7 +56,7 @@ export default function JourneyPage() {
                   Author at Age 10
                 </span>
                 <span className="px-3 py-1 rounded-full bg-lavender text-primary font-sans text-xs font-semibold">
-                  3 Published Books
+                  4 Published Books
                 </span>
                 <span className="px-3 py-1 rounded-full bg-lavender text-primary font-sans text-xs font-semibold">
                   Speaker, Lucknow Book Fair 2026
@@ -66,11 +66,12 @@ export default function JourneyPage() {
 
             <div className="lg:col-span-5 relative aspect-[4/5] rounded-xl overflow-hidden shadow-editorial-hover border-2 border-gold/40 bg-ivory-warm">
               <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3VUN0nQD4v1nQ_mkx42ZcASu-2QkeYOnWPz-jq8YX526fiAhJ2TPg9fCnKVj2CL0G-bcV78bjtdnOInFxqsdwTdz2ULPue08XkNji_uoUQ49MC23zdqZT-w-SJVRKq6ZMMUWIDIx31CS0ri-2J_IqoOm24KUt3wAC1TYa5uLSzgYZ1TpbX-GD5PkRdpcn-Rge9dHrZXKw56O5cfG5BBONCTu0fR6nJPyqHezaEso"
-                alt="Portrait of young author Avni Chaturvedi in an intimate literary library salon"
+                src="/images/avni/avni-journey-hero.jpg"
+                alt="Young author and MUN delegate Avni Chaturvedi"
                 fill
+                priority
                 sizes="(max-width: 1024px) 100vw, 40vw"
-                className="object-cover"
+                className="object-cover object-top"
               />
             </div>
           </div>

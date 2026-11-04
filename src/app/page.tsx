@@ -297,28 +297,34 @@ export default function HomePage() {
                     src={avni.image}
                     alt={avni.name}
                     fill
-                    className="object-cover"
+                    className="object-cover object-top"
                   />
                 </div>
                 <div className="flex flex-col">
                   <span className="font-sans text-xs font-semibold text-gold uppercase tracking-wider">
-                    Young Author &amp; Storyteller
+                    Young Author | Creative Inspiration
                   </span>
                   <h3 className="font-serif text-xl sm:text-2xl font-bold text-primary">
                     {avni.name}
                   </h3>
                   <span className="font-sans text-xs text-charcoal-muted">
-                    Began writing at age 10 • 4 Published Books
+                    The Face of Read Pustak with Avni
                   </span>
                 </div>
               </div>
-              <p className="font-sans text-sm text-charcoal leading-relaxed">
-                Avni crafts stories rooted in natural curiosity, Indian
-                tradition, and life reflections. She inspires young minds to
-                trust their creative voices and write with sincerity.
-              </p>
+              <div className="flex flex-col gap-3 font-sans text-sm text-charcoal leading-relaxed">
+                <p>
+                  Avni Chaturvedi is a young published author whose literary journey began at the age of 10. With a passion for storytelling, imagination and meaningful writing, she represents the creative spirit behind Read Pustak with Avni.
+                </p>
+                <p>
+                  Author of <em>Emma Finds Her Solution</em>, <em>Pancha Tatva Tales: Stories of Joy and Wisdom</em>, <em>Ancient Answers for Modern Problems</em>, and <em>Incredible Bharat</em>, Avni believes that age should never limit imagination or the power of ideas.
+                </p>
+                <p>
+                  Beyond writing books, she participates in literary workshops, storytelling activities, theatre and initiatives that encourage children to explore their creative potential. Through Read Pustak with Avni, she hopes to inspire more children to pick up a book, express their thoughts and discover the joy of becoming storytellers.
+                </p>
+              </div>
               <blockquote className="p-3.5 rounded-lg bg-lavender/50 border-l-2 border-gold font-serif italic text-xs sm:text-sm text-primary">
-                {avni.quote}
+                “Age should never limit imagination or the power of ideas.” — Avni Chaturvedi
               </blockquote>
             </div>
 
@@ -357,6 +363,13 @@ export default function HomePage() {
                 “Her vision is to make reading a habit, writing an expression and publishing an opportunity for emerging voices.”
               </blockquote>
             </div>
+          </div>
+
+          {/* Closing Line Below Both Profiles */}
+          <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-[#FAF0FF] via-[#FFF9F1] to-[#FAF0FF] border border-gold/40 text-center shadow-xs">
+            <p className="font-serif italic text-base sm:text-lg text-primary font-medium">
+              “One vision, a love for books and a shared dream of making every story matter.”
+            </p>
           </div>
         </div>
       </section>

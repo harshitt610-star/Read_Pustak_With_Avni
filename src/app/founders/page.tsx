@@ -58,8 +58,7 @@ export default function FoundersPage() {
               Shared Guiding Belief
             </span>
             <p className="font-serif italic text-2xl sm:text-3xl text-white font-medium leading-relaxed">
-              “Every child has an imagination. Every writer has a voice. And every
-              story deserves an opportunity to reach the world.”
+              “One vision, a love for books and a shared dream of making every story matter.”
             </p>
             <span className="font-sans text-xs text-white/70">
               — Neena Chaturvedi &amp; Avni Chaturvedi
