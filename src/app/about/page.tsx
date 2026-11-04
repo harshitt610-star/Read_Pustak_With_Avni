@@ -57,11 +57,12 @@ export default function AboutPage() {
 
             <div className="lg:col-span-5 relative aspect-[4/3] rounded-xl overflow-hidden shadow-editorial border border-gold/30">
               <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzuev9SE2aXhZqwVuFi_-LdnsxBdV1BhmC6KKO74GXetnLqYCoUCCjfT4C_ZFCqHszdrheneqm0q5OBuz8hN7MDK8xr_xuiNgvGlsXEzpXSHLZ6pWDjY5qyJOutmJ11CqwqgcdirnFWpUsi_A1rFfy1xx5Q0ddpgNC1feShfYqFpocnoXUwG1JayQJs8_4sZJX1Sogko6eKTIgzG_msWEXFPxD04W5VtFwbJidEFU"
-                alt="Literary studio with open illustrated books and handwritten manuscripts"
+                src="/images/avni/hero-slide-1.jpg"
+                alt="Young author Avni Chaturvedi"
                 fill
+                priority
                 sizes="(max-width: 1024px) 100vw, 40vw"
-                className="object-cover"
+                className="object-cover object-top"
               />
             </div>
           </div>
@@ -73,11 +74,11 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-5 relative aspect-[4/3] rounded-2xl overflow-hidden shadow-editorial border border-border">
             <Image
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmLfQdd9ZJCeqyr_TxBKz_E9jiv4UrsyGrWfX9xgij0bDsO6qQd9o5mawN-iPkPmmUvxITHYe9sZ-E3B9rz7R9KqqWa1CgORLrEGicFdA5RQdjkkE0Vj2D40RycA_jXEYOIKAeETpuq2kr2xWVaqk1EEy1vce_LvtouRRiOFg77oftl79puN2WobMWxBvieFnLTFfARSsjLwp_2OkTYDbgbL1fGkTMZ8d1JUxhKZQ"
-              alt="An inviting and cozy literary writing salon with mahogany shelves and parchment journals"
+              src="/images/founders/neena-desk.jpg"
+              alt="Founder Neena Chaturvedi working at her desk"
               fill
               sizes="(max-width: 1024px) 100vw, 40vw"
-              className="object-cover"
+              className="object-cover object-top"
             />
           </div>
 
