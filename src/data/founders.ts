@@ -6,7 +6,7 @@ export const foundersData: Founder[] = [
     name: "Avni Chaturvedi",
     role: "Young Author | Creative Inspiration | Face of the Initiative",
     title: "Young Author & Creative Inspiration",
-    image: "/images/avni/hero-slide-1.jpg",
+    image: "/images/avni/avni-desk-writing.jpg",
     quote: "“Age should never limit imagination or the power of ideas.”",
     bio: [
       "Avni Chaturvedi is a young published author whose literary journey began at the age of 10. With a passion for storytelling, imagination and meaningful writing, she represents the creative spirit behind Read Pustak with Avni.",

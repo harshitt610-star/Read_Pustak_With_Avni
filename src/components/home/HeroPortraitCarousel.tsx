@@ -56,6 +56,16 @@ const HERO_SLIDES: HeroSlide[] = [
     tag: "Nurturing Young Voices",
     icon: Heart,
   },
+  {
+    id: "cultural-accolades",
+    image: "/images/avni/avni-traditional-award.jpg",
+    alt: "Avni Chaturvedi in traditional attire celebrating literary excellence and cultural awards",
+    badge: "Literary Honors & Heritage",
+    quote: "“Celebrating culture, storytelling, and youthful excellence.”",
+    authorLabel: "Avni Chaturvedi • Award Recipient & Speaker",
+    tag: "Cultural Harmony & Recognition",
+    icon: Sparkles,
+  },
 ];
 
 export function HeroPortraitCarousel() {

@@ -9,20 +9,20 @@ import {
   ArrowRight,
   ScrollText,
   Languages,
-  Layers,
   CheckCircle2,
   BookmarkCheck,
   Send,
   Library,
   Palette,
   Globe2,
+  Users,
 } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export const metadata: Metadata = {
   title: "Publishing & Editorial | Read Pustak Publications",
   description:
-    "Explore the editorial mandate, bilingual publishing vision, and manuscript development journey of Read Pustak Publications in New Delhi.",
+    "Explore the editorial mandate, our story, bilingual publishing vision, and manuscript development journey of Read Pustak Publications in New Delhi.",
 };
 
 const publishingStages = [
@@ -98,9 +98,9 @@ const editorialStandards = [
 export default function PublishingEditorialPage() {
   return (
     <div className="flex flex-col gap-16 lg:gap-24 py-6 sm:py-10">
-      {/* 1. HERO SECTION: Publishing & Editorial Mandate */}
+      {/* 1. HERO SECTION: Editorial Mandate */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="bg-gradient-to-b from-white to-[#FAF0FF]/50 rounded-2xl border border-border/80 shadow-editorial p-6 sm:p-12 lg:p-16 flex flex-col gap-8 relative overflow-hidden">
+        <div className="bg-gradient-to-b from-white to-[#FAF0FF]/50 rounded-2xl border border-border/80 shadow-editorial p-6 sm:p-12 lg:p-16 flex flex-col gap-6 relative overflow-hidden">
           <div className="flex flex-col gap-3">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-lavender border border-primary/10 text-primary text-xs font-sans font-semibold tracking-wider uppercase self-start">
               <ScrollText className="w-3.5 h-3.5 text-gold" />
@@ -114,63 +114,160 @@ export default function PublishingEditorialPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center pt-2">
-            <div className="lg:col-span-7 flex flex-col gap-5 font-sans text-sm sm:text-base text-charcoal leading-relaxed">
-              <p>
-                <strong>Read Pustak Publications</strong> is an independent
-                literary imprint established with a distinctive purpose: to prove
-                that young voices, when given patient mentorship and professional
-                publishing standards, produce literature of cultural significance
-                and lasting emotional impact.
-              </p>
-              <p>
-                Unlike commercial mass-market publishers that often standardize
-                children&apos;s writing into repetitive templates, our editorial
-                house takes a boutique, handcrafted approach. We treat books not
-                as quick digital commodities, but as mirrors of childhood wonder,
-                cultural reservoirs, and beacons of empathy.
-              </p>
-              <div className="p-4 rounded-xl bg-white border-l-4 border-gold shadow-xs border border-border flex flex-col gap-1">
-                <span className="font-serif text-primary font-bold text-base">
-                  The Editorial Creed:
-                </span>
-                <p className="text-xs sm:text-sm text-charcoal italic leading-relaxed">
-                  “A book is not merely printed paper; it is a shared dream. Every child
-                  who writes with honesty deserves an imprint that honors their voice.”
-                </p>
-              </div>
-            </div>
-
-            {/* Editorial Desk Photo with authentic caption */}
-            <div className="lg:col-span-5 flex flex-col gap-2.5">
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-editorial border-2 border-gold/40 group">
-                <Image
-                  src="/images/founders/neena-desk.jpg"
-                  alt="Editorial Director Neena Chaturvedi reviewing manuscripts at Read Pustak Publications"
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-80" />
-                <div className="absolute bottom-3 left-3 right-3 text-white">
-                  <span className="text-[10px] uppercase font-sans font-bold tracking-widest text-gold block">
-                    Editorial Desk • In Action
-                  </span>
-                  <p className="font-serif text-xs sm:text-sm font-semibold">
-                    Manuscript Review &amp; Proof Editing
-                  </p>
-                </div>
-              </div>
-              <span className="text-center font-sans text-xs text-charcoal-muted italic">
-                Neena Chaturvedi overseeing editorial direction and author proofs.
-              </span>
-            </div>
+          <div className="flex flex-col gap-4 font-sans text-sm sm:text-base text-charcoal leading-relaxed max-w-4xl pt-2">
+            <p>
+              <strong>Read Pustak Publications</strong> is an independent literary
+              imprint established with a distinctive purpose: to prove that young
+              voices, when supported with patient mentorship and professional
+              publishing standards, produce literature of cultural significance
+              and lasting emotional resonance.
+            </p>
+            <p>
+              Rather than treating books as mere commercial commodities, our
+              editorial house takes a boutique, handcrafted approach. We celebrate
+              stories as companions of solace, mirrors of culture, and windows to
+              boundless imaginative possibilities.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* 2. THE BILINGUAL PUBLISHING PHILOSOPHY */}
+      {/* 2. OUR STORY — Avni's Column & Neena's Column */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="bg-white rounded-2xl border border-border/80 shadow-editorial p-6 sm:p-10 lg:p-12 flex flex-col gap-10">
+          <SectionHeading
+            eyebrow="Origins & Creative Genesis"
+            title="Our Story"
+            subtitle="From a childhood writing desk to an inspiring publishing platform"
+            align="center"
+          />
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+            {/* Left: Avni's Column */}
+            <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-b from-[#FFF9F1] via-[#FAF0FF]/40 to-[#FFF9F1] border-2 border-gold/40 shadow-xs flex flex-col justify-between gap-6 group">
+              <div className="flex flex-col gap-4">
+                <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-md border-2 border-gold/50 bg-ivory-warm">
+                  <Image
+                    src="/images/avni/avni-desk-writing.jpg"
+                    alt="Young author Avni Chaturvedi sitting at her desk writing in notebooks"
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-transparent to-transparent opacity-80" />
+                  <div className="absolute bottom-3 left-3 right-3 text-white">
+                    <span className="text-[10px] uppercase font-sans font-bold tracking-widest text-gold block">
+                      Young Author&apos;s Desk
+                    </span>
+                    <p className="font-serif text-sm font-semibold">
+                      Avni Chaturvedi • The Creative Spark
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-1">
+                  <span className="font-sans text-xs font-bold uppercase tracking-wider text-gold">
+                    Creative Genesis • Age 10
+                  </span>
+                  <h3 className="font-serif text-xl sm:text-2xl font-bold text-primary">
+                    Avni&apos;s Storytelling Journey
+                  </h3>
+                </div>
+
+                <p className="font-sans text-sm text-charcoal leading-relaxed">
+                  The seeds of Read Pustak were sown when Avni, at age ten, began
+                  filling notebooks with character sketches, moral fables, and
+                  observations of the natural world. Her passion for turning
+                  everyday curiosity into evocative prose represents the
+                  heartbeat of our movement.
+                </p>
+
+                <p className="font-sans text-sm text-charcoal leading-relaxed">
+                  Now the author of four published works—including <em>Emma Finds Her Solution</em>, <em>The Panch Tatva Tales</em>, and <em>Ancient Answers for Modern Problems</em>—she proves that age should never limit the depth of an idea.
+                </p>
+              </div>
+
+              <blockquote className="p-3.5 rounded-lg bg-lavender/60 border-l-4 border-gold font-serif italic text-xs sm:text-sm text-primary">
+                “Age should never limit imagination or the power of ideas.” — Avni
+              </blockquote>
+            </div>
+
+            {/* Right: Neena's Column */}
+            <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-b from-[#FFF9F1] via-[#FAF0FF]/40 to-[#FFF9F1] border-2 border-gold/40 shadow-xs flex flex-col justify-between gap-6 group">
+              <div className="flex flex-col gap-4">
+                <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-md border-2 border-gold/50 bg-ivory-warm">
+                  <Image
+                    src="/images/founders/neena-desk.jpg"
+                    alt="Founder Neena Chaturvedi editing manuscripts at her desk"
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-transparent to-transparent opacity-80" />
+                  <div className="absolute bottom-3 left-3 right-3 text-white">
+                    <span className="text-[10px] uppercase font-sans font-bold tracking-widest text-gold block">
+                      Editorial Director&apos;s Desk
+                    </span>
+                    <p className="font-serif text-sm font-semibold">
+                      Neena Chaturvedi • Editorial Vision
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-1">
+                  <span className="font-sans text-xs font-bold uppercase tracking-wider text-gold">
+                    Editorial Leadership • New Delhi
+                  </span>
+                  <h3 className="font-serif text-xl sm:text-2xl font-bold text-primary">
+                    Neena&apos;s Publishing Mandate
+                  </h3>
+                </div>
+
+                <p className="font-sans text-sm text-charcoal leading-relaxed">
+                  Seeing her daughter&apos;s boundless creative dedication,
+                  publisher Neena Chaturvedi realized that countless children harbor
+                  similar literary sparks that simply need receptive encouragement
+                  and structured editorial stewardship.
+                </p>
+
+                <p className="font-sans text-sm text-charcoal leading-relaxed">
+                  Through <strong>Read Pustak Publications</strong>, she established
+                  a literary imprint that mentors young writers through every
+                  phase—developmental editing, illustration, ISBN cataloguing, and
+                  global distribution—ensuring their voices reach audiences with
+                  dignity.
+                </p>
+              </div>
+
+              <blockquote className="p-3.5 rounded-lg bg-lavender/60 border-l-4 border-gold font-serif italic text-xs sm:text-sm text-primary">
+                “Make reading a habit, writing an expression, and publishing an opportunity.” — Neena
+              </blockquote>
+            </div>
+          </div>
+
+          {/* Shared Closing Manifesto Banner */}
+          <div className="p-5 sm:p-6 rounded-xl bg-primary text-white border border-gold/40 text-center flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3 text-left">
+              <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gold shrink-0 border border-gold/40">
+                <Sparkles className="w-5 h-5" />
+              </div>
+              <p className="font-serif italic text-base sm:text-lg text-white font-medium">
+                “One vision, a love for books and a shared dream of making every story matter.”
+              </p>
+            </div>
+            <Link
+              href="/founders"
+              className="px-5 py-2.5 rounded-lg bg-gold text-primary font-sans text-xs sm:text-sm font-bold hover:bg-gold-light transition-colors whitespace-nowrap shrink-0"
+            >
+              Meet the Founders Profile
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. THE BILINGUAL PUBLISHING PHILOSOPHY */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="bg-white rounded-2xl border border-border/80 shadow-editorial p-6 sm:p-10 lg:p-12 flex flex-col gap-8">
           <SectionHeading
@@ -258,7 +355,7 @@ export default function PublishingEditorialPage() {
         </div>
       </section>
 
-      {/* 3. FROM MANUSCRIPT TO BOOKSHELF: 5-STEP PUBLISHING JOURNEY */}
+      {/* 4. FROM MANUSCRIPT TO BOOKSHELF: 5-STEP PUBLISHING JOURNEY */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="flex flex-col gap-10">
           <SectionHeading
@@ -310,7 +407,7 @@ export default function PublishingEditorialPage() {
         </div>
       </section>
 
-      {/* 4. EDITORIAL STANDARDS & WHAT WE CHAMPION */}
+      {/* 5. EDITORIAL STANDARDS & WHAT WE CHAMPION */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="bg-primary text-white rounded-2xl p-6 sm:p-10 lg:p-12 shadow-editorial-hover relative overflow-hidden border border-gold/40">
           <div className="relative z-10 flex flex-col gap-8">
@@ -351,7 +448,7 @@ export default function PublishingEditorialPage() {
         </div>
       </section>
 
-      {/* 5. YOUNG WRITERS MENTORSHIP & EDITORIAL INQUIRIES */}
+      {/* 6. YOUNG WRITERS MENTORSHIP & EDITORIAL INQUIRIES */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="bg-gradient-to-r from-lavender/80 via-ivory to-lavender/80 border border-gold/40 rounded-2xl p-8 sm:p-12 text-center flex flex-col items-center gap-5 shadow-editorial">
           <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-primary border border-gold/30">
