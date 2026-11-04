@@ -1,0 +1,530 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport">
+<meta content="mobile_tab" name="shell-type">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#35105F",
+            "primary-container": "#35105F",
+            "background": "#FFF9F1",
+            "surface": "#FFF9F1",
+            "surface-container-lowest": "#FFFFFF",
+            "surface-container-low": "#FFF5E9",
+            "surface-container": "#FBF0E4",
+            "surface-container-high": "#F5E6D8",
+            "surface-container-highest": "#EED8C5",
+            "surface-lavender": "#F4E4F4",
+            "gold-accent": "#D9A441",
+            "secondary": "#D9A441",
+            "secondary-container": "#FFE5A3",
+            "on-secondary-container": "#5A3F00",
+            "on-background": "#30283A",
+            "on-surface": "#30283A",
+            "on-surface-variant": "#5F5568",
+            "on-primary": "#FFFFFF",
+            "outline-variant": "#E4D8CE"
+          },
+          fontFamily: {
+            "title-editorial": ["Playfair Display", "serif"],
+            "headline-sm": ["Playfair Display", "serif"],
+            "headline-md": ["Playfair Display", "serif"],
+            "headline-lg": ["Playfair Display", "serif"],
+            "body-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "body-md": ["Plus Jakarta Sans", "sans-serif"],
+            "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "label-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "label-md": ["Plus Jakarta Sans", "sans-serif"],
+            "caption": ["Plus Jakarta Sans", "sans-serif"]
+          },
+          spacing: {
+            "gutter-mobile": "1.25rem",
+            "space-xs": "0.35rem",
+            "space-sm": "0.6rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem"
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    @layer base {
+      html, body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        min-height: 100%;
+        background-color: #FFF9F1;
+      }
+      body {
+        overscroll-behavior-y: none;
+      }
+      .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+      .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+    }
+    ::-webkit-scrollbar { display: none; }
+    details summary::-webkit-details-marker { display: none; }
+  </style>
+</head>
+<body class="bg-[#FFF9F1] font-body-md text-[#30283A] antialiased flex flex-col min-h-screen">
+<!-- 1. Header -->
+<header class="fixed top-0 w-full z-50 pt-safe bg-[#FFF9F1]/95 backdrop-blur-md border-b border-[#E4D8CE]/60 shadow-[0_2px_12px_rgba(53,16,95,0.04)]">
+<div class="h-16 px-gutter-mobile flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<img alt="Read Pustak with Avni Logo" class="h-9 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WffSlUXwIkKlxllbSG-WNl2sXL25KBvFzA4MIEM-4XHYlTE4KWEmIdcN7dfSdsdvqniW-XZZEMGZzAH2NEqIsmzr73dzKwpnL07P6GZ6dahR1lCI3xX_4nkA09kjBSx52r8BDFFq7zufmDc1TLITgFSxIKYkd7rHAR1BN0aQyC-maAOkeTNE1nkJVJyQJXDghFRGJkUYyMQ_Ub_NjdDgVmisFHKYfyIlVd4jwg_4ww">
+<div class="flex flex-col">
+<span class="font-title-editorial text-[17px] font-bold text-[#35105F] leading-tight tracking-tight">Read Pustak</span>
+<span class="font-caption text-[11px] font-semibold text-[#D9A441] tracking-widest uppercase leading-none">with Avni</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<details class="relative group">
+<summary class="w-10 h-10 flex items-center justify-center rounded-lg text-[#35105F] hover:bg-[#F4E4F4] transition-colors list-none cursor-pointer">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</summary>
+<div class="fixed inset-x-0 top-16 bg-[#FFF9F1]/98 backdrop-blur-xl border-b border-[#E4D8CE] shadow-[0_16px_36px_rgba(53,16,95,0.1)] p-5 flex flex-col gap-3 z-50">
+<div class="flex items-center justify-between border-b border-[#E4D8CE]/80 pb-2">
+<span class="font-title-editorial text-lg text-[#35105F] font-bold">Folio Directory</span>
+<span class="font-caption text-[11px] text-[#D9A441] font-semibold tracking-wider uppercase">Read Pustak Publications</span>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<a class="flex items-center gap-2 py-2 px-2.5 rounded-lg text-[#30283A] bg-[#F4E4F4]/70 font-semibold" data-path="home" href="#">
+<span class="material-symbols-outlined text-[18px] text-[#35105F]">home</span>
+<span class="font-label-md text-sm">Home</span>
+</a>
+<a class="flex items-center gap-2 py-2 px-2.5 rounded-lg text-[#30283A] hover:bg-[#F4E4F4]/60 transition-colors" data-path="about-us" href="#">
+<span class="material-symbols-outlined text-[18px] text-[#D9A441]">auto_stories</span>
+<span class="font-label-md text-sm">About Us</span>
+</a>
+<a class="flex items-center gap-2 py-2 px-2.5 rounded-lg text-[#30283A] hover:bg-[#F4E4F4]/60 transition-colors" data-path="meet-our-founders" href="#">
+<span class="material-symbols-outlined text-[18px] text-[#D9A441]">group</span>
+<span class="font-label-md text-sm">Founders</span>
+</a>
+<a class="flex items-center gap-2 py-2 px-2.5 rounded-lg text-[#30283A] hover:bg-[#F4E4F4]/60 transition-colors" data-path="avnis-journey" href="#">
+<span class="material-symbols-outlined text-[18px] text-[#D9A441]">history_edu</span>
+<span class="font-label-md text-sm">Avni's Journey</span>
+</a>
+<a class="flex items-center gap-2 py-2 px-2.5 rounded-lg text-[#30283A] hover:bg-[#F4E4F4]/60 transition-colors" data-path="our-books" href="#">
+<span class="material-symbols-outlined text-[18px] text-[#D9A441]">menu_book</span>
+<span class="font-label-md text-sm">Our Books</span>
+</a>
+<a class="flex items-center gap-2 py-2 px-2.5 rounded-lg text-[#30283A] hover:bg-[#F4E4F4]/60 transition-colors" data-path="achievements" href="#">
+<span class="material-symbols-outlined text-[18px] text-[#D9A441]">workspace_premium</span>
+<span class="font-label-md text-sm">Achievements</span>
+</a>
+<a class="flex items-center gap-2 py-2 px-2.5 rounded-lg text-[#30283A] hover:bg-[#F4E4F4]/60 transition-colors" data-path="social-impact" href="#">
+<span class="material-symbols-outlined text-[18px] text-[#D9A441]">volunteer_activism</span>
+<span class="font-label-md text-sm">Social Impact</span>
+</a>
+<a class="flex items-center gap-2 py-2 px-2.5 rounded-lg text-[#30283A] hover:bg-[#F4E4F4]/60 transition-colors" data-path="contact" href="#">
+<span class="material-symbols-outlined text-[18px] text-[#D9A441]">mail</span>
+<span class="font-label-md text-sm">Contact</span>
+</a>
+</div>
+</div>
+</details>
+<div class="w-8 h-8 rounded-full bg-[#35105F] text-white flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">person</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-[#FFF9F1]">
+<div class="px-gutter-mobile pt-5 flex flex-col gap-9">
+<!-- 2. Hero Section -->
+<section class="flex flex-col gap-4">
+<!-- Eyebrow & Headline -->
+<div class="flex flex-col gap-2 items-start">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F4E4F4] text-[#35105F] border border-[#35105F]/10">
+<span class="material-symbols-outlined text-[14px] text-[#D9A441]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-caption text-[11px] uppercase tracking-wider font-semibold">A Literary Initiative</span>
+</div>
+<h1 class="font-title-editorial text-[32px] leading-[1.15] font-bold text-[#35105F]">
+            Read Pustak with Avni
+          </h1>
+<p class="font-title-editorial text-[20px] italic text-[#D9A441] leading-snug font-medium">
+            “Every Child Has a Story Worth Sharing.”
+          </p>
+<p class="font-body-md text-[15px] text-[#5F5568] leading-relaxed pt-1">
+            A heartwarming platform dedicated to cultivating lifelong reading, inspiring expressive writing, and nurturing the imaginative spirit of young authors worldwide.
+          </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col sm:flex-row gap-2.5 pt-1">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-[#35105F] text-white font-semibold text-sm shadow-md hover:bg-[#270b47] active:scale-[0.99] transition-all" data-path="avnis-journey" href="#">
+<span class="material-symbols-outlined text-[18px] text-[#D9A441]">history_edu</span>
+<span class="">Explore Our Journey</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-white border border-[#D9A441] text-[#35105F] font-semibold text-sm hover:bg-[#FBF0E4] active:scale-[0.99] transition-all" data-path="our-books" href="#">
+<span class="material-symbols-outlined text-[18px] text-[#D9A441]">menu_book</span>
+<span class="">Discover Our Books</span>
+</a>
+</div>
+<!-- Warm Portrait Feature of Avni with decorative literary elements -->
+<div class="relative w-full rounded-2xl overflow-hidden mt-2 bg-gradient-to-b from-[#F4E4F4] to-[#FFF5E9] p-3 border border-[#E4D8CE]/70 shadow-[0_4px_20px_rgba(53,16,95,0.06)]">
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-inner">
+<img class="w-full h-full object-cover object-center" data-alt="Warm and inspiring portrait of young author Avni Chaturvedi in an intimate literary library salon surrounded by classic books, golden warm lighting, and notebooks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3VUN0nQD4v1nQ_mkx42ZcASu-2QkeYOnWPz-jq8YX526fiAhJ2TPg9fCnKVj2CL0G-bcV78bjtdnOInFxqsdwTdz2ULPue08XkNji_uoUQ49MC23zdqZT-w-SJVRKq6ZMMUWIDIx31CS0ri-2J_IqoOm24KUt3wAC1TYa5uLSzgYZ1TpbX-GD5PkRdpcn-Rge9dHrZXKw56O5cfG5BBONCTu0fR6nJPyqHezaEso">
+<div class="absolute inset-0 bg-gradient-to-t from-[#35105F]/80 via-transparent to-transparent"></div>
+<!-- Decorative badge on image -->
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white">
+<div class="flex items-center gap-1.5 bg-[#35105F]/80 backdrop-blur-md px-2.5 py-1 rounded-full text-xs border border-white/20">
+<span class="material-symbols-outlined text-[14px] text-[#D9A441]" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span class="font-medium">Avni Chaturvedi • Young Author</span>
+</div>
+<span class="text-[11px] font-caption text-[#FFE5A3] bg-black/30 backdrop-blur-sm px-2 py-0.5 rounded">Read Pustak Folio</span>
+</div>
+</div>
+<!-- Subtle editorial footnote -->
+<div class="flex items-center justify-between px-2 pt-2 text-[#5F5568] text-xs">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-[#D9A441]">ink_pen</span>
+              Young Author &amp; Creative Mentor
+            </span>
+<span class="italic text-[11px]">New Delhi, India</span>
+</div>
+</div>
+</section>
+<!-- Literary Flourish Divider -->
+<div class="flex items-center justify-center gap-2">
+<div class="h-[1px] flex-1 bg-[#E4D8CE]"></div>
+<span class="material-symbols-outlined text-[#D9A441] text-[18px]">local_florist</span>
+<div class="h-[1px] flex-1 bg-[#E4D8CE]"></div>
+</div>
+<!-- 3. About the Initiative -->
+<section class="bg-white rounded-2xl p-5 border border-[#E4D8CE]/70 shadow-[0_4px_16px_rgba(53,16,95,0.04)] flex flex-col gap-4">
+<div class="flex flex-col gap-1">
+<span class="font-caption text-[11px] text-[#D9A441] uppercase tracking-widest font-bold">Nurturing Platform</span>
+<h2 class="font-title-editorial text-2xl text-[#35105F] font-bold">About the Initiative</h2>
+</div>
+<div class="relative w-full aspect-[16/9] rounded-xl overflow-hidden shadow-sm bg-[#F4E4F4]">
+<img class="w-full h-full object-cover" data-alt="An inviting and cozy literary writing salon with mahogany shelves filled with books, parchment journals, and soft amber lamplight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmLfQdd9ZJCeqyr_TxBKz_E9jiv4UrsyGrWfX9xgij0bDsO6qQd9o5mawN-iPkPmmUvxITHYe9sZ-E3B9rz7R9KqqWa1CgORLrEGicFdA5RQdjkkE0Vj2D40RycA_jXEYOIKAeETpuq2kr2xWVaqk1EEy1vce_LvtouRRiOFg77oftl79puN2WobMWxBvieFnLTFfARSsjLwp_2OkTYDbgbL1fGkTMZ8d1JUxhKZQ">
+<div class="absolute inset-0 bg-gradient-to-t from-[#35105F]/60 via-transparent to-transparent"></div>
+<span class="absolute bottom-2.5 left-3 text-white text-xs font-semibold bg-[#35105F]/70 px-2.5 py-0.5 rounded-full backdrop-blur-sm">
+            Literary Havens &amp; Creative Workshops
+          </span>
+</div>
+<div class="flex flex-col gap-2.5 text-[#5F5568] text-sm leading-relaxed">
+<p class="">
+<strong class="text-[#35105F] font-semibold">Read Pustak with Avni</strong> is an editorial and cultural initiative born under <strong class="text-[#35105F]">Read Pustak Publications</strong>. It serves as a nurturing haven where young minds discover the joy of reading, master the craft of storytelling, and gain the confidence to publish original literature.
+          </p>
+<p class="">
+            Through guided reading circles, interactive author sessions, and child-centered publication programs, we bridge generational knowledge with modern, youthful perspectives.
+          </p>
+</div>
+<div class="grid grid-cols-2 gap-2.5 pt-1 border-t border-[#E4D8CE]/50"><div class="col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-2.5"><div class="bg-[#FFF9F1] p-3.5 rounded-xl border border-[#E4D8CE]/60 flex flex-col gap-1"><div class="w-8 h-8 rounded-lg bg-[#FFE5A3]/60 flex items-center justify-center text-[#D9A441] mb-0.5"><span class="material-symbols-outlined text-[18px]">menu_book</span></div><span class="font-bold text-xs text-[#35105F]">Reading Circles</span><span class="text-[11px] text-[#5F5568] leading-relaxed">Cultivating a lifelong devotion to world literature and mindful comprehension from an early formative age.</span></div><div class="bg-[#FFF9F1] p-3.5 rounded-xl border border-[#E4D8CE]/60 flex flex-col gap-1"><div class="w-8 h-8 rounded-lg bg-[#F4E4F4] flex items-center justify-center text-[#35105F] mb-0.5"><span class="material-symbols-outlined text-[18px]">edit_note</span></div><span class="font-bold text-xs text-[#35105F]">Creative Writing</span><span class="text-[11px] text-[#5F5568] leading-relaxed">Mentoring budding youth authors to uncover their distinct narrative voice and poetic authenticity.</span></div><div class="bg-[#FFF9F1] p-3.5 rounded-xl border border-[#E4D8CE]/60 flex flex-col gap-1"><div class="w-8 h-8 rounded-lg bg-[#FFE5A3]/60 flex items-center justify-center text-[#D9A441] mb-0.5"><span class="material-symbols-outlined text-[18px]">stylus</span></div><span class="font-bold text-xs text-[#35105F]">Young Publishing</span><span class="text-[11px] text-[#5F5568] leading-relaxed">Providing tangible publishing pathways, editorial guidance, and archival honors for emerging literary talents.</span></div></div><div class="col-span-2 pt-2 border-t border-[#E4D8CE]/50 flex items-center justify-around bg-[#FFF9F1]/80 rounded-xl p-3 border border-[#E4D8CE]/40"><div class="flex flex-col items-center text-center"><span class="font-title-editorial text-xl font-bold text-[#35105F]">1,200+</span><span class="text-[11px] font-caption text-[#D9A441] font-semibold uppercase tracking-wider">Books Distributed</span></div><div class="h-8 w-[1px] bg-[#E4D8CE]"></div><div class="flex flex-col items-center text-center"><span class="font-title-editorial text-xl font-bold text-[#35105F]">35+</span><span class="text-[11px] font-caption text-[#D9A441] font-semibold uppercase tracking-wider">Youth Workshops</span></div></div></div>
+</section>
+<!-- 4. Meet Our Founders -->
+<section class="flex flex-col gap-3.5">
+<div class="flex flex-col">
+<span class="font-caption text-[11px] text-[#D9A441] uppercase tracking-widest font-bold">Visionaries &amp; Mentors</span>
+<h2 class="font-title-editorial text-2xl text-[#35105F] font-bold">Meet Our Founders</h2>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Card 1: Neena Chaturvedi -->
+<div class="bg-white rounded-2xl p-4 border border-[#E4D8CE]/70 shadow-[0_4px_16px_rgba(53,16,95,0.04)] flex gap-3.5 items-start">
+<div class="relative w-20 h-24 rounded-xl overflow-hidden shrink-0 bg-[#F4E4F4] shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Graceful studio portrait of Neena Chaturvedi, publisher and founder of Read Pustak Publications" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmLfQdd9ZJCeqyr_TxBKz_E9jiv4UrsyGrWfX9xgij0bDsO6qQd9o5mawN-iPkPmmUvxITHYe9sZ-E3B9rz7R9KqqWa1CgORLrEGicFdA5RQdjkkE0Vj2D40RycA_jXEYOIKAeETpuq2kr2xWVaqk1EEy1vce_LvtouRRiOFg77oftl79puN2WobMWxBvieFnLTFfARSsjLwp_2OkTYDbgbL1fGkTMZ8d1JUxhKZQ">
+</div>
+<div class="flex flex-col gap-1">
+<div class="inline-flex items-center gap-1 w-fit px-2 py-0.5 rounded-full bg-[#F4E4F4] text-[#35105F] text-[10px] font-bold uppercase tracking-wider">
+                Founder &amp; Owner
+              </div>
+<h3 class="font-title-editorial text-lg text-[#35105F] font-bold leading-tight">Neena Chaturvedi</h3>
+<p class="font-caption text-xs text-[#D9A441] font-semibold">Read Pustak Publications</p>
+<p class="font-body-sm text-xs text-[#5F5568] leading-relaxed pt-1">
+                A visionary publisher dedicated to literary guidance, fostering reading culture, and providing an authentic launchpad for young creators.
+              </p>
+</div>
+</div>
+<!-- Card 2: Avni Chaturvedi -->
+<div class="bg-white rounded-2xl p-4 border border-[#E4D8CE]/70 shadow-[0_4px_16px_rgba(53,16,95,0.04)] flex gap-3.5 items-start">
+<div class="relative w-20 h-24 rounded-xl overflow-hidden shrink-0 bg-[#F4E4F4] shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Bright and inspiring portrait of Avni Chaturvedi, author and creative mentor, holding books" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3VUN0nQD4v1nQ_mkx42ZcASu-2QkeYOnWPz-jq8YX526fiAhJ2TPg9fCnKVj2CL0G-bcV78bjtdnOInFxqsdwTdz2ULPue08XkNji_uoUQ49MC23zdqZT-w-SJVRKq6ZMMUWIDIx31CS0ri-2J_IqoOm24KUt3wAC1TYa5uLSzgYZ1TpbX-GD5PkRdpcn-Rge9dHrZXKw56O5cfG5BBONCTu0fR6nJPyqHezaEso">
+</div>
+<div class="flex flex-col gap-1">
+<div class="inline-flex items-center gap-1 w-fit px-2 py-0.5 rounded-full bg-[#FFE5A3] text-[#5A3F00] text-[10px] font-bold uppercase tracking-wider">
+                Young Author &amp; Storyteller
+              </div>
+<h3 class="font-title-editorial text-lg text-[#35105F] font-bold leading-tight">Avni Chaturvedi</h3>
+<p class="font-caption text-xs text-[#D9A441] font-semibold">Creative Inspiration</p>
+<p class="font-body-sm text-xs text-[#5F5568] leading-relaxed pt-1">
+                Passionate author celebrated for her storytelling empathy, inspiring children worldwide to find and express their unique literary voices.
+              </p>
+</div>
+</div>
+</div>
+<a class="inline-flex items-center justify-center gap-1 text-[#35105F] font-semibold text-xs py-1 hover:text-[#D9A441] transition-colors" data-path="meet-our-founders" href="#">
+<span class="">Read complete founders story &amp; reflections</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</section>
+<!-- 5. Featured Books (Exact 3 Books) -->
+<section class="flex flex-col gap-3.5">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-caption text-[11px] text-[#D9A441] uppercase tracking-widest font-bold">Publications Folio</span>
+<h2 class="font-title-editorial text-2xl text-[#35105F] font-bold">Featured Books</h2>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-[#F4E4F4] text-[#35105F] text-xs font-semibold">3 Titles</span>
+</div>
+<div class="flex flex-col gap-3.5">
+<!-- Book 1: Emma Finds Her Solution -->
+<div class="bg-white rounded-2xl p-4 border border-[#E4D8CE]/70 shadow-[0_4px_16px_rgba(53,16,95,0.04)] flex flex-col gap-3">
+<div class="flex gap-3.5 items-start">
+<div class="w-24 h-32 rounded-lg bg-[#F4E4F4] overflow-hidden shrink-0 shadow-md relative border border-[#E4D8CE]">
+<img class="w-full h-full object-cover" data-alt="Book cover illustration of Emma Finds Her Solution, a charming storybook with playful whimsical art" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAu6H_WREDpnodhLa5Bc38KE_BBp2rKudTlFSej1Vc6BZ8t1KltYJo655qzU0_1s3stdyhbB-zF9ba_ynlTRcoHFSnxnvbIlEfkaPcN7c5ch6qbJrjssXqXY5PVWDEMcLbCPqt1Wn2bi77G-FDbp3sxe_eO9vwcxCIAOcKtknIxiK0ITxkYPV7nrBgTvLkNU3wu20bVEIYt-jHqjeuxGHyQ9dJi0XMHlpc_mqlWFjk">
+<div class="absolute bottom-0 inset-x-0 bg-[#35105F]/80 text-[9px] text-white py-0.5 text-center font-bold">Illustrated</div>
+</div>
+<div class="flex flex-col gap-1 flex-1">
+<span class="text-[10px] uppercase font-bold text-[#D9A441] tracking-wider">By Avni Chaturvedi</span>
+<h3 class="font-title-editorial text-lg text-[#35105F] font-bold leading-snug">Emma Finds Her Solution</h3>
+<div class="flex items-center gap-2 text-[11px] text-[#5F5568]">
+<span class="bg-[#FFF5E9] px-2 py-0.5 rounded border border-[#E4D8CE] font-medium">Ages 6–10</span>
+<span class="font-semibold text-[#D9A441]">Fiction</span>
+</div>
+<p class="font-body-sm text-xs text-[#5F5568] leading-relaxed pt-1">
+                  A heartwarming narrative exploring children’s curiosity, determination, and creative problem-solving when confronted with surprising daily puzzles.
+                </p>
+</div>
+</div>
+<a class="w-full inline-flex items-center justify-between px-3.5 py-2 rounded-lg bg-[#FFF9F1] border border-[#E4D8CE] text-[#35105F] text-xs font-semibold hover:bg-[#F4E4F4] transition-colors" data-path="our-books" href="#">
+<span class="">Read Excerpt &amp; Details</span>
+<span class="material-symbols-outlined text-[16px] text-[#D9A441]">arrow_forward</span>
+</a>
+</div>
+<!-- Book 2: Pancha Tatva Tales: Stories of Joy and Wisdom -->
+<div class="bg-white rounded-2xl p-4 border border-[#E4D8CE]/70 shadow-[0_4px_16px_rgba(53,16,95,0.04)] flex flex-col gap-3">
+<div class="flex gap-3.5 items-start">
+<div class="w-24 h-32 rounded-lg bg-[#FFF5E9] overflow-hidden shrink-0 shadow-md relative border border-[#E4D8CE]">
+<img class="w-full h-full object-cover" data-alt="Cover art of Pancha Tatva Tales with five cosmic elements Earth, Water, Fire, Air, Space rendered in warm gold and deep purple" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3VUN0nQD4v1nQ_mkx42ZcASu-2QkeYOnWPz-jq8YX526fiAhJ2TPg9fCnKVj2CL0G-bcV78bjtdnOInFxqsdwTdz2ULPue08XkNji_uoUQ49MC23zdqZT-w-SJVRKq6ZMMUWIDIx31CS0ri-2J_IqoOm24KUt3wAC1TYa5uLSzgYZ1TpbX-GD5PkRdpcn-Rge9dHrZXKw56O5cfG5BBONCTu0fR6nJPyqHezaEso">
+<div class="absolute bottom-0 inset-x-0 bg-[#D9A441]/90 text-[9px] text-[#35105F] py-0.5 text-center font-bold">Folklore</div>
+</div>
+<div class="flex flex-col gap-1 flex-1">
+<span class="text-[10px] uppercase font-bold text-[#D9A441] tracking-wider">By Avni Chaturvedi</span>
+<h3 class="font-title-editorial text-lg text-[#35105F] font-bold leading-snug">Pancha Tatva Tales</h3>
+<span class="text-[11px] font-title-editorial italic text-[#5F5568]">Stories of Joy and Wisdom</span>
+<div class="flex items-center gap-2 text-[11px] text-[#5F5568] pt-0.5">
+<span class="bg-[#FFF5E9] px-2 py-0.5 rounded border border-[#E4D8CE] font-medium">Ages 8–14</span>
+<span class="font-semibold text-[#D9A441]">Cultural Lore</span>
+</div>
+<p class="font-body-sm text-xs text-[#5F5568] leading-relaxed pt-1">
+                  Enchanting fables illuminating the five cosmic elements—Earth, Water, Fire, Air, and Space—woven with timeless Indian heritage and joyful moral lessons.
+                </p>
+</div>
+</div>
+<a class="w-full inline-flex items-center justify-between px-3.5 py-2 rounded-lg bg-[#FFF9F1] border border-[#E4D8CE] text-[#35105F] text-xs font-semibold hover:bg-[#F4E4F4] transition-colors" data-path="our-books" href="#">
+<span class="">Read Excerpt &amp; Details</span>
+<span class="material-symbols-outlined text-[16px] text-[#D9A441]">arrow_forward</span>
+</a>
+</div>
+<!-- Book 3: Ancient Answers for Modern Problems -->
+<div class="bg-white rounded-2xl p-4 border border-[#E4D8CE]/70 shadow-[0_4px_16px_rgba(53,16,95,0.04)] flex flex-col gap-3">
+<div class="flex gap-3.5 items-start">
+<div class="w-24 h-32 rounded-lg bg-[#F4E4F4] overflow-hidden shrink-0 shadow-md relative border border-[#E4D8CE]">
+<img class="w-full h-full object-cover" data-alt="Cover of Ancient Answers for Modern Problems featuring ancient manuscript and modern youth illustrations" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAu6H_WREDpnodhLa5Bc38KE_BBp2rKudTlFSej1Vc6BZ8t1KltYJo655qzU0_1s3stdyhbB-zF9ba_ynlTRcoHFSnxnvbIlEfkaPcN7c5ch6qbJrjssXqXY5PVWDEMcLbCPqt1Wn2bi77G-FDbp3sxe_eO9vwcxCIAOcKtknIxiK0ITxkYPV7nrBgTvLkNU3wu20bVEIYt-jHqjeuxGHyQ9dJi0XMHlpc_mqlWFjk">
+<div class="absolute bottom-0 inset-x-0 bg-[#35105F]/80 text-[9px] text-white py-0.5 text-center font-bold">Philosophy</div>
+</div>
+<div class="flex flex-col gap-1 flex-1">
+<span class="text-[10px] uppercase font-bold text-[#D9A441] tracking-wider">By Avni Chaturvedi</span>
+<h3 class="font-title-editorial text-lg text-[#35105F] font-bold leading-snug">Ancient Answers for Modern Problems</h3>
+<div class="flex items-center gap-2 text-[11px] text-[#5F5568]">
+<span class="bg-[#FFF5E9] px-2 py-0.5 rounded border border-[#E4D8CE] font-medium">Young Adults</span>
+<span class="font-semibold text-[#D9A441]">Life Lessons</span>
+</div>
+<p class="font-body-sm text-xs text-[#5F5568] leading-relaxed pt-1">
+                  Connecting epic Indian philosophies and ancient insights to contemporary youth challenges—resilience, focus, compassion, and digital mindfulness.
+                </p>
+</div>
+</div>
+<a class="w-full inline-flex items-center justify-between px-3.5 py-2 rounded-lg bg-[#FFF9F1] border border-[#E4D8CE] text-[#35105F] text-xs font-semibold hover:bg-[#F4E4F4] transition-colors" data-path="our-books" href="#">
+<span class="">Read Excerpt &amp; Details</span>
+<span class="material-symbols-outlined text-[16px] text-[#D9A441]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 6. Our Mission -->
+<section class="bg-gradient-to-br from-[#35105F] to-[#250745] text-white rounded-2xl p-5 shadow-[0_8px_24px_rgba(53,16,95,0.12)] flex flex-col gap-3 relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-32 h-32 rounded-full bg-[#D9A441]/10 blur-xl pointer-events-none"></div>
+<div class="flex items-center gap-1.5 text-[#D9A441]">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">flag</span>
+<span class="font-caption text-[11px] uppercase tracking-wider font-bold">Our Mission</span>
+</div>
+<h3 class="font-title-editorial text-xl font-bold leading-snug text-[#FFF5E9]">
+          Making Reading a Lifelong Joy &amp; Cultivating Creative Voice
+        </h3>
+<p class="font-body-sm text-xs text-[#F4E4F4]/90 leading-relaxed">
+          We believe literacy goes far beyond decoding words—it is an awakening of empathy, critical thought, and personal expression. Our mission is to make reading a daily joy and to guide children to author their own stories without fear.
+        </p>
+<div class="flex flex-wrap gap-2 pt-1 text-[11px]">
+<span class="bg-white/10 backdrop-blur-sm px-2.5 py-1 rounded-full text-[#FFE5A3] font-medium border border-white/10">Joyful Reading Habit</span>
+<span class="bg-white/10 backdrop-blur-sm px-2.5 py-1 rounded-full text-[#FFE5A3] font-medium border border-white/10">Peer Creative Mentorship</span>
+<span class="bg-white/10 backdrop-blur-sm px-2.5 py-1 rounded-full text-[#FFE5A3] font-medium border border-white/10">Equal Literary Access</span>
+</div>
+</section>
+<!-- 7. Achievements and Recognition -->
+<section class="flex flex-col gap-3">
+<div class="flex flex-col">
+<span class="font-caption text-[11px] text-[#D9A441] uppercase tracking-widest font-bold">Honors &amp; Milestones</span>
+<h2 class="font-title-editorial text-2xl text-[#35105F] font-bold">Achievements &amp; Recognition</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+<!-- Achievement 1 -->
+<div class="bg-white rounded-xl p-3.5 border border-[#E4D8CE]/70 shadow-sm flex items-start gap-3">
+<div class="w-10 h-10 rounded-lg bg-[#FFE5A3]/60 flex items-center justify-center shrink-0 text-[#D9A441]">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-editorial font-bold text-sm text-[#35105F]">Youth Literary Excellence</span>
+<span class="text-[11px] text-[#5F5568] leading-tight pt-0.5">Honored at regional literary conventions for early literary depth and character creation.</span>
+</div>
+</div>
+<!-- Achievement 2 -->
+<div class="bg-white rounded-xl p-3.5 border border-[#E4D8CE]/70 shadow-sm flex items-start gap-3">
+<div class="w-10 h-10 rounded-lg bg-[#F4E4F4] flex items-center justify-center shrink-0 text-[#35105F]">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-editorial font-bold text-sm text-[#35105F]">National Young Author Recognition</span>
+<span class="text-[11px] text-[#5F5568] leading-tight pt-0.5">Commended for reviving Indian elemental lore for young readers through modern storytelling.</span>
+</div>
+</div>
+<!-- Achievement 3 -->
+<div class="bg-white rounded-xl p-3.5 border border-[#E4D8CE]/70 shadow-sm flex items-start gap-3">
+<div class="w-10 h-10 rounded-lg bg-[#FFE5A3]/60 flex items-center justify-center shrink-0 text-[#D9A441]">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-editorial font-bold text-sm text-[#35105F]">Community Reading Drive</span>
+<span class="text-[11px] text-[#5F5568] leading-tight pt-0.5">Over 1,200 books distributed and 35+ inclusive storytelling workshops hosted.</span>
+</div>
+</div>
+</div>
+<a class="inline-flex items-center gap-1 text-[#35105F] text-xs font-semibold hover:text-[#D9A441] transition-colors" data-path="achievements" href="#">
+<span class="">Explore all certificates, honors &amp; press features</span>
+<span class="material-symbols-outlined text-[14px]">navigate_next</span>
+</a>
+</section>
+<!-- 8. Closing Section: Inspirational Motto Banner -->
+<section class="bg-[#F4E4F4] rounded-2xl p-5 border border-[#35105F]/15 flex flex-col items-center text-center gap-3 shadow-sm">
+<span class="material-symbols-outlined text-[#D9A441] text-[28px]" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<div class="flex flex-col gap-1 max-w-xs">
+<span class="font-caption text-[11px] font-bold text-[#D9A441] uppercase tracking-widest">Our Guiding Motto</span>
+<h3 class="font-title-editorial text-2xl font-bold text-[#35105F] leading-tight">
+            “एक बच्चा, एक पुस्तक पढ़े।”
+          </h3>
+<p class="font-title-editorial italic text-sm text-[#35105F]/80">
+            “One Child, One Book Read”
+          </p>
+<p class="font-body-sm text-xs text-[#5F5568] pt-1 leading-relaxed">
+            Every time a child opens a book, an unexplored world takes flight. Join us in shaping tomorrow's writers and thinkers.
+          </p>
+</div>
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#35105F] text-white text-xs font-semibold shadow hover:bg-[#270b47] transition-all" data-path="about-us" href="#">
+<span class="">Learn More About Us</span>
+<span class="material-symbols-outlined text-[16px] text-[#D9A441]">arrow_forward</span>
+</a>
+</section>
+</div>
+<!-- 9. Footer -->
+<footer class="w-full bg-[#35105F] text-white px-gutter-mobile py-8 mt-12 flex flex-col gap-6">
+<!-- Imprint and Brand -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="font-title-editorial text-xl font-bold text-[#FFE5A3]">Read Pustak with Avni</span>
+</div>
+<span class="text-xs text-[#FFE5A3]/90 font-medium">An initiative by Read Pustak Publications</span>
+<p class="font-body-sm text-xs text-white/70 leading-relaxed">
+          Dedicated to inspiring young minds through literary storytelling, founded with reverence and literary artistry by Neena Chaturvedi &amp; Avni Chaturvedi.
+        </p>
+</div>
+<!-- Navigation Links -->
+<div class="grid grid-cols-2 gap-2 text-xs border-y border-white/10 py-4 text-white/80">
+<a class="hover:text-[#FFE5A3] transition-colors flex items-center gap-1" data-path="home" href="#">
+<span class="material-symbols-outlined text-[14px] text-[#D9A441]">chevron_right</span> Home
+        </a>
+<a class="hover:text-[#FFE5A3] transition-colors flex items-center gap-1" data-path="about-us" href="#">
+<span class="material-symbols-outlined text-[14px] text-[#D9A441]">chevron_right</span> About Us
+        </a>
+<a class="hover:text-[#FFE5A3] transition-colors flex items-center gap-1" data-path="meet-our-founders" href="#">
+<span class="material-symbols-outlined text-[14px] text-[#D9A441]">chevron_right</span> Meet Founders
+        </a>
+<a class="hover:text-[#FFE5A3] transition-colors flex items-center gap-1" data-path="our-books" href="#">
+<span class="material-symbols-outlined text-[14px] text-[#D9A441]">chevron_right</span> Our Books
+        </a>
+<a class="hover:text-[#FFE5A3] transition-colors flex items-center gap-1" data-path="avnis-journey" href="#">
+<span class="material-symbols-outlined text-[14px] text-[#D9A441]">chevron_right</span> Avni's Journey
+        </a>
+<a class="hover:text-[#FFE5A3] transition-colors flex items-center gap-1" data-path="achievements" href="#">
+<span class="material-symbols-outlined text-[14px] text-[#D9A441]">chevron_right</span> Achievements
+        </a>
+<a class="hover:text-[#FFE5A3] transition-colors flex items-center gap-1" data-path="social-impact" href="#">
+<span class="material-symbols-outlined text-[14px] text-[#D9A441]">chevron_right</span> Social Impact
+        </a>
+<a class="hover:text-[#FFE5A3] transition-colors flex items-center gap-1" data-path="contact" href="#">
+<span class="material-symbols-outlined text-[14px] text-[#D9A441]">chevron_right</span> Contact Us
+        </a>
+</div>
+<!-- Contact & Social Details -->
+<div class="flex flex-col gap-2 text-xs text-white/70">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-[#D9A441]">mail</span>
+<span class="">contact@readpustak.com</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-[#D9A441]">location_on</span>
+<span class="">New Delhi, India</span>
+</div>
+<div class="flex items-center gap-3 pt-2">
+<span class="text-[11px] text-[#FFE5A3]">Connect:</span>
+<span class="font-semibold text-xs text-white/90">Instagram</span>
+<span class="text-white/30">•</span>
+<span class="font-semibold text-xs text-white/90">YouTube</span>
+<span class="text-white/30">•</span>
+<span class="font-semibold text-xs text-white/90">LinkedIn</span>
+</div>
+</div>
+<div class="pt-2 border-t border-white/10 text-[11px] text-white/50">
+<p class="">© Read Pustak Publications. All literary rights reserved.</p>
+</div>
+</footer>
+</main>
+<!-- Fixed Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full z-50 pb-safe bg-[#FFF9F1]/95 backdrop-blur-xl border-t border-[#E4D8CE]/80 shadow-[0_-2px_12px_rgba(53,16,95,0.06)]" data-active-classes="text-[#35105F] font-bold">
+<div class="flex justify-around items-center h-16 px-gutter-mobile">
+<a aria-current="page" class="flex flex-col items-center justify-center min-w-[48px] min-h-[48px] text-[#35105F] font-bold transition-colors" data-path="home" href="#">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-caption text-[11px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center min-w-[48px] min-h-[48px] text-[#5F5568] hover:text-[#35105F] transition-colors" data-path="our-books" href="#">
+<span class="material-symbols-outlined text-[22px]">menu_book</span>
+<span class="font-caption text-[11px]">Books</span>
+</a>
+<a class="flex flex-col items-center justify-center min-w-[48px] min-h-[48px] text-[#5F5568] hover:text-[#35105F] transition-colors" data-path="avnis-journey" href="#">
+<span class="material-symbols-outlined text-[22px]">history_edu</span>
+<span class="font-caption text-[11px]">Journey</span>
+</a>
+<a class="flex flex-col items-center justify-center min-w-[48px] min-h-[48px] text-[#5F5568] hover:text-[#35105F] transition-colors" data-path="achievements" href="#">
+<span class="material-symbols-outlined text-[22px]">workspace_premium</span>
+<span class="font-caption text-[11px]">Honors</span>
+</a>
+<a class="flex flex-col items-center justify-center min-w-[48px] min-h-[48px] text-[#5F5568] hover:text-[#35105F] transition-colors" data-path="social-impact" href="#">
+<span class="material-symbols-outlined text-[22px]">volunteer_activism</span>
+<span class="font-caption text-[11px]">Impact</span>
+</a>
+</div>
+</nav>
+
+
+</body></html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-background": "#201829", "surface-dim": "#e2d5ed", "surface-variant": "#ebdef6", "inverse-on-surface": "#f8edff", "on-secondary-container": "#755100", "error": "#ba1a1a", "surface-container-highest": "#ebdef6", "tertiary": "#160f19", "on-secondary-fixed-variant": "#5f4100", "on-primary-container": "#a17dcf", "inverse-primary": "#d9b9ff", "on-error": "#ffffff", "on-tertiary-fixed-variant": "#4e4350", "surface-container-lowest": "#ffffff", "surface-tint": "#704e9c", "tertiary-fixed-dim": "#d1c2d1", "surface-container": "#f6e9ff", "on-secondary-fixed": "#271900", "on-secondary": "#ffffff", "surface-container-low": "#faf0ff", "error-container": "#ffdad6", "secondary-container": "#ffc55f", "on-primary-fixed-variant": "#573582", "on-surface-variant": "#4a4450", "on-surface": "#201829", "primary": "#1c003c", "outline": "#7c7481", "on-primary-fixed": "#2a0054", "tertiary-fixed": "#eddeee", "on-error-container": "#93000a", "on-primary": "#ffffff", "secondary-fixed": "#ffdeaa", "on-tertiary-container": "#968997", "tertiary-container": "#2c232e", "secondary": "#7d5700", "primary-fixed-dim": "#d9b9ff", "on-tertiary-fixed": "#211924", "inverse-surface": "#352d3f", "on-tertiary": "#ffffff", "surface": "#fff7ff", "outline-variant": "#ccc3d1", "primary-container": "#35105f", "surface-container-high": "#f1e3fc", "background": "#fff7ff", "primary-fixed": "eedcff", "secondary-fixed-dim": "#f5bd58", "surface-bright": "#fff7ff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin": "3rem", "space-xl": "3rem", "margin-mobile": "1.25rem", "gutter": "1.5rem", "space-sm": "0.5rem", "gutter-mobile": "1rem", "space-xs": "0.25rem", "space-lg": "1.75rem", "space-md": "1rem" }, fontFamily: { "display-hero": ["Playfair Display"], "headline-sm": ["Playfair Display"], "headline-md": ["Playfair Display"], "headline-lg": ["Playfair Display"], "body-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "caption": ["Plus Jakarta Sans"], "title-editorial": ["Playfair Display"], "label-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Playfair Display"], "display-hero-mobile": ["Playfair Display"] }, fontSize: { "display-hero": ["56px", { lineHeight: "68px", letterSpacing: "-0.02em", fontWeight: "600" }], "headline-sm": ["22px", { lineHeight: "30px", fontWeight: "500" }], "headline-md": ["28px", { lineHeight: "36px", fontWeight: "500" }], "headline-lg": ["40px", { lineHeight: "50px", letterSpacing: "-0.015em", fontWeight: "600" }], "body-sm": ["14px", { lineHeight: "22px", fontWeight: "400" }], "label-md": ["14px", { lineHeight: "20px", letterSpacing: "0.03em", fontWeight: "600" }], "caption": ["12px", { lineHeight: "18px", fontWeight: "400" }], "title-editorial": ["18px", { lineHeight: "26px", letterSpacing: "0.02em", fontWeight: "600" }], "label-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "600" }], "body-lg": ["18px", { lineHeight: "30px", fontWeight: "400" }], "body-md": ["16px", { lineHeight: "26px", fontWeight: "400" }], "headline-lg-mobile": ["28px", { lineHeight: "36px", letterSpacing: "0", fontWeight: "600" }], "display-hero-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "600" }] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100%;background-color:#fff7ff;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}details summary::-webkit-details-marker{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(53,16,95,0.06)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Read Pustak with Avni Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WffSlUXwIkKlxllbSG-WNl2sXL25KBvFzA4MIEM-4XHYlTE4KWEmIdcN7dfSdsdvqniW-XZZEMGZzAH2NEqIsmzr73dzKwpnL07P6GZ6dahR1lCI3xX_4nkA09kjBSx52r8BDFFq7zufmDc1TLITgFSxIKYkd7rHAR1BN0aQyC-maAOkeTNE1nkJVJyQJXDghFRGJkUYyMQ_Ub_NjdDgVmisFHKYfyIlVd4jwg_4ww"/><div class="flex flex-col"><span class="font-title-editorial text-title-editorial text-primary-container leading-none">Read Pustak</span><span class="font-caption text-caption text-on-surface-variant tracking-wider uppercase leading-tight">with Avni</span></div></div><div class="flex items-center gap-space-sm"><details class="relative group"><summary class="w-11 h-11 flex items-center justify-center rounded-lg text-primary-container hover:bg-surface-container-high transition-colors list-none cursor-pointer"><span class="material-symbols-outlined text-[24px]">menu</span></summary><div class="fixed inset-x-0 top-16 bg-surface-container-lowest/95 backdrop-blur-2xl shadow-[0_12px_32px_rgba(53,16,95,0.12)] p-margin-mobile flex flex-col gap-space-sm z-50"><div class="flex items-center justify-between pb-space-xs"><span class="font-headline-sm text-headline-sm text-primary-container">Directory</span><span class="font-caption text-caption text-secondary tracking-widest uppercase">Editorial Folio</span></div><div class="grid grid-cols-2 gap-space-xs"><a class="flex items-center gap-space-xs py-space-sm px-space-sm rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[18px] text-secondary">home</span><span class="font-label-md text-label-md">Home</span></a><a class="flex items-center gap-space-xs py-space-sm px-space-sm rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="about-us" href="#"><span class="material-symbols-outlined text-[18px] text-secondary">auto_stories</span><span class="font-label-md text-label-md">About Us</span></a><a class="flex items-center gap-space-xs py-space-sm px-space-sm rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="meet-our-founders" href="#"><span class="material-symbols-outlined text-[18px] text-secondary">group</span><span class="font-label-md text-label-md">Founders</span></a><a class="flex items-center gap-space-xs py-space-sm px-space-sm rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="avnis-journey" href="#"><span class="material-symbols-outlined text-[18px] text-secondary">history_edu</span><span class="font-label-md text-label-md">Avni's Journey</span></a><a class="flex items-center gap-space-xs py-space-sm px-space-sm rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="our-books" href="#"><span class="material-symbols-outlined text-[18px] text-secondary">menu_book</span><span class="font-label-md text-label-md">Our Books</span></a><a class="flex items-center gap-space-xs py-space-sm px-space-sm rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="achievements" href="#"><span class="material-symbols-outlined text-[18px] text-secondary">workspace_premium</span><span class="font-label-md text-label-md">Achievements</span></a><a class="flex items-center gap-space-xs py-space-sm px-space-sm rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="social-impact" href="#"><span class="material-symbols-outlined text-[18px] text-secondary">volunteer_activism</span><span class="font-label-md text-label-md">Social Impact</span></a><a class="flex items-center gap-space-xs py-space-sm px-space-sm rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="contact" href="#"><span class="material-symbols-outlined text-[18px] text-secondary">mail</span><span class="font-label-md text-label-md">Contact</span></a></div></div></details><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Editorial Header & Manifesto Banner -->
+<section class="px-margin-mobile pt-space-md pb-space-lg flex flex-col gap-space-sm relative">
+<div class="flex items-center gap-space-xs self-start bg-secondary-fixed/50 text-on-secondary-fixed px-space-sm py-space-xs rounded-full">
+<span class="material-symbols-outlined text-[15px] text-secondary" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Founding Voices</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary-container leading-tight">
+        Meet Our Founders
+      </h1>
+<p class="font-title-editorial text-title-editorial text-secondary italic">
+        A Shared Vision for Reading, Writing and Creative Expression.
+      </p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      Rooted in a profound love for literature, Read Pustak is nurtured by an intimate mother-daughter partnership. Together, they bridge seasoned editorial stewardship with the fearless, vibrant creativity of young authorship—crafting a home where stories of all generations are cherished.
+    </p>
+<!-- Refined Editorial Ornament -->
+<div class="flex items-center justify-center gap-space-sm py-space-xs opacity-70">
+<div class="h-[1px] w-12 bg-secondary-fixed"></div>
+<span class="material-symbols-outlined text-[14px] text-secondary">flare</span>
+<div class="h-[1px] w-12 bg-secondary-fixed"></div>
+</div>
+</section>
+<!-- Founder 1: Avni Chaturvedi -->
+<section class="px-margin-mobile mb-space-lg">
+<article class="bg-surface-container-lowest rounded-xl shadow-[0_4px_24px_rgba(53,16,95,0.06)] overflow-hidden flex flex-col">
+<!-- Founder Portrait Container -->
+<div class="relative w-full aspect-[4/3] bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Warm natural portrait of Avni Chaturvedi, an inspired young Indian female author seated thoughtfully by an open mahogany writing desk filled with hardcover notebooks, ink pens, and classic storybooks. Soft afternoon window light falls across her poised expression, celebrating youth authorship and literary creativity in a warm ivory and deep royal purple ambience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy6rfQKLtMw4oSyMcy-mkbjGKLXH3HFFD06W16rM4Gpd8zUCoirg3eXl9HHcBaIhf7KhKAzLqzPdgcxfV-uk8CiipiZreAcW21SVXH_sJRgURQhppPLEzApvuxEUJfixtwIlXJuSA4cjAipYO5Yh2oQpO93Qo_gLbNe0Bl4aKkrIUx3_dgRufw8pNVo_fwiE5lemjCvbPT90snhIaI86rTvbcV5_tQVwDi_gyBD4c"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3">
+<span class="bg-secondary-container text-on-secondary-container px-space-sm py-[2px] rounded-full font-label-sm text-label-sm tracking-wide shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">edit_note</span>
+            Young Author &amp; Inspiration
+          </span>
+</div>
+</div>
+<!-- Content Details -->
+<div class="p-space-md flex flex-col gap-space-md">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary-container leading-snug">
+            Avni Chaturvedi
+          </h2>
+<p class="font-label-md text-label-md text-secondary tracking-normal mt-0.5">
+            Young Author | Storyteller | Literary Enthusiast
+          </p>
+</div>
+<div class="flex flex-col gap-space-sm text-on-surface-variant font-body-md text-body-md">
+<p>
+            Avni embarked on her literary voyage at the tender age of ten, inspired by ancient Indian folk fables, mythology, and modern childhood wonder. Her stories echo an uninhibited freshness that speaks directly to peers and grown-ups alike.
+          </p>
+<p>
+            Deeply passionate about reading and regional lore, she champions the belief that every young mind holds an authentic story. Her voice is the living spark behind Read Pustak with Avni—an inviting realm built to reassure young readers that their pens hold true creative power.
+          </p>
+</div>
+<!-- Featured Quote Highlight -->
+<blockquote class="bg-surface-container-highest/60 rounded-lg p-space-md flex flex-col gap-space-xs relative overflow-hidden">
+<div class="flex items-center gap-space-xs text-secondary mb-0.5">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Guiding Voice</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-primary-container italic font-medium leading-relaxed">
+            “Young in Age, Limitless in Imagination.”
+          </p>
+<span class="font-caption text-caption text-on-surface-variant self-end">— Avni</span>
+</blockquote>
+<!-- Focus Pills -->
+<div class="flex flex-wrap gap-space-xs pt-space-xs">
+<span class="bg-surface-container px-space-sm py-space-xs rounded-full font-label-sm text-label-sm text-primary-container">
+            Creative Mentorship
+          </span>
+<span class="bg-surface-container px-space-sm py-space-xs rounded-full font-label-sm text-label-sm text-primary-container">
+            Indian Literature
+          </span>
+<span class="bg-surface-container px-space-sm py-space-xs rounded-full font-label-sm text-label-sm text-primary-container">
+            Youth Storytelling
+          </span>
+</div>
+</div>
+</article>
+</section>
+<!-- Founder 2: Neena Chaturvedi -->
+<section class="px-margin-mobile mb-space-lg">
+<article class="bg-surface-container-lowest rounded-xl shadow-[0_4px_24px_rgba(53,16,95,0.06)] overflow-hidden flex flex-col">
+<!-- Founder Portrait Container -->
+<div class="relative w-full aspect-[4/3] bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Dignified, warm portrait of Neena Chaturvedi, a distinguished Indian woman and publisher, seated in a tranquil library setting surrounded by stacks of published works, literary manuscripts, and handcrafted paper bindings. She wears elegant attire with a gracious smile, illuminated by ambient gentle golden light symbolizing wisdom, mentorship, and editorial excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBvIgcGWKDMGZ9qmFlbLwGy3rMGa3clDm-7wbYVspQsWXzdHqqgaYifwLZqETJY2P9Ue1esboiFFZFgd76jxQ92L84JH19Id7P4h_GffoQhEaNm6qQgKMDY4_AHtqQAaw3oQT5ARry4FLyl7vqg9m1dV2Rr-NB1HaiwnWp92H7VX1H2VtRw6F4lLXETEduE1pS_A3TC9H7PmtLXaZnV_vqgGQsqxf1-SkAmntLjpA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3">
+<span class="bg-secondary-container text-on-secondary-container px-space-sm py-[2px] rounded-full font-label-sm text-label-sm tracking-wide shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">shield_person</span>
+            Founder &amp; Owner
+          </span>
+</div>
+</div>
+<!-- Content Details -->
+<div class="p-space-md flex flex-col gap-space-md">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary-container leading-snug">
+            Neena Chaturvedi
+          </h2>
+<p class="font-label-md text-label-md text-secondary tracking-normal mt-0.5">
+            Founder &amp; Owner, Read Pustak Publications
+          </p>
+</div>
+<div class="flex flex-col gap-space-sm text-on-surface-variant font-body-md text-body-md">
+<p>
+            With an abiding commitment to the transformative power of books, Neena guides the institutional heart of Read Pustak. She founded the imprint to cultivate mindful reading habits and creative expression from a child’s earliest formative stages.
+          </p>
+<p>
+            She orchestrates publishing operations, editorial curation, school partnerships, and literary circles with meticulous care. Her mission is to create a welcoming, dignified launchpad where aspiring storytellers receive genuine respect, guidance, and lasting wings.
+          </p>
+</div>
+<!-- Featured Quote Highlight -->
+<blockquote class="bg-surface-container-highest/60 rounded-lg p-space-md flex flex-col gap-space-xs relative overflow-hidden">
+<div class="flex items-center gap-space-xs text-secondary mb-0.5">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Guiding Philosophy</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-primary-container italic font-medium leading-relaxed">
+            “When you nurture a child's story, you build confidence that lasts a lifetime.”
+          </p>
+<span class="font-caption text-caption text-on-surface-variant self-end">— Neena Chaturvedi</span>
+</blockquote>
+<!-- Focus Pills -->
+<div class="flex flex-wrap gap-space-xs pt-space-xs">
+<span class="bg-surface-container px-space-sm py-space-xs rounded-full font-label-sm text-label-sm text-primary-container">
+            Publishing Direction
+          </span>
+<span class="bg-surface-container px-space-sm py-space-xs rounded-full font-label-sm text-label-sm text-primary-container">
+            Author Engagement
+          </span>
+<span class="bg-surface-container px-space-sm py-space-xs rounded-full font-label-sm text-label-sm text-primary-container">
+            Inclusive Literacy
+          </span>
+</div>
+</div>
+</article>
+</section>
+<!-- Section: Together, We Believe (Manifesto Card) -->
+<section class="px-margin-mobile mb-space-lg">
+<div class="bg-primary-container text-on-primary rounded-xl p-space-lg shadow-[0_12px_32px_rgba(53,16,95,0.18)] flex flex-col items-center text-center relative overflow-hidden">
+<!-- Ambient Decorative Backdrop Circle -->
+<div class="absolute -right-8 -bottom-8 w-40 h-40 bg-surface-tint/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="absolute -left-8 -top-8 w-40 h-40 bg-secondary-container/10 rounded-full blur-2xl pointer-events-none"></div>
+<!-- Refined Book Icon Symbol -->
+<div class="w-12 h-12 rounded-full bg-secondary-container/20 flex items-center justify-center mb-space-sm text-secondary-fixed">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed mb-space-xs">
+        Our Shared Belief
+      </span>
+<!-- Core Statement -->
+<p class="font-headline-sm text-headline-sm text-surface italic font-medium leading-relaxed my-space-xs">
+        “Every child has an imagination. Every writer has a voice. And every story deserves an opportunity to reach the world.”
+      </p>
+<div class="w-16 h-[1px] bg-secondary-container/40 my-space-md"></div>
+<p class="font-body-sm text-body-sm text-surface-variant max-w-sm leading-relaxed">
+        By knitting together parental encouragement and the boundless optimism of child authorship, Read Pustak serves not merely as a publishing label, but as a living bridge between generations of dreamers.
+      </p>
+</div>
+</section>
+<!-- Interactive Story Micro-Experience (Moments of Delight) -->
+<section class="px-margin-mobile mb-space-lg">
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">auto_stories</span>
+<span class="font-label-md text-label-md text-primary-container">Two Generations, One Mission</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Tap to inspect</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs" id="interactive-values">
+<button class="value-toggle active text-left p-space-sm rounded-lg bg-surface-container-lowest transition-all" data-target="avni-value" type="button">
+<span class="font-label-sm text-label-sm text-secondary block font-semibold">From Avni</span>
+<span class="font-body-sm text-body-sm text-primary-container font-medium">Spark &amp; Courage</span>
+</button>
+<button class="value-toggle text-left p-space-sm rounded-lg bg-surface-container-high/40 transition-all" data-target="neena-value" type="button">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">From Neena</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Wisdom &amp; Nurture</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg text-on-surface-variant font-body-sm text-body-sm leading-relaxed mt-space-xs" id="interactive-detail">
+        Encouraging peers to conquer the blank page without fear of criticism, honoring every child's spontaneous wonder.
+      </div>
+</div>
+</section>
+<!-- Closing Action Callout -->
+<section class="px-margin-mobile pb-space-lg flex flex-col gap-space-sm">
+<div class="flex flex-col items-center text-center gap-space-xs mb-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-primary-container">
+        Join the Literary Circle
+      </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Discover inspiring books or learn how Read Pustak guides fresh authors from concept to publication.
+      </p>
+</div>
+<!-- Dual Actions -->
+<div class="flex flex-col gap-space-xs w-full">
+<a class="w-full py-3.5 px-space-md bg-primary-container text-on-primary rounded-lg font-label-md text-label-md text-center flex items-center justify-center gap-space-xs shadow-md active:scale-[0.98] transition-transform" data-path="our-books" href="#">
+<span class="material-symbols-outlined text-[18px]">library_books</span>
+<span>Explore Our Books</span>
+</a>
+<a class="w-full py-3.5 px-space-md bg-surface-container text-primary-container rounded-lg font-label-md text-label-md text-center flex items-center justify-center gap-space-xs active:scale-[0.98] transition-transform" data-path="about-us" href="#">
+<span class="material-symbols-outlined text-[18px] text-secondary">explore</span>
+<span>Discover Our Mission</span>
+</a>
+</div>
+<!-- Editorial Folio Stamp -->
+<div class="flex items-center justify-center gap-2 pt-space-md text-on-surface-variant opacity-60">
+<span class="material-symbols-outlined text-[14px]">local_library</span>
+<span class="font-caption text-caption tracking-widest uppercase">Read Pustak Publishing Imprint • Established with Care</span>
+</div>
+</section>
+</div>
+<script>
+  (function initInteractiveStory() {
+    const toggles = document.querySelectorAll('.value-toggle');
+    const detailBox = document.getElementById('interactive-detail');
+    
+    const descriptions = {
+      'avni-value': "Encouraging peers to conquer the blank page without fear of criticism, honoring every child's spontaneous wonder.",
+      'neena-value': "Creating thoughtful editorial scaffolds, ensuring books are published with enduring dignity, respect, and craft."
+    };
+
+    toggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        toggles.forEach(t => {
+          t.classList.remove('bg-surface-container-lowest', 'shadow-sm');
+          t.classList.add('bg-surface-container-high/40');
+          const title = t.querySelector('span:first-child');
+          const role = t.querySelector('span:last-child');
+          title.className = "font-label-sm text-label-sm text-on-surface-variant block";
+          role.className = "font-body-sm text-body-sm text-on-surface-variant font-medium";
+        });
+
+        toggle.classList.add('bg-surface-container-lowest', 'shadow-sm');
+        toggle.classList.remove('bg-surface-container-high/40');
+        const activeTitle = toggle.querySelector('span:first-child');
+        const activeRole = toggle.querySelector('span:last-child');
+        activeTitle.className = "font-label-sm text-label-sm text-secondary block font-semibold";
+        activeRole.className = "font-body-sm text-body-sm text-primary-container font-medium";
+
+        const target = toggle.getAttribute('data-target');
+        if (detailBox && descriptions[target]) {
+          detailBox.style.opacity = '0.3';
+          setTimeout(() => {
+            detailBox.textContent = descriptions[target];
+            detailBox.style.opacity = '1';
+          }, 150);
+        }
+      });
+    });
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-1px_12px_rgba(53,16,95,0.06)]" data-active-classes="text-primary-container font-semibold"><div class="flex justify-around items-center h-16 px-gutter-mobile"><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] text-on-surface-variant hover:text-primary-container transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-caption text-caption">Home</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] text-on-surface-variant hover:text-primary-container transition-colors" data-path="our-books" href="#"><span class="material-symbols-outlined text-[22px]">menu_book</span><span class="font-caption text-caption">Books</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] text-on-surface-variant hover:text-primary-container transition-colors" data-path="avnis-journey" href="#"><span class="material-symbols-outlined text-[22px]">history_edu</span><span class="font-caption text-caption">Journey</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] text-on-surface-variant hover:text-primary-container transition-colors" data-path="achievements" href="#"><span class="material-symbols-outlined text-[22px]">workspace_premium</span><span class="font-caption text-caption">Honors</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] text-on-surface-variant hover:text-primary-container transition-colors" data-path="social-impact" href="#"><span class="material-symbols-outlined text-[22px]">volunteer_activism</span><span class="font-caption text-caption">Impact</span></a></div></nav></body></html>
