@@ -25,6 +25,7 @@ import { milestonesData } from "@/data/milestones";
 import { partnersData } from "@/data/partners";
 import { BookCard } from "@/components/books/BookCard";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { GlimpsesGallery } from "@/components/glimpses/GlimpsesGallery";
 
 export default function HomePage() {
   const avni = foundersData.find((f) => f.id === "avni-chaturvedi")!;
@@ -283,160 +284,9 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Glimpses in Action Showcase */}
-          <div className="mt-4 pt-8 border-t border-border flex flex-col gap-6">
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-              <div>
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-lavender text-primary text-xs font-semibold tracking-wider uppercase mb-1">
-                  <Camera className="w-3.5 h-3.5 text-gold" />
-                  <span>Glimpses in Action</span>
-                </div>
-                <h3 className="font-serif text-2xl sm:text-3xl font-bold text-primary">
-                  Moments from Our Workshops &amp; Community Giving
-                </h3>
-              </div>
-              <p className="font-sans text-xs sm:text-sm text-charcoal-muted max-w-md">
-                Taking books beyond pages: real interactions in classrooms, NGO circles, and creative storytelling assemblies.
-              </p>
-            </div>
-
-            {/* Photo Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-              {/* Card 1: Glimpse 1 - Community Giving */}
-              <div className="md:col-span-6 relative rounded-2xl overflow-hidden border border-gold/30 shadow-md group bg-charcoal">
-                <div className="relative aspect-[4/5] sm:aspect-[16/11] md:aspect-[4/3] w-full">
-                  <Image
-                    src="/images/glimpses/glimpse-1.jpg"
-                    alt="Avni donating Emma Finds Her Solution to a young child"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-transparent" />
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 rounded-full bg-white/95 text-primary text-xs font-semibold uppercase tracking-wider backdrop-blur-sm border border-gold/40">
-                      Community Giving
-                    </span>
-                  </div>
-                  <div className="absolute bottom-4 inset-x-4 flex flex-col gap-1 text-white">
-                    <h4 className="font-serif text-lg sm:text-xl font-bold text-gold-light">
-                      Inspiring Young Readers
-                    </h4>
-                    <p className="font-sans text-xs sm:text-sm text-white/90 leading-snug">
-                      Avni sharing her debut book <em>Emma Finds Her Solution</em> with young children in the community.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Card 2: Glimpse 2 - Literary Workshop */}
-              <div className="md:col-span-6 relative rounded-2xl overflow-hidden border border-gold/30 shadow-md group bg-charcoal">
-                <div className="relative aspect-[4/5] sm:aspect-[16/11] md:aspect-[4/3] w-full">
-                  <Image
-                    src="/images/glimpses/glimpse-2.jpg"
-                    alt="Avni addressing an interactive storytelling workshop session"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-transparent" />
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 rounded-full bg-white/95 text-primary text-xs font-semibold uppercase tracking-wider backdrop-blur-sm border border-gold/40">
-                      Literary Workshop
-                    </span>
-                  </div>
-                  <div className="absolute bottom-4 inset-x-4 flex flex-col gap-1 text-white">
-                    <h4 className="font-serif text-lg sm:text-xl font-bold text-gold-light">
-                      Storytelling &amp; Dialogue
-                    </h4>
-                    <p className="font-sans text-xs sm:text-sm text-white/90 leading-snug">
-                      Leading a reading session and sharing tales that inspire young minds to imagine and reflect.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Card 3: Glimpse 3 - Classroom Circle */}
-              <div className="md:col-span-4 relative rounded-2xl overflow-hidden border border-gold/30 shadow-md group bg-charcoal">
-                <div className="relative aspect-[16/11] sm:aspect-[4/3] w-full">
-                  <Image
-                    src="/images/glimpses/glimpse-3.jpg"
-                    alt="Children seated in classroom reading circle holding books"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-transparent" />
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 rounded-full bg-white/95 text-primary text-xs font-semibold uppercase tracking-wider backdrop-blur-sm border border-gold/40">
-                      Classroom Circle
-                    </span>
-                  </div>
-                  <div className="absolute bottom-4 inset-x-4 flex flex-col gap-1 text-white">
-                    <h4 className="font-serif text-base sm:text-lg font-bold text-gold-light">
-                      Building a Reading Culture
-                    </h4>
-                    <p className="font-sans text-xs text-white/90 leading-snug">
-                      Students proudly displaying their books in a guided reading circle.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Card 4: Glimpse 4 - Creative Writing */}
-              <div className="md:col-span-4 relative rounded-2xl overflow-hidden border border-gold/30 shadow-md group bg-charcoal">
-                <div className="relative aspect-[16/11] sm:aspect-[4/3] w-full">
-                  <Image
-                    src="/images/glimpses/glimpse-4.jpg"
-                    alt="School assembly of young writers holding materials"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-transparent" />
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 rounded-full bg-white/95 text-primary text-xs font-semibold uppercase tracking-wider backdrop-blur-sm border border-gold/40">
-                      Creative Writing
-                    </span>
-                  </div>
-                  <div className="absolute bottom-4 inset-x-4 flex flex-col gap-1 text-white">
-                    <h4 className="font-serif text-base sm:text-lg font-bold text-gold-light">
-                      Young Writers Assembly
-                    </h4>
-                    <p className="font-sans text-xs text-white/90 leading-snug">
-                      Equipping children with writing kits to help give their ideas an authentic voice.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Card 5: Glimpse 5 - Story Explorers */}
-              <div className="md:col-span-4 relative rounded-2xl overflow-hidden border border-gold/30 shadow-md group bg-charcoal">
-                <div className="relative aspect-[16/11] sm:aspect-[4/3] w-full">
-                  <Image
-                    src="/images/glimpses/glimpse-5.jpg"
-                    alt="Story Explorers interactive workshop presentation"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-transparent" />
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 rounded-full bg-white/95 text-primary text-xs font-semibold uppercase tracking-wider backdrop-blur-sm border border-gold/40">
-                      Story Explorers
-                    </span>
-                  </div>
-                  <div className="absolute bottom-4 inset-x-4 flex flex-col gap-1 text-white">
-                    <h4 className="font-serif text-base sm:text-lg font-bold text-gold-light">
-                      Story Explorers Interactive
-                    </h4>
-                    <p className="font-sans text-xs text-white/90 leading-snug">
-                      Engaging young learners through multimedia storytelling activities and school collaboration.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          {/* Glimpses in Action Showcase & Featured Workshop */}
+          <div className="mt-4 pt-8 border-t border-border">
+            <GlimpsesGallery />
           </div>
         </div>
       </section>

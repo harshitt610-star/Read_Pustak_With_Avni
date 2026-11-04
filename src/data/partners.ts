@@ -3,15 +3,16 @@ import { PartnerImpact } from "@/types";
 export const partnersData: PartnerImpact[] = [
   {
     id: "apni-pathshala",
-    name: "Apni Pathshala",
-    type: "Grassroots Learning Initiative",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAqY26llovOBAcpbdukGRkJofy9jGAKYgqPU1DddG38N2gWUO94Sd-BCVUEB7RVipRj-iU8KB0FCUQbXZuKK_4Q2X3z_iRVhH92zG6HbiGw3voi6nFoAbNmLD26JJ_skbQCr6th4y_NwfqqC95OC00RBcrplGmH3SXqaPAE9dSCouy1uOHYCcRWsw6suuGH7wrndsX_cgZC1YT4ps9_RjzcyWjTkH0ZyYopn7bwHiM",
+    name: "Apni Pathshaala & SRMU",
+    type: "Grassroots Learning Initiative & University Collaboration",
+    image: "/images/glimpses/srmu-workshop-poster.jpg",
     description:
-      "Book distribution drives and interactive storytelling sessions conducted to spark curiosity and support foundational reading for underprivileged children.",
+      "Collaboration with Shri Ramswaroop Memorial University (SRMU) and Apni Pathshaala, conducting dedicated Authors' Workshops, book distribution drives, and creative writing sessions for young students.",
     initiatives: [
-      "Open-air storytelling and reading comprehension circles",
-      "Donation of illustrated children's storybooks",
-      "Interactive character-drawing and word games",
+      "Official Authors' Workshop with SRMU faculty & student coordinators",
+      "Interactive 'Story Explorers' multimedia storytelling sessions",
+      "Distribution of creative writing stationery kits and storybooks",
+      "Classroom reading comprehension and creative expression circles",
     ],
   },
   {

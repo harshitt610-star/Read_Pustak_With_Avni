@@ -50,6 +50,14 @@ export const milestonesData: Milestone[] = [
     badge: "Keynote & Speaker",
   },
   {
+    yearOrAge: "Oct 2026",
+    title: "Authors' Workshop with SRMU & Apni Pathshaala",
+    description:
+      "Conducted a featured authors' workshop in collaboration with Shri Ramswaroop Memorial University (SRMU) and Apni Pathshaala, inspiring students with interactive storytelling, reading culture, and creative writing kits.",
+    category: "community",
+    badge: "University Collaboration",
+  },
+  {
     yearOrAge: "Ongoing",
     title: "Model United Nations (MUN) & Theatre",
     description:
