@@ -16,23 +16,23 @@ export const TeamCard: React.FC<TeamCardProps> = ({ member }) => {
     <div className="bg-white rounded-2xl border border-border/80 shadow-editorial p-6 sm:p-8 flex flex-col justify-between gap-6 hover:shadow-editorial-hover transition-all duration-300 group hover:-translate-y-1">
       <div className="flex flex-col gap-5">
         {/* Profile Image & Role Header */}
-        <div className="flex items-center gap-4">
-          <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden shrink-0 border-2 border-gold/40 shadow-sm bg-gradient-to-br from-lavender via-ivory to-lavender/60 flex items-center justify-center">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden shrink-0 border-2 border-gold/50 shadow-md bg-gradient-to-br from-lavender via-ivory to-lavender/60 flex items-center justify-center group-hover:border-gold transition-colors">
             {member.image && !imageError ? (
               <Image
                 src={member.image}
                 alt={member.name}
                 fill
-                sizes="96px"
+                sizes="(max-width: 640px) 96px, 112px"
                 onError={() => setImageError(true)}
                 className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
               />
             ) : (
               <div className="flex flex-col items-center justify-center text-primary font-serif">
-                <span className="text-xl sm:text-2xl font-bold tracking-tight text-primary">
+                <span className="text-2xl font-bold tracking-tight text-primary">
                   {member.initials}
                 </span>
-                <span className="text-[9px] uppercase font-sans font-bold text-gold tracking-widest mt-0.5">
+                <span className="text-[10px] uppercase font-sans font-bold text-gold tracking-widest mt-0.5">
                   RPWA
                 </span>
               </div>
@@ -72,3 +72,4 @@ export const TeamCard: React.FC<TeamCardProps> = ({ member }) => {
     </div>
   );
 };
+

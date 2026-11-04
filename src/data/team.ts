@@ -40,3 +40,4 @@ export const teamData: TeamMember[] = [
     image: "/images/team/rajneesh-shukla.jpg",
   },
 ];
+

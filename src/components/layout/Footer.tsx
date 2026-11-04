@@ -87,6 +87,14 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
+                  href="/founders#our-team"
+                  className="hover:text-gold transition-colors inline-flex items-center gap-1.5 text-gold-light"
+                >
+                  <span>Our Team</span>
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/avni-journey"
                   className="hover:text-gold transition-colors inline-flex items-center gap-1.5"
                 >
