@@ -11,9 +11,17 @@ import {
   Heart,
   Quote,
   CheckCircle2,
+  Theater,
+  Globe,
+  Share2,
+  Palette,
+  Calendar,
+  Mail,
 } from "lucide-react";
 import { booksData } from "@/data/books";
 import { foundersData } from "@/data/founders";
+import { milestonesData } from "@/data/milestones";
+import { partnersData } from "@/data/partners";
 import { BookCard } from "@/components/books/BookCard";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
@@ -23,29 +31,31 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col gap-16 lg:gap-24 overflow-hidden">
-      {/* 1. HERO SECTION */}
+      {/* ========================================================= */}
+      {/* 1. HERO SECTION — Communicates: Our Vision and Mission    */}
+      {/* ========================================================= */}
       <section className="relative pt-6 pb-12 sm:pt-10 sm:pb-16 lg:pt-16 lg:pb-20 bg-gradient-to-b from-[#FFF9F1] via-[#FAF0FF]/60 to-[#FFF9F1]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-            {/* Left Column: Headlines & Call to Actions */}
+            {/* Left Column: Vision & Mission */}
             <div className="lg:col-span-7 flex flex-col gap-5 sm:gap-6 items-start">
               {/* Eyebrow Badge */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-lavender border border-primary/10 text-primary text-xs font-sans font-semibold tracking-wider uppercase">
                 <Sparkles className="w-3.5 h-3.5 text-gold fill-gold" />
-                <span>A Literary &amp; Educational Initiative</span>
+                <span>Our Vision &amp; Mission</span>
               </div>
 
-              {/* Main Headline */}
+              {/* Main Brand Title */}
               <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-primary tracking-tight leading-[1.12]">
                 Read Pustak with Avni
               </h1>
 
-              {/* Slogan */}
+              {/* Supporting Slogan / Vision */}
               <p className="font-serif italic text-xl sm:text-2xl text-gold font-medium leading-snug">
                 “Every Child Has a Story Worth Sharing.”
               </p>
 
-              {/* Editorial Description */}
+              {/* Mission Statement */}
               <p className="font-sans text-base sm:text-lg text-charcoal leading-relaxed max-w-2xl">
                 A heartwarming platform dedicated to cultivating lifelong reading,
                 inspiring expressive writing, and nurturing the imaginative
@@ -142,97 +152,103 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. ABOUT THE INITIATIVE SECTION */}
+      {/* ========================================================= */}
+      {/* 2. OUR PHILOSOPHY — Communicates: Read • Write • Create • Share */}
+      {/* ========================================================= */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-2xl border border-border/80 shadow-editorial p-6 sm:p-10 lg:p-12 relative overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-5 flex flex-col gap-4">
-              <SectionHeading
-                eyebrow="Our Story &amp; Imprint"
-                title="About the Initiative"
-                subtitle="Bridging youth curiosity with editorial excellence"
-              />
-              <p className="font-sans text-sm sm:text-base text-charcoal leading-relaxed">
-                <strong className="text-primary font-semibold">
-                  Read Pustak with Avni
-                </strong>{" "}
-                is the community and literary outreach initiative powered by{" "}
-                <strong className="text-primary font-semibold">
-                  Read Pustak Publications
-                </strong>
-                . Founded in New Delhi by Neena Chaturvedi and inspired by Avni&apos;s
-                writing journey, we believe that when children fall in love with
-                books, they gain a sanctuary of wonder, empathy, and creative
-                confidence.
-              </p>
-              <div className="pt-2">
-                <Link
-                  href="/about"
-                  className="inline-flex items-center gap-2 text-primary font-sans text-sm font-semibold hover:text-gold transition-colors"
-                >
-                  <span>Learn more about our philosophy</span>
-                  <ArrowRight className="w-4 h-4 text-gold" />
-                </Link>
+        <div className="bg-white rounded-2xl border border-border/80 shadow-editorial p-6 sm:p-10 lg:p-12 relative overflow-hidden flex flex-col gap-8">
+          <SectionHeading
+            eyebrow="Guiding Ethos"
+            title="Our Philosophy"
+            subtitle="Read • Write • Create • Share"
+            align="center"
+          />
+
+          <p className="text-center font-sans text-sm sm:text-base text-charcoal-muted max-w-2xl mx-auto -mt-3">
+            At Read Pustak, we believe literature is a four-fold journey that
+            transforms passive readers into confident, compassionate creators.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-2">
+            {/* Read */}
+            <div className="p-6 rounded-xl bg-ivory-warm border border-border hover:border-gold/50 shadow-xs hover:shadow-editorial transition-all flex flex-col gap-3 group">
+              <div className="w-12 h-12 rounded-xl bg-lavender flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                <BookOpen className="w-6 h-6 text-gold" />
               </div>
+              <h3 className="font-serif text-xl font-bold text-primary flex items-center gap-1.5">
+                <span>Read</span>
+                <span className="text-gold text-xs">✦</span>
+              </h3>
+              <p className="font-sans text-sm text-charcoal leading-relaxed">
+                Opening doorways to infinite worlds. Cultivating reading as a
+                joyful, comforting daily sanctuary that sparks natural curiosity.
+              </p>
             </div>
 
-            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="p-5 rounded-xl bg-ivory-warm border border-border flex flex-col gap-2">
-                <div className="w-10 h-10 rounded-lg bg-lavender flex items-center justify-center text-primary mb-1">
-                  <BookOpen className="w-5 h-5 text-gold" />
-                </div>
-                <h3 className="font-serif text-base font-bold text-primary">
-                  Cultivating Reading
-                </h3>
-                <p className="font-sans text-xs text-charcoal-muted leading-relaxed">
-                  Making literature an accessible, joyful daily habit for every
-                  child.
-                </p>
+            {/* Write */}
+            <div className="p-6 rounded-xl bg-ivory-warm border border-border hover:border-gold/50 shadow-xs hover:shadow-editorial transition-all flex flex-col gap-3 group">
+              <div className="w-12 h-12 rounded-xl bg-lavender flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                <Feather className="w-6 h-6 text-gold" />
               </div>
+              <h3 className="font-serif text-xl font-bold text-primary flex items-center gap-1.5">
+                <span>Write</span>
+                <span className="text-gold text-xs">✦</span>
+              </h3>
+              <p className="font-sans text-sm text-charcoal leading-relaxed">
+                Empowering children to articulate their thoughts, feelings, and
+                observations into structured words and evocative narratives.
+              </p>
+            </div>
 
-              <div className="p-5 rounded-xl bg-ivory-warm border border-border flex flex-col gap-2">
-                <div className="w-10 h-10 rounded-lg bg-lavender flex items-center justify-center text-primary mb-1">
-                  <Feather className="w-5 h-5 text-gold" />
-                </div>
-                <h3 className="font-serif text-base font-bold text-primary">
-                  Inspiring Writing
-                </h3>
-                <p className="font-sans text-xs text-charcoal-muted leading-relaxed">
-                  Encouraging children to express their original thoughts and fables.
-                </p>
+            {/* Create */}
+            <div className="p-6 rounded-xl bg-ivory-warm border border-border hover:border-gold/50 shadow-xs hover:shadow-editorial transition-all flex flex-col gap-3 group">
+              <div className="w-12 h-12 rounded-xl bg-lavender flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                <Palette className="w-6 h-6 text-gold" />
               </div>
+              <h3 className="font-serif text-xl font-bold text-primary flex items-center gap-1.5">
+                <span>Create</span>
+                <span className="text-gold text-xs">✦</span>
+              </h3>
+              <p className="font-sans text-sm text-charcoal leading-relaxed">
+                Transforming imagination, cultural fables, and life lessons into
+                meaningful books and stories that touch human hearts.
+              </p>
+            </div>
 
-              <div className="p-5 rounded-xl bg-ivory-warm border border-border flex flex-col gap-2">
-                <div className="w-10 h-10 rounded-lg bg-lavender flex items-center justify-center text-primary mb-1">
-                  <Users className="w-5 h-5 text-gold" />
-                </div>
-                <h3 className="font-serif text-base font-bold text-primary">
-                  Youth Authorship
-                </h3>
-                <p className="font-sans text-xs text-charcoal-muted leading-relaxed">
-                  Demonstrating that age is never a boundary to meaningful
-                  expression.
-                </p>
+            {/* Share */}
+            <div className="p-6 rounded-xl bg-ivory-warm border border-border hover:border-gold/50 shadow-xs hover:shadow-editorial transition-all flex flex-col gap-3 group">
+              <div className="w-12 h-12 rounded-xl bg-lavender flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                <Share2 className="w-6 h-6 text-gold" />
               </div>
+              <h3 className="font-serif text-xl font-bold text-primary flex items-center gap-1.5">
+                <span>Share</span>
+                <span className="text-gold text-xs">✦</span>
+              </h3>
+              <p className="font-sans text-sm text-charcoal leading-relaxed">
+                Taking stories beyond private desks to schools, community
+                circles, and young readers eager for inspiration and wisdom.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3. MEET OUR FOUNDERS SECTION */}
+      {/* ========================================================= */}
+      {/* 3. MEET THE FOUNDERS — Communicates: Avni and Neena       */}
+      {/* ========================================================= */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <SectionHeading
-              eyebrow="Leadership &amp; Inspiration"
-              title="Meet Our Founders"
-              subtitle="A harmonious partnership of mentoring wisdom and youthful imagination"
+              eyebrow="Visionaries Behind the Pages"
+              title="Meet the Founders"
+              subtitle="Avni and Neena — Mentoring wisdom united with young imagination"
             />
             <Link
               href="/founders"
               className="inline-flex items-center gap-1.5 text-primary text-sm font-semibold hover:text-gold transition-colors self-start sm:self-auto"
             >
-              <span>View Full Profiles</span>
+              <span>View In-Depth Profiles</span>
               <ArrowRight className="w-4 h-4 text-gold" />
             </Link>
           </div>
@@ -241,7 +257,7 @@ export default function HomePage() {
             {/* Avni Card */}
             <div className="bg-white rounded-2xl border border-border/80 shadow-editorial p-6 sm:p-8 flex flex-col gap-5 hover:shadow-editorial-hover transition-all">
               <div className="flex items-center gap-4">
-                <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden shrink-0 border-2 border-gold/40 shadow-sm">
+                <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden shrink-0 border-2 border-gold/40 shadow-sm bg-ivory-warm">
                   <Image
                     src={avni.image}
                     alt={avni.name}
@@ -274,7 +290,7 @@ export default function HomePage() {
             {/* Neena Card */}
             <div className="bg-white rounded-2xl border border-border/80 shadow-editorial p-6 sm:p-8 flex flex-col gap-5 hover:shadow-editorial-hover transition-all">
               <div className="flex items-center gap-4">
-                <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden shrink-0 border-2 border-gold/40 shadow-sm">
+                <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden shrink-0 border-2 border-gold/40 shadow-sm bg-ivory-warm">
                   <Image
                     src={neena.image}
                     alt={neena.name}
@@ -307,14 +323,79 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. FEATURED BOOKS SECTION */}
+      {/* ========================================================= */}
+      {/* 4. AVNI'S JOURNEY — Young writer to published author      */}
+      {/* ========================================================= */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-gradient-to-b from-white to-[#FAF0FF]/50 rounded-2xl border border-border/80 shadow-editorial p-6 sm:p-10 lg:p-12 flex flex-col gap-8">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <SectionHeading
+              eyebrow="Author's Path"
+              title="Avni's Journey"
+              subtitle="Her journey from a young writer to published author"
+            />
+            <Link
+              href="/avni-journey"
+              className="inline-flex items-center gap-1.5 text-primary text-sm font-semibold hover:text-gold transition-colors self-start sm:self-auto"
+            >
+              <span>Explore Complete Timeline</span>
+              <ArrowRight className="w-4 h-4 text-gold" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="p-6 rounded-xl bg-white border border-border/70 shadow-xs flex flex-col gap-3">
+              <span className="px-2.5 py-0.5 rounded-full bg-lavender text-primary font-sans text-xs font-bold self-start">
+                Age 10
+              </span>
+              <h3 className="font-serif text-lg font-bold text-primary">
+                The First Spark
+              </h3>
+              <p className="font-sans text-xs sm:text-sm text-charcoal leading-relaxed">
+                Avni begins filling notebooks with personal fables, daily
+                wonder, and character sketches, transmuting imagination into words.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-xl bg-white border border-border/70 shadow-xs flex flex-col gap-3">
+              <span className="px-2.5 py-0.5 rounded-full bg-gold/15 text-gold-dark font-sans text-xs font-bold self-start">
+                Debut Release
+              </span>
+              <h3 className="font-serif text-lg font-bold text-primary">
+                Emma Finds Her Solution
+              </h3>
+              <p className="font-sans text-xs sm:text-sm text-charcoal leading-relaxed">
+                Authoring and publishing her debut storybook centered on
+                curiosity, youth resilience, and joyful everyday problem-solving.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-xl bg-white border border-border/70 shadow-xs flex flex-col gap-3">
+              <span className="px-2.5 py-0.5 rounded-full bg-lavender text-primary font-sans text-xs font-bold self-start">
+                Expanding Horizons
+              </span>
+              <h3 className="font-serif text-lg font-bold text-primary">
+                3 Acclaimed Titles
+              </h3>
+              <p className="font-sans text-xs sm:text-sm text-charcoal leading-relaxed">
+                Expanding into Indian cosmic philosophy with <em>Pancha Tatva Tales</em>{" "}
+                and <em>Ancient Answers for Modern Problems</em>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================= */}
+      {/* 5. EXPLORE OUR BOOKS — Communicates: All Published Books  */}
+      {/* ========================================================= */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <SectionHeading
               eyebrow="Published Catalogue"
-              title="Featured Books by Avni"
-              subtitle="Stories that spark curiosity, celebrate heritage, and stay with readers"
+              title="Explore Our Books"
+              subtitle="All published books by young author Avni Chaturvedi"
             />
             <Link
               href="/books"
@@ -333,39 +414,98 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. VERIFIED ACHIEVEMENTS & MILESTONES BANNER */}
+      {/* ========================================================= */}
+      {/* 6. BEYOND BOOKS — Workshops, Theatre, Storytelling Circles */}
+      {/* ========================================================= */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-white rounded-2xl border border-border/80 shadow-editorial p-6 sm:p-10 lg:p-12 flex flex-col gap-8">
+          <SectionHeading
+            eyebrow="Creative Activities"
+            title="Beyond Books"
+            subtitle="Workshops, theatre, storytelling and literary activities"
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Theatre */}
+            <div className="p-6 rounded-xl bg-ivory-warm border border-border flex flex-col gap-3">
+              <div className="w-12 h-12 rounded-xl bg-lavender flex items-center justify-center text-primary">
+                <Theater className="w-6 h-6 text-gold" />
+              </div>
+              <h3 className="font-serif text-lg font-bold text-primary">
+                Theatre &amp; Dramatic Arts
+              </h3>
+              <p className="font-sans text-sm text-charcoal leading-relaxed">
+                Active stage acting and dramatic character study hone emotional
+                empathy, spoken dialogue, and authentic narrative rhythm.
+              </p>
+            </div>
+
+            {/* Model UN */}
+            <div className="p-6 rounded-xl bg-ivory-warm border border-border flex flex-col gap-3">
+              <div className="w-12 h-12 rounded-xl bg-lavender flex items-center justify-center text-primary">
+                <Globe className="w-6 h-6 text-gold" />
+              </div>
+              <h3 className="font-serif text-lg font-bold text-primary">
+                Model United Nations (MUN)
+              </h3>
+              <p className="font-sans text-sm text-charcoal leading-relaxed">
+                Engaging in diplomatic debate and youth dialogue sharpens
+                critical inquiry and cultural awareness on global concerns.
+              </p>
+            </div>
+
+            {/* Storytelling Circles */}
+            <div className="p-6 rounded-xl bg-ivory-warm border border-border flex flex-col gap-3">
+              <div className="w-12 h-12 rounded-xl bg-lavender flex items-center justify-center text-primary">
+                <Users className="w-6 h-6 text-gold" />
+              </div>
+              <h3 className="font-serif text-lg font-bold text-primary">
+                Storytelling &amp; Writing Circles
+              </h3>
+              <p className="font-sans text-sm text-charcoal leading-relaxed">
+                Interactive workshops for young peers, guiding students to
+                translate personal thoughts and fables into written craft.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================= */}
+      {/* 7. ACHIEVEMENTS & RECOGNITION — Awards & Honors           */}
+      {/* ========================================================= */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-primary text-white rounded-2xl p-8 sm:p-12 shadow-editorial-hover relative overflow-hidden border border-gold/40">
           <div className="relative z-10 flex flex-col gap-8">
             <div className="flex flex-col gap-2">
               <span className="text-xs font-sans text-gold font-bold uppercase tracking-widest">
-                Milestones &amp; Outreach
+                Author Accolades
               </span>
               <h2 className="font-serif text-2xl sm:text-4xl font-bold">
-                Literary Milestones &amp; Social Impact
+                Achievements &amp; Recognition
               </h2>
               <p className="font-sans text-sm sm:text-base text-white/80 max-w-2xl">
-                From early journal writing at age 10 to speaking at literary
-                gatherings and distributing books to young learners in need.
+                Awards, nominations, book fair speaker honors, and verified
+                milestones celebrated across Avni&apos;s literary career.
               </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-white/10 rounded-xl p-5 border border-white/10 backdrop-blur-sm flex flex-col gap-1.5">
                 <span className="text-xs text-gold uppercase tracking-wider font-semibold">
-                  Author Milestone
+                  Publishing Record
                 </span>
                 <span className="font-serif text-xl font-bold">
-                  3 Published Works
+                  3 Published Books
                 </span>
                 <span className="text-xs text-white/70">
-                  Children&apos;s fables &amp; philosophy
+                  Authored starting at age 10
                 </span>
               </div>
 
               <div className="bg-white/10 rounded-xl p-5 border border-white/10 backdrop-blur-sm flex flex-col gap-1.5">
                 <span className="text-xs text-gold uppercase tracking-wider font-semibold">
-                  Literary Stage
+                  Keynote Speaker
                 </span>
                 <span className="font-serif text-xl font-bold">
                   Lucknow Book Fair 2026
@@ -377,25 +517,25 @@ export default function HomePage() {
 
               <div className="bg-white/10 rounded-xl p-5 border border-white/10 backdrop-blur-sm flex flex-col gap-1.5">
                 <span className="text-xs text-gold uppercase tracking-wider font-semibold">
-                  Community Partner
+                  Creative Arts
                 </span>
                 <span className="font-serif text-xl font-bold">
-                  Apni Pathshala
+                  Theatre Contributor
                 </span>
                 <span className="text-xs text-white/70">
-                  Reading drives &amp; circles
+                  Dramatic expression &amp; dialogue
                 </span>
               </div>
 
               <div className="bg-white/10 rounded-xl p-5 border border-white/10 backdrop-blur-sm flex flex-col gap-1.5">
                 <span className="text-xs text-gold uppercase tracking-wider font-semibold">
-                  Shelter Outreach
+                  Youth Diplomacy
                 </span>
                 <span className="font-serif text-xl font-bold">
-                  Manisha Mandir
+                  Model UN Delegate
                 </span>
                 <span className="text-xs text-white/70">
-                  Storytelling for girls
+                  Critical debate &amp; rhetoric
                 </span>
               </div>
             </div>
@@ -406,16 +546,66 @@ export default function HomePage() {
                 className="px-6 py-3 rounded-lg bg-gold text-primary font-sans text-sm font-bold hover:bg-gold-light transition-colors inline-flex items-center gap-2"
               >
                 <Award className="w-4 h-4" />
-                <span>Read Verified Impact Report</span>
+                <span>Read Complete Achievements Report</span>
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 6. CLOSING CULTURAL SLOGAN SECTION */}
+      {/* ========================================================= */}
+      {/* 8. OUR INITIATIVES — Encouraging Children to Read & Write */}
+      {/* ========================================================= */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col gap-8">
+          <SectionHeading
+            eyebrow="Community Literacy"
+            title="Our Initiatives"
+            subtitle="Encouraging children to become readers and writers"
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {partnersData.map((partner) => (
+              <div
+                key={partner.id}
+                className="bg-white rounded-xl border border-border/80 shadow-editorial p-6 flex flex-col justify-between gap-4 hover:shadow-editorial-hover transition-all"
+              >
+                <div className="flex flex-col gap-3">
+                  <div className="flex items-center justify-between">
+                    <span className="px-3 py-1 rounded-full bg-lavender text-primary text-xs font-semibold">
+                      {partner.name}
+                    </span>
+                    <Heart className="w-4 h-4 text-gold" />
+                  </div>
+                  <h3 className="font-serif text-lg font-bold text-primary">
+                    {partner.type}
+                  </h3>
+                  <p className="font-sans text-xs sm:text-sm text-charcoal leading-relaxed">
+                    {partner.description}
+                  </p>
+                </div>
+
+                <div className="pt-3 border-t border-border/60">
+                  <ul className="flex flex-col gap-1 font-sans text-xs text-charcoal-muted">
+                    {partner.initiatives.slice(0, 2).map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-1.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-gold shrink-0 mt-0.5" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================= */}
+      {/* 9. JOIN OUR COMMUNITY — Connect, Collaborate & Participate */}
+      {/* ========================================================= */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-        <div className="rounded-2xl bg-gradient-to-r from-lavender/80 via-ivory to-lavender/80 p-8 sm:p-12 border border-primary/10 shadow-editorial text-center flex flex-col items-center gap-4">
+        <div className="rounded-2xl bg-gradient-to-r from-lavender/80 via-ivory to-lavender/80 p-8 sm:p-12 border border-primary/10 shadow-editorial text-center flex flex-col items-center gap-5">
           <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden shadow-md ring-2 ring-gold/50 bg-white">
             <Image
               src="/images/logo.png"
@@ -426,28 +616,37 @@ export default function HomePage() {
             />
           </div>
 
-          <h3 className="font-serif text-2xl sm:text-4xl font-bold text-primary">
-            “Ek Bachcha, Ek Pustak Padhe.”
-          </h3>
+          <div className="flex flex-col gap-2">
+            <span className="font-sans text-xs uppercase tracking-widest text-gold font-bold">
+              Connect • Collaborate • Participate
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-primary">
+              Join Our Community
+            </h2>
+            <p className="font-serif italic text-lg sm:text-xl text-primary font-medium">
+              “Ek Bachcha, Ek Pustak Padhe.”
+            </p>
+          </div>
 
           <p className="font-sans text-sm sm:text-base text-charcoal-muted max-w-xl leading-relaxed">
             Every child who opens a book opens a door to infinite empathy and
-            wisdom. Join us in sharing stories that light up young hearts across
-            our communities.
+            wisdom. Join our community reading drives, invite us to your school,
+            or share your stories with us.
           </p>
 
-          <div className="pt-2 flex gap-3">
+          <div className="pt-2 flex flex-wrap justify-center gap-3">
             <Link
               href="/contact"
-              className="px-6 py-3 rounded-lg bg-primary text-white font-sans text-sm font-semibold hover:bg-primary-hover shadow-sm transition-colors"
+              className="px-6 py-3 rounded-lg bg-primary text-white font-sans text-sm font-semibold hover:bg-primary-hover shadow-sm transition-colors flex items-center gap-2"
             >
-              Get in Touch
+              <Mail className="w-4 h-4 text-gold" />
+              <span>Get in Touch</span>
             </Link>
             <Link
               href="/about"
               className="px-6 py-3 rounded-lg bg-white text-primary font-sans text-sm font-semibold hover:bg-lavender border border-border shadow-xs transition-colors"
             >
-              Our Vision
+              <span>Our Vision</span>
             </Link>
           </div>
         </div>
@@ -455,4 +654,3 @@ export default function HomePage() {
     </div>
   );
 }
-
