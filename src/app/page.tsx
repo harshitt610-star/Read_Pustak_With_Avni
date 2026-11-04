@@ -17,6 +17,7 @@ import {
   Palette,
   Calendar,
   Mail,
+  Camera,
 } from "lucide-react";
 import { booksData } from "@/data/books";
 import { foundersData } from "@/data/founders";
@@ -158,78 +159,283 @@ export default function HomePage() {
       {/* 2. OUR PHILOSOPHY — Communicates: Read • Write • Create • Share */}
       {/* ========================================================= */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-2xl border border-border/80 shadow-editorial p-6 sm:p-10 lg:p-12 relative overflow-hidden flex flex-col gap-8">
+        <div className="bg-white rounded-2xl border border-border/80 shadow-editorial p-6 sm:p-10 lg:p-12 relative overflow-hidden flex flex-col gap-10">
           <SectionHeading
-            eyebrow="Guiding Ethos"
+            eyebrow="Our Guiding Ethos"
             title="Our Philosophy"
             subtitle="Read • Write • Create • Share"
             align="center"
           />
 
-          <p className="text-center font-sans text-sm sm:text-base text-charcoal-muted max-w-2xl mx-auto -mt-3">
-            At Read Pustak, we believe literature is a four-fold journey that
-            transforms passive readers into confident, compassionate creators.
-          </p>
+          {/* Philosophy Narrative */}
+          <div className="max-w-4xl mx-auto flex flex-col gap-6 text-center -mt-2">
+            <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-[#FFF9F1] via-[#FAF0FF]/60 to-[#FFF9F1] border border-gold/30 shadow-xs">
+              <p className="font-serif italic text-lg sm:text-xl md:text-2xl text-primary font-medium leading-relaxed">
+                “We believe that every book opens a new world, every written word carries an idea, every creative activity builds confidence and every shared story has the power to inspire others.”
+              </p>
+            </div>
 
+            <div className="flex flex-col gap-4 font-sans text-sm sm:text-base text-charcoal/90 leading-relaxed text-left sm:text-center max-w-3xl mx-auto">
+              <p>
+                At <strong>Read Pustak with Avni</strong>, our philosophy goes beyond reading books. We believe in taking literature beyond pages and bringing it into communities, classrooms and young minds.
+              </p>
+              <p>
+                Through literary workshops, storytelling sessions, creative writing activities and collaborations with NGOs and educational organisations, we encourage children to discover the joy of reading and the confidence to express themselves.
+              </p>
+              <p className="font-semibold text-primary">
+                We believe that reading should be experienced, creativity should be encouraged and opportunities should be shared.
+              </p>
+            </div>
+          </div>
+
+          {/* 4 Pillars */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-2">
-            {/* Read */}
-            <div className="p-6 rounded-xl bg-ivory-warm border border-border hover:border-gold/50 shadow-xs hover:shadow-editorial transition-all flex flex-col gap-3 group">
-              <div className="w-12 h-12 rounded-xl bg-lavender flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
-                <BookOpen className="w-6 h-6 text-gold" />
+            {/* 1. READ */}
+            <div className="p-6 rounded-2xl bg-ivory-warm border-2 border-border/70 hover:border-gold/60 shadow-xs hover:shadow-editorial transition-all flex flex-col gap-4 group">
+              <div className="flex items-center justify-between">
+                <div className="w-12 h-12 rounded-xl bg-lavender flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                  <BookOpen className="w-6 h-6 text-gold" />
+                </div>
+                <span className="font-serif text-xs font-bold text-gold px-2.5 py-1 rounded-full bg-white border border-gold/30">
+                  Pillar 01
+                </span>
               </div>
-              <h3 className="font-serif text-xl font-bold text-primary flex items-center gap-1.5">
-                <span>Read</span>
-                <span className="text-gold text-xs">✦</span>
-              </h3>
+              <div className="flex flex-col gap-1">
+                <h3 className="font-serif text-2xl font-bold text-primary">
+                  1. READ
+                </h3>
+                <p className="font-sans text-xs uppercase tracking-wider font-semibold text-gold">
+                  Build a reading culture
+                </p>
+              </div>
               <p className="font-sans text-sm text-charcoal leading-relaxed">
-                Opening doorways to infinite worlds. Cultivating reading as a
-                joyful, comforting daily sanctuary that sparks natural curiosity.
+                Encourage children and adults to rediscover books and make reading a daily habit.
               </p>
             </div>
 
-            {/* Write */}
-            <div className="p-6 rounded-xl bg-ivory-warm border border-border hover:border-gold/50 shadow-xs hover:shadow-editorial transition-all flex flex-col gap-3 group">
-              <div className="w-12 h-12 rounded-xl bg-lavender flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
-                <Feather className="w-6 h-6 text-gold" />
+            {/* 2. WRITE */}
+            <div className="p-6 rounded-2xl bg-ivory-warm border-2 border-border/70 hover:border-gold/60 shadow-xs hover:shadow-editorial transition-all flex flex-col gap-4 group">
+              <div className="flex items-center justify-between">
+                <div className="w-12 h-12 rounded-xl bg-lavender flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                  <Feather className="w-6 h-6 text-gold" />
+                </div>
+                <span className="font-serif text-xs font-bold text-gold px-2.5 py-1 rounded-full bg-white border border-gold/30">
+                  Pillar 02
+                </span>
               </div>
-              <h3 className="font-serif text-xl font-bold text-primary flex items-center gap-1.5">
-                <span>Write</span>
-                <span className="text-gold text-xs">✦</span>
-              </h3>
+              <div className="flex flex-col gap-1">
+                <h3 className="font-serif text-2xl font-bold text-primary">
+                  2. WRITE
+                </h3>
+                <p className="font-sans text-xs uppercase tracking-wider font-semibold text-gold">
+                  Give words a voice
+                </p>
+              </div>
               <p className="font-sans text-sm text-charcoal leading-relaxed">
-                Empowering children to articulate their thoughts, feelings, and
-                observations into structured words and evocative narratives.
+                Inspire young minds to write stories, share ideas and develop their own expressions.
               </p>
             </div>
 
-            {/* Create */}
-            <div className="p-6 rounded-xl bg-ivory-warm border border-border hover:border-gold/50 shadow-xs hover:shadow-editorial transition-all flex flex-col gap-3 group">
-              <div className="w-12 h-12 rounded-xl bg-lavender flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
-                <Palette className="w-6 h-6 text-gold" />
+            {/* 3. CREATE */}
+            <div className="p-6 rounded-2xl bg-ivory-warm border-2 border-border/70 hover:border-gold/60 shadow-xs hover:shadow-editorial transition-all flex flex-col gap-4 group">
+              <div className="flex items-center justify-between">
+                <div className="w-12 h-12 rounded-xl bg-lavender flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                  <Palette className="w-6 h-6 text-gold" />
+                </div>
+                <span className="font-serif text-xs font-bold text-gold px-2.5 py-1 rounded-full bg-white border border-gold/30">
+                  Pillar 03
+                </span>
               </div>
-              <h3 className="font-serif text-xl font-bold text-primary flex items-center gap-1.5">
-                <span>Create</span>
-                <span className="text-gold text-xs">✦</span>
-              </h3>
+              <div className="flex flex-col gap-1">
+                <h3 className="font-serif text-2xl font-bold text-primary">
+                  3. CREATE
+                </h3>
+                <p className="font-sans text-xs uppercase tracking-wider font-semibold text-gold">
+                  Turn imagination into action
+                </p>
+              </div>
               <p className="font-sans text-sm text-charcoal leading-relaxed">
-                Transforming imagination, cultural fables, and life lessons into
-                meaningful books and stories that touch human hearts.
+                Organise creative writing workshops, storytelling activities and literary experiences.
               </p>
             </div>
 
-            {/* Share */}
-            <div className="p-6 rounded-xl bg-ivory-warm border border-border hover:border-gold/50 shadow-xs hover:shadow-editorial transition-all flex flex-col gap-3 group">
-              <div className="w-12 h-12 rounded-xl bg-lavender flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
-                <Share2 className="w-6 h-6 text-gold" />
+            {/* 4. SHARE */}
+            <div className="p-6 rounded-2xl bg-ivory-warm border-2 border-border/70 hover:border-gold/60 shadow-xs hover:shadow-editorial transition-all flex flex-col gap-4 group">
+              <div className="flex items-center justify-between">
+                <div className="w-12 h-12 rounded-xl bg-lavender flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                  <Share2 className="w-6 h-6 text-gold" />
+                </div>
+                <span className="font-serif text-xs font-bold text-gold px-2.5 py-1 rounded-full bg-white border border-gold/30">
+                  Pillar 04
+                </span>
               </div>
-              <h3 className="font-serif text-xl font-bold text-primary flex items-center gap-1.5">
-                <span>Share</span>
-                <span className="text-gold text-xs">✦</span>
-              </h3>
+              <div className="flex flex-col gap-1">
+                <h3 className="font-serif text-2xl font-bold text-primary">
+                  4. SHARE
+                </h3>
+                <p className="font-sans text-xs uppercase tracking-wider font-semibold text-gold">
+                  Inspire through giving
+                </p>
+              </div>
               <p className="font-sans text-sm text-charcoal leading-relaxed">
-                Taking stories beyond private desks to schools, community
-                circles, and young readers eager for inspiration and wisdom.
+                Collaborate with NGOs and communities, celebrate young talent and share the joy of books.
               </p>
+            </div>
+          </div>
+
+          {/* Glimpses in Action Showcase */}
+          <div className="mt-4 pt-8 border-t border-border flex flex-col gap-6">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+              <div>
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-lavender text-primary text-xs font-semibold tracking-wider uppercase mb-1">
+                  <Camera className="w-3.5 h-3.5 text-gold" />
+                  <span>Glimpses in Action</span>
+                </div>
+                <h3 className="font-serif text-2xl sm:text-3xl font-bold text-primary">
+                  Moments from Our Workshops &amp; Community Giving
+                </h3>
+              </div>
+              <p className="font-sans text-xs sm:text-sm text-charcoal-muted max-w-md">
+                Taking books beyond pages: real interactions in classrooms, NGO circles, and creative storytelling assemblies.
+              </p>
+            </div>
+
+            {/* Photo Cards Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+              {/* Card 1: Glimpse 1 - Community Giving */}
+              <div className="md:col-span-6 relative rounded-2xl overflow-hidden border border-gold/30 shadow-md group bg-charcoal">
+                <div className="relative aspect-[4/5] sm:aspect-[16/11] md:aspect-[4/3] w-full">
+                  <Image
+                    src="/images/glimpses/glimpse-1.jpg"
+                    alt="Avni donating Emma Finds Her Solution to a young child"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-transparent" />
+                  <div className="absolute top-4 left-4">
+                    <span className="px-3 py-1 rounded-full bg-white/95 text-primary text-xs font-semibold uppercase tracking-wider backdrop-blur-sm border border-gold/40">
+                      Community Giving
+                    </span>
+                  </div>
+                  <div className="absolute bottom-4 inset-x-4 flex flex-col gap-1 text-white">
+                    <h4 className="font-serif text-lg sm:text-xl font-bold text-gold-light">
+                      Inspiring Young Readers
+                    </h4>
+                    <p className="font-sans text-xs sm:text-sm text-white/90 leading-snug">
+                      Avni sharing her debut book <em>Emma Finds Her Solution</em> with young children in the community.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 2: Glimpse 2 - Literary Workshop */}
+              <div className="md:col-span-6 relative rounded-2xl overflow-hidden border border-gold/30 shadow-md group bg-charcoal">
+                <div className="relative aspect-[4/5] sm:aspect-[16/11] md:aspect-[4/3] w-full">
+                  <Image
+                    src="/images/glimpses/glimpse-2.jpg"
+                    alt="Avni addressing an interactive storytelling workshop session"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-transparent" />
+                  <div className="absolute top-4 left-4">
+                    <span className="px-3 py-1 rounded-full bg-white/95 text-primary text-xs font-semibold uppercase tracking-wider backdrop-blur-sm border border-gold/40">
+                      Literary Workshop
+                    </span>
+                  </div>
+                  <div className="absolute bottom-4 inset-x-4 flex flex-col gap-1 text-white">
+                    <h4 className="font-serif text-lg sm:text-xl font-bold text-gold-light">
+                      Storytelling &amp; Dialogue
+                    </h4>
+                    <p className="font-sans text-xs sm:text-sm text-white/90 leading-snug">
+                      Leading a reading session and sharing tales that inspire young minds to imagine and reflect.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 3: Glimpse 3 - Classroom Circle */}
+              <div className="md:col-span-4 relative rounded-2xl overflow-hidden border border-gold/30 shadow-md group bg-charcoal">
+                <div className="relative aspect-[16/11] sm:aspect-[4/3] w-full">
+                  <Image
+                    src="/images/glimpses/glimpse-3.jpg"
+                    alt="Children seated in classroom reading circle holding books"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-transparent" />
+                  <div className="absolute top-4 left-4">
+                    <span className="px-3 py-1 rounded-full bg-white/95 text-primary text-xs font-semibold uppercase tracking-wider backdrop-blur-sm border border-gold/40">
+                      Classroom Circle
+                    </span>
+                  </div>
+                  <div className="absolute bottom-4 inset-x-4 flex flex-col gap-1 text-white">
+                    <h4 className="font-serif text-base sm:text-lg font-bold text-gold-light">
+                      Building a Reading Culture
+                    </h4>
+                    <p className="font-sans text-xs text-white/90 leading-snug">
+                      Students proudly displaying their books in a guided reading circle.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 4: Glimpse 4 - Creative Writing */}
+              <div className="md:col-span-4 relative rounded-2xl overflow-hidden border border-gold/30 shadow-md group bg-charcoal">
+                <div className="relative aspect-[16/11] sm:aspect-[4/3] w-full">
+                  <Image
+                    src="/images/glimpses/glimpse-4.jpg"
+                    alt="School assembly of young writers holding materials"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-transparent" />
+                  <div className="absolute top-4 left-4">
+                    <span className="px-3 py-1 rounded-full bg-white/95 text-primary text-xs font-semibold uppercase tracking-wider backdrop-blur-sm border border-gold/40">
+                      Creative Writing
+                    </span>
+                  </div>
+                  <div className="absolute bottom-4 inset-x-4 flex flex-col gap-1 text-white">
+                    <h4 className="font-serif text-base sm:text-lg font-bold text-gold-light">
+                      Young Writers Assembly
+                    </h4>
+                    <p className="font-sans text-xs text-white/90 leading-snug">
+                      Equipping children with writing kits to help give their ideas an authentic voice.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 5: Glimpse 5 - Story Explorers */}
+              <div className="md:col-span-4 relative rounded-2xl overflow-hidden border border-gold/30 shadow-md group bg-charcoal">
+                <div className="relative aspect-[16/11] sm:aspect-[4/3] w-full">
+                  <Image
+                    src="/images/glimpses/glimpse-5.jpg"
+                    alt="Story Explorers interactive workshop presentation"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-transparent" />
+                  <div className="absolute top-4 left-4">
+                    <span className="px-3 py-1 rounded-full bg-white/95 text-primary text-xs font-semibold uppercase tracking-wider backdrop-blur-sm border border-gold/40">
+                      Story Explorers
+                    </span>
+                  </div>
+                  <div className="absolute bottom-4 inset-x-4 flex flex-col gap-1 text-white">
+                    <h4 className="font-serif text-base sm:text-lg font-bold text-gold-light">
+                      Story Explorers Interactive
+                    </h4>
+                    <p className="font-sans text-xs text-white/90 leading-snug">
+                      Engaging young learners through multimedia storytelling activities and school collaboration.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -73,6 +73,7 @@ export const booksData: Book[] = [
     subtitle: "A journey through India's vibrant stories, heritage and unity",
     author: "Avni Chaturvedi",
     publishedYear: "2026",
+    amazonUrl: "https://amzn.in/d/0eKXuU5a",
     flipkartUrl: "https://dl.flipkart.com/s/Ybs0kmNNNN",
     coverImage:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuDwm1kXDo3p3EhXR0nesjHBvlj6OjNJuno4MxXC2LTfWJH2nzz2o5A8vf4acLB1yJhMA6cEogKoZe1KdPPft6CltDSO3pgnd65WstK2u8eOjeOJXlmpxTiHFGcqpVFHsaVedhpmCV6oDWWnNCjb_ZLLfEN81vXwHiq0yGa5QWVqafMYGLWWE5JKYnaa46keF9JTpTkduW8AL_uKWQRwkVJu8mpcXDZsVGmx2QxIu3s",
