@@ -44,6 +44,17 @@ export const glimpsesData: GlimpseItem[] = [
     aspect: "landscape",
   },
   {
+    id: "up-ki-baat-award-glimpse",
+    image: "/images/achievements/up-ki-baat-award.jpg",
+    title: "Felicitation at 'उत्तर प्रदेश की बात'",
+    category: "giving",
+    categoryLabel: "Awards & Honors",
+    date: "2026",
+    caption:
+      "Avni receiving a prestigious trophy and felicitation on stage from distinguished guests at the 'उत्तर प्रदेश की बात' (Mahasangam) summit.",
+    aspect: "portrait",
+  },
+  {
     id: "ancient-answers-giving",
     image: "/images/glimpses/glimpse-6.jpg",
     title: "Inspiring Wisdom & Calm",

@@ -401,45 +401,70 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 rounded-xl bg-white border border-border/70 shadow-xs flex flex-col gap-3">
-              <span className="px-2.5 py-0.5 rounded-full bg-lavender text-primary font-sans text-xs font-bold self-start">
-                Age 10
-              </span>
-              <h3 className="font-serif text-lg font-bold text-primary">
-                The First Spark
-              </h3>
-              <p className="font-sans text-xs sm:text-sm text-charcoal leading-relaxed">
-                Avni begins filling notebooks with personal fables, daily
-                wonder, and character sketches, transmuting imagination into words.
-              </p>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            {/* Left: Official Meet the Author Creative */}
+            <div className="lg:col-span-5 flex justify-center">
+              <div className="relative w-full max-w-sm aspect-[1/1.08] rounded-2xl overflow-hidden shadow-editorial-hover border-2 border-gold/40 group bg-ivory-warm">
+                <Image
+                  src="/images/author/meet-the-author-avni.jpg"
+                  alt="Meet the Author - Avni Chaturvedi with published books"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-contain bg-white group-hover:scale-102 transition-transform duration-500"
+                />
+              </div>
             </div>
 
-            <div className="p-6 rounded-xl bg-white border border-border/70 shadow-xs flex flex-col gap-3">
-              <span className="px-2.5 py-0.5 rounded-full bg-gold/15 text-gold-dark font-sans text-xs font-bold self-start">
-                Debut Release
-              </span>
-              <h3 className="font-serif text-lg font-bold text-primary">
-                Emma Finds Her Solution
-              </h3>
-              <p className="font-sans text-xs sm:text-sm text-charcoal leading-relaxed">
-                Authoring and publishing her debut storybook centered on
-                curiosity, youth resilience, and joyful everyday problem-solving.
-              </p>
-            </div>
+            {/* Right: The 3 Milestones & Author Statement */}
+            <div className="lg:col-span-7 flex flex-col gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div className="p-4 sm:p-5 rounded-xl bg-white border border-border/70 shadow-xs flex flex-col gap-2">
+                  <span className="px-2.5 py-0.5 rounded-full bg-lavender text-primary font-sans text-xs font-bold self-start">
+                    Age 10
+                  </span>
+                  <h3 className="font-serif text-base font-bold text-primary">
+                    The First Spark
+                  </h3>
+                  <p className="font-sans text-xs text-charcoal leading-relaxed">
+                    Avni begins filling notebooks with personal fables, daily wonder, and character sketches.
+                  </p>
+                </div>
 
-            <div className="p-6 rounded-xl bg-white border border-border/70 shadow-xs flex flex-col gap-3">
-              <span className="px-2.5 py-0.5 rounded-full bg-lavender text-primary font-sans text-xs font-bold self-start">
-                Expanding Horizons
-              </span>
-              <h3 className="font-serif text-lg font-bold text-primary">
-                4 Published Titles
-              </h3>
-              <p className="font-sans text-xs sm:text-sm text-charcoal leading-relaxed">
-                From children&apos;s fables to cosmic elements and ancient wisdom—spanning
-                <em>Emma Finds Her Solution</em>, <em>Pancha Tatva Tales</em>,
-                <em>Ancient Answers</em>, and <em>Incredible Bharat</em>.
-              </p>
+                <div className="p-4 sm:p-5 rounded-xl bg-white border border-border/70 shadow-xs flex flex-col gap-2">
+                  <span className="px-2.5 py-0.5 rounded-full bg-gold/15 text-gold-dark font-sans text-xs font-bold self-start">
+                    Debut Release
+                  </span>
+                  <h3 className="font-serif text-base font-bold text-primary">
+                    Emma Finds Her Solution
+                  </h3>
+                  <p className="font-sans text-xs text-charcoal leading-relaxed">
+                    Authoring her debut storybook centered on curiosity, youth resilience, and problem-solving.
+                  </p>
+                </div>
+
+                <div className="p-4 sm:p-5 rounded-xl bg-white border border-border/70 shadow-xs flex flex-col gap-2">
+                  <span className="px-2.5 py-0.5 rounded-full bg-lavender text-primary font-sans text-xs font-bold self-start">
+                    Expanding Horizons
+                  </span>
+                  <h3 className="font-serif text-base font-bold text-primary">
+                    4 Published Titles
+                  </h3>
+                  <p className="font-sans text-xs text-charcoal leading-relaxed">
+                    Spanning fables, cosmic elements, ancient wisdom, and cultural heritage across India.
+                  </p>
+                </div>
+              </div>
+
+              {/* Author Statement Callout */}
+              <div className="p-5 rounded-xl bg-white/95 border border-gold/40 shadow-xs flex flex-col gap-2">
+                <div className="flex items-center gap-2 text-gold text-xs font-semibold uppercase tracking-wider">
+                  <Sparkles className="w-3.5 h-3.5" />
+                  <span>About the Author</span>
+                </div>
+                <p className="font-sans text-xs sm:text-sm text-charcoal leading-relaxed">
+                  “Avni Chaturvedi is a young author and student with a passion for storytelling and creative writing. She enjoys reading books, exploring new ideas, and expressing her imagination through words. She believes that every story has the power to teach, inspire, and bring people together.”
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -469,6 +494,83 @@ export default function HomePage() {
             {booksData.map((book) => (
               <BookCard key={book.id} book={book} />
             ))}
+          </div>
+
+          {/* Officially Approved & Verified Amazon Author Banner */}
+          <div className="mt-4 rounded-2xl border-2 border-gold/50 bg-gradient-to-br from-[#FFF9F1] via-[#FAF0FF]/80 to-[#FFF9F1] p-6 sm:p-8 lg:p-10 shadow-editorial relative overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              {/* Left Column: Verified Artwork */}
+              <div className="lg:col-span-5 flex justify-center">
+                <div className="relative w-full max-w-sm aspect-square rounded-2xl overflow-hidden shadow-editorial-hover border-2 border-gold/50 group bg-white">
+                  <Image
+                    src="/images/author/amazon-verified-author.jpg"
+                    alt="Officially Approved and Verified Amazon Author - Avni Chaturvedi"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                    className="object-contain p-2 group-hover:scale-102 transition-transform duration-500"
+                  />
+                </div>
+              </div>
+
+              {/* Right Column: Verified Author Details & Links */}
+              <div className="lg:col-span-7 flex flex-col gap-4">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="px-3.5 py-1 rounded-full bg-gold/20 text-primary text-xs font-bold uppercase tracking-wider border border-gold/40 flex items-center gap-1.5">
+                    <Award className="w-3.5 h-3.5 text-gold" />
+                    Amazon Approved &amp; Verified Author
+                  </span>
+                  <span className="px-3 py-1 rounded-full bg-white text-charcoal-muted text-xs font-medium border border-border">
+                    Global Author Central
+                  </span>
+                </div>
+
+                <div>
+                  <h3 className="font-serif text-2xl sm:text-3xl font-bold text-primary">
+                    Follow Avni&apos;s Journey on Amazon
+                  </h3>
+                  <p className="font-sans text-sm text-charcoal/90 mt-1">
+                    Please visit Avni&apos;s official Amazon Author Page, explore her books, read customer reviews, and follow her literary journey as a young author.
+                  </p>
+                </div>
+
+                {/* Badges from artwork */}
+                <div className="flex flex-wrap gap-2 py-1">
+                  <span className="px-3 py-1 rounded-lg bg-white border border-border text-xs font-medium text-primary flex items-center gap-1.5">
+                    <BookOpen className="w-3.5 h-3.5 text-gold" />
+                    Inspiring Stories
+                  </span>
+                  <span className="px-3 py-1 rounded-lg bg-white border border-border text-xs font-medium text-primary flex items-center gap-1.5">
+                    <Heart className="w-3.5 h-3.5 text-gold" />
+                    Thoughtful Lessons
+                  </span>
+                  <span className="px-3 py-1 rounded-lg bg-white border border-border text-xs font-medium text-primary flex items-center gap-1.5">
+                    <Users className="w-3.5 h-3.5 text-gold" />
+                    For Young Readers
+                  </span>
+                </div>
+
+                <blockquote className="font-serif italic text-sm text-primary font-medium border-l-2 border-gold pl-3 py-0.5">
+                  “Every book is a step towards a better tomorrow.” — Avni Chaturvedi
+                </blockquote>
+
+                {/* Action Buttons */}
+                <div className="flex flex-wrap items-center gap-3 pt-2">
+                  <a
+                    href="https://www.amazon.com/author/avnic.author"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-5 py-2.5 rounded-xl bg-primary text-white hover:bg-primary-dark font-sans text-xs sm:text-sm font-bold shadow-md hover:shadow-lg transition-all inline-flex items-center gap-2 group"
+                  >
+                    <span>Visit Amazon Author Page</span>
+                    <ArrowRight className="w-4 h-4 text-gold group-hover:translate-x-0.5 transition-transform" />
+                  </a>
+
+                  <span className="font-sans text-xs text-charcoal-muted">
+                    Also available on <strong>Flipkart</strong>
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -534,7 +636,7 @@ export default function HomePage() {
       {/* 7. ACHIEVEMENTS & RECOGNITION — Awards & Honors           */}
       {/* ========================================================= */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-primary text-white rounded-2xl p-8 sm:p-12 shadow-editorial-hover relative overflow-hidden border border-gold/40">
+        <div className="bg-primary text-white rounded-2xl p-6 sm:p-10 lg:p-12 shadow-editorial-hover relative overflow-hidden border border-gold/40">
           <div className="relative z-10 flex flex-col gap-8">
             <div className="flex flex-col gap-2">
               <span className="text-xs font-sans text-gold font-bold uppercase tracking-widest">
@@ -544,69 +646,100 @@ export default function HomePage() {
                 Achievements &amp; Recognition
               </h2>
               <p className="font-sans text-sm sm:text-base text-white/80 max-w-2xl">
-                Awards, nominations, book fair speaker honors, and verified
-                milestones celebrated across Avni&apos;s literary career.
+                Awards, state felicitations, book fair speaker honors, and verified milestones celebrated across Avni&apos;s literary career.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white/10 rounded-xl p-5 border border-white/10 backdrop-blur-sm flex flex-col gap-1.5">
-                <span className="text-xs text-gold uppercase tracking-wider font-semibold">
-                  Publishing Record
-                </span>
-                <span className="font-serif text-xl font-bold">
-                  4 Published Books
-                </span>
-                <span className="text-xs text-white/70">
-                  Authored between 2023 &amp; 2026
-                </span>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              {/* Award Ceremony Photo */}
+              <div className="lg:col-span-5 flex justify-center">
+                <div className="relative w-full max-w-sm aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-2 border-gold/60 group bg-charcoal">
+                  <Image
+                    src="/images/achievements/up-ki-baat-award.jpg"
+                    alt="Avni Chaturvedi being felicitated with a trophy on stage at Uttar Pradesh Ki Baat"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-transparent to-transparent" />
+                  <div className="absolute top-3 left-3">
+                    <span className="px-3 py-1 rounded-full bg-gold text-primary text-xs font-bold uppercase tracking-wider shadow-md">
+                      State Felicitation
+                    </span>
+                  </div>
+                  <div className="absolute bottom-4 inset-x-4 flex flex-col gap-1 text-white">
+                    <h4 className="font-serif text-base sm:text-lg font-bold text-gold-light">
+                      &apos;उत्तर प्रदेश की बात&apos; Mahasangam
+                    </h4>
+                    <p className="font-sans text-xs text-white/90 leading-snug">
+                      Avni receiving a prestigious trophy from distinguished dignitaries in recognition of youth literary excellence.
+                    </p>
+                  </div>
+                </div>
               </div>
 
-              <div className="bg-white/10 rounded-xl p-5 border border-white/10 backdrop-blur-sm flex flex-col gap-1.5">
-                <span className="text-xs text-gold uppercase tracking-wider font-semibold">
-                  Keynote Speaker
-                </span>
-                <span className="font-serif text-xl font-bold">
-                  Lucknow Book Fair 2026
-                </span>
-                <span className="text-xs text-white/70">
-                  Invited Youth Speaker
-                </span>
-              </div>
+              {/* Accolades Grid & Link */}
+              <div className="lg:col-span-7 flex flex-col gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="bg-white/10 rounded-xl p-5 border border-white/10 backdrop-blur-sm flex flex-col gap-1.5">
+                    <span className="text-xs text-gold uppercase tracking-wider font-semibold">
+                      Publishing Record
+                    </span>
+                    <span className="font-serif text-xl font-bold">
+                      4 Published Books
+                    </span>
+                    <span className="text-xs text-white/70">
+                      Authored between 2023 &amp; 2026
+                    </span>
+                  </div>
 
-              <div className="bg-white/10 rounded-xl p-5 border border-white/10 backdrop-blur-sm flex flex-col gap-1.5">
-                <span className="text-xs text-gold uppercase tracking-wider font-semibold">
-                  Creative Arts
-                </span>
-                <span className="font-serif text-xl font-bold">
-                  Theatre Contributor
-                </span>
-                <span className="text-xs text-white/70">
-                  Dramatic expression &amp; dialogue
-                </span>
-              </div>
+                  <div className="bg-white/10 rounded-xl p-5 border border-white/10 backdrop-blur-sm flex flex-col gap-1.5">
+                    <span className="text-xs text-gold uppercase tracking-wider font-semibold">
+                      Keynote Speaker
+                    </span>
+                    <span className="font-serif text-xl font-bold">
+                      Lucknow Book Fair 2026
+                    </span>
+                    <span className="text-xs text-white/70">
+                      Invited Youth Author &amp; Speaker
+                    </span>
+                  </div>
 
-              <div className="bg-white/10 rounded-xl p-5 border border-white/10 backdrop-blur-sm flex flex-col gap-1.5">
-                <span className="text-xs text-gold uppercase tracking-wider font-semibold">
-                  Youth Diplomacy
-                </span>
-                <span className="font-serif text-xl font-bold">
-                  Model UN Delegate
-                </span>
-                <span className="text-xs text-white/70">
-                  Critical debate &amp; rhetoric
-                </span>
-              </div>
-            </div>
+                  <div className="bg-white/10 rounded-xl p-5 border border-white/10 backdrop-blur-sm flex flex-col gap-1.5">
+                    <span className="text-xs text-gold uppercase tracking-wider font-semibold">
+                      University Collaboration
+                    </span>
+                    <span className="font-serif text-xl font-bold">
+                      SRMU Authors&apos; Workshop
+                    </span>
+                    <span className="text-xs text-white/70">
+                      Story Explorers &amp; Apni Pathshaala
+                    </span>
+                  </div>
 
-            <div className="pt-2 flex justify-start">
-              <Link
-                href="/achievements"
-                className="px-6 py-3 rounded-lg bg-gold text-primary font-sans text-sm font-bold hover:bg-gold-light transition-colors inline-flex items-center gap-2"
-              >
-                <Award className="w-4 h-4" />
-                <span>Read Complete Achievements Report</span>
-              </Link>
+                  <div className="bg-white/10 rounded-xl p-5 border border-white/10 backdrop-blur-sm flex flex-col gap-1.5">
+                    <span className="text-xs text-gold uppercase tracking-wider font-semibold">
+                      Amazon Author
+                    </span>
+                    <span className="font-serif text-xl font-bold">
+                      Officially Verified
+                    </span>
+                    <span className="text-xs text-white/70">
+                      Global Author Central Profile
+                    </span>
+                  </div>
+                </div>
+
+                <div className="pt-2 flex justify-start">
+                  <Link
+                    href="/achievements"
+                    className="px-6 py-3 rounded-lg bg-gold text-primary font-sans text-sm font-bold hover:bg-gold-light transition-colors inline-flex items-center gap-2"
+                  >
+                    <Award className="w-4 h-4" />
+                    <span>Read Complete Achievements Report</span>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
