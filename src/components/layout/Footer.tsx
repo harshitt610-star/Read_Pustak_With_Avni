@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   BookOpen,
   Mail,
@@ -20,8 +21,14 @@ export const Footer: React.FC = () => {
           {/* Column 1: Brand & Slogan */}
           <div className="flex flex-col gap-4 lg:col-span-1">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-primary-container border border-gold/50 flex items-center justify-center text-gold font-serif font-bold text-lg">
-                RP
+              <div className="relative w-12 h-12 rounded-full overflow-hidden shadow-sm ring-2 ring-gold/50 bg-white shrink-0">
+                <Image
+                  src="/images/logo.png"
+                  alt="Read Pustak with Avni Logo"
+                  fill
+                  sizes="48px"
+                  className="object-cover"
+                />
               </div>
               <div className="flex flex-col">
                 <span className="font-serif text-xl font-bold tracking-tight text-white">

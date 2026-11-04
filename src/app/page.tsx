@@ -416,8 +416,14 @@ export default function HomePage() {
       {/* 6. CLOSING CULTURAL SLOGAN SECTION */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <div className="rounded-2xl bg-gradient-to-r from-lavender/80 via-ivory to-lavender/80 p-8 sm:p-12 border border-primary/10 shadow-editorial text-center flex flex-col items-center gap-4">
-          <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-gold shadow-sm">
-            <Sparkles className="w-6 h-6 fill-gold" />
+          <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden shadow-md ring-2 ring-gold/50 bg-white">
+            <Image
+              src="/images/logo.png"
+              alt="Read Pustak with Avni Emblem"
+              fill
+              sizes="80px"
+              className="object-cover"
+            />
           </div>
 
           <h3 className="font-serif text-2xl sm:text-4xl font-bold text-primary">

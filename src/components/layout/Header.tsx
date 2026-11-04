@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
   Menu,
@@ -71,8 +72,15 @@ export const Header: React.FC = () => {
               href="/"
               className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-lg p-1"
             >
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white shadow-sm ring-1 ring-gold/40 group-hover:scale-105 transition-transform overflow-hidden">
-                <span className="font-serif text-lg font-bold text-gold">RP</span>
+              <div className="relative w-12 h-12 rounded-full overflow-hidden shadow-sm ring-2 ring-gold/40 group-hover:scale-105 transition-transform bg-white shrink-0">
+                <Image
+                  src="/images/logo.png"
+                  alt="Read Pustak with Avni Logo"
+                  fill
+                  sizes="48px"
+                  priority
+                  className="object-cover"
+                />
               </div>
               <div className="flex flex-col">
                 <span className="font-serif text-[19px] sm:text-[21px] font-bold text-primary tracking-tight leading-tight group-hover:text-primary-hover transition-colors">
