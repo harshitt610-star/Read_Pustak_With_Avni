@@ -26,7 +26,7 @@ export const foundersData: Founder[] = [
     name: "Neena Chaturvedi",
     role: "Founder, Read Pustak with Avni",
     title: "Founder",
-    image: "/images/founders/neena-chaturvedi.jpg",
+    image: "/images/founders/neena-desk.jpg",
     quote: "“Her vision is to make reading a habit, writing an expression and publishing an opportunity for emerging voices.”",
     bio: [
       "A believer in the power of books, education and creative expression, Neena Chaturvedi founded Read Pustak with Avni with a vision to revive the joy of reading in today's digital age.",

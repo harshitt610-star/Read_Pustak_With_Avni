@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import { Sparkles, BookOpen, Globe, ChevronLeft, ChevronRight } from "lucide-react";
+import { Sparkles, BookOpen, Globe, Heart, ChevronLeft, ChevronRight } from "lucide-react";
 
 interface HeroSlide {
   id: string;
@@ -45,6 +45,16 @@ const HERO_SLIDES: HeroSlide[] = [
     authorLabel: "AIS VKC MUN Delegate • Creative Speaker",
     tag: "Public Speaking & Thought Leadership",
     icon: Globe,
+  },
+  {
+    id: "founder-visionary",
+    image: "/images/founders/neena-portrait.jpg",
+    alt: "Neena Chaturvedi - Founder of Read Pustak with Avni",
+    badge: "Founder & Visionary",
+    quote: "“Making reading a habit, writing an expression and publishing an opportunity.”",
+    authorLabel: "Neena Chaturvedi • Founder, Read Pustak with Avni",
+    tag: "Nurturing Young Voices",
+    icon: Heart,
   },
 ];
 
