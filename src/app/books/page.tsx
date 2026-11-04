@@ -45,8 +45,8 @@ export default function BooksPage() {
 
             <div className="lg:col-span-5 relative aspect-[16/10] rounded-xl overflow-hidden shadow-editorial border border-gold/30">
               <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwm1kXDo3p3EhXR0nesjHBvlj6OjNJuno4MxXC2LTfWJH2nzz2o5A8vf4acLB1yJhMA6cEogKoZe1KdPPft6CltDSO3pgnd65WstK2u8eOjeOJXlmpxTiHFGcqpVFHsaVedhpmCV6oDWWnNCjb_ZLLfEN81vXwHiq0yGa5QWVqafMYGLWWE5JKYnaa46keF9JTpTkduW8AL_uKWQRwkVJu8mpcXDZsVGmx2QxIu3s"
-                alt="A warm, editorial still-life featuring three beautifully bound books in soft lavender and deep purple tones"
+                src="/images/author/amazon-verified-author.jpg"
+                alt="Published books by young author Avni Chaturvedi"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"

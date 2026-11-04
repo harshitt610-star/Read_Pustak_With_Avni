@@ -9,8 +9,7 @@ export const booksData: Book[] = [
     publishedYear: "2023",
     amazonUrl: "https://amzn.in/d/0fRGJpig",
     flipkartUrl: "https://dl.flipkart.com/s/YvNmh_NNNN",
-    coverImage:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBSISX-sIAWmsPvuZ-zwEhz1HHv7xzBToqXfzBY3aYHCTzhMv5k7GIN5OeuNgMAfb4pIupM4GUAgZiQJdGQ3j__8WZLuAUkcw6S_VH1UbPsyuR_QrT5iiiOkkLCSwHu_gu5J3N5VsvAjGhND1ZKU-IbvS_FFTSxNwjTf6JZhq6ga9qPnkoahSk_hIrHPWdcmoRSL6y4ElVBzyCe4O7bLtfVgfieEKsUAFWSdkJtGLM",
+    coverImage: "/images/books/emma-finds-her-solution.jpg",
     ageRange: "Ages 6 - 12",
     summary:
       "A heartwarming narrative exploring a child's natural curiosity, inner determination, and creative problem-solving when confronted with surprising daily puzzles.",
@@ -31,8 +30,7 @@ export const booksData: Book[] = [
     publishedYear: "2025",
     amazonUrl: "https://amzn.in/d/06ltxrmg",
     flipkartUrl: "https://dl.flipkart.com/s/Yb!sGnNNNN",
-    coverImage:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCd9wxlK9NGfVz3eFrmJh796g1Y1MkIrhA-jdc5h-Q4E-JbKLBW3KQ7iOJPoU7nZ0wP-PXFUiWraKt1vgG1vAuR1Wy2Ki3V9y8nKCtx3hJZ1Ne33RGx6YCToayeI-5rMVhB2VOEwy3kbbnRuUOfIcbeHofgykIIIWT9_gj9B8_Z01RHQfpa_A_P0rnBzw6LHjNotT6B6uItA3uRTHWFbrF0ynIexmjATVMQnwJyDG4",
+    coverImage: "/images/books/pancha-tatva-tales.jpg",
     ageRange: "Ages 8 - 14",
     summary:
       "Enchanting fables illuminating the five cosmic elements—Earth, Water, Fire, Air, and Space—woven with timeless Indian heritage and joyful moral reflections.",
@@ -53,8 +51,7 @@ export const booksData: Book[] = [
     publishedYear: "2026",
     amazonUrl: "https://amzn.in/d/07QoFGHp",
     flipkartUrl: "https://dl.flipkart.com/s/JsADeCuuuN",
-    coverImage:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDU8-Skxu9NXTQBPWpftBQRvHsLAkc22brGfDpDf95-n0eoyUb0B-_SFWcvoftJnws04SMXNBuJUE7IsyTyU5lmu7iwOMwO2Fh_chiBX0Y0xciTekEfIna2pVAr_2fIXIvUkp-L9kTEOU_kd1qmerxBviGMKtS9S9sO6XlbjPf_WK3-59Vvkx8E38CsOUYN0uq6OdHZC2FFnqcS6hhqOHbsf5SUchs98_kODk_1JRg",
+    coverImage: "/images/books/ancient-answers.jpg",
     ageRange: "Ages 10 - Young Adult",
     summary:
       "Connecting epic Indian philosophies and ancient insights to contemporary youth challenges—resilience, focus, compassion, and digital mindfulness.",
@@ -75,8 +72,7 @@ export const booksData: Book[] = [
     publishedYear: "2026",
     amazonUrl: "https://amzn.in/d/0eKXuU5a",
     flipkartUrl: "https://dl.flipkart.com/s/Ybs0kmNNNN",
-    coverImage:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDwm1kXDo3p3EhXR0nesjHBvlj6OjNJuno4MxXC2LTfWJH2nzz2o5A8vf4acLB1yJhMA6cEogKoZe1KdPPft6CltDSO3pgnd65WstK2u8eOjeOJXlmpxTiHFGcqpVFHsaVedhpmCV6oDWWnNCjb_ZLLfEN81vXwHiq0yGa5QWVqafMYGLWWE5JKYnaa46keF9JTpTkduW8AL_uKWQRwkVJu8mpcXDZsVGmx2QxIu3s",
+    coverImage: "/images/books/incredible-bharat.jpg",
     ageRange: "Ages 8 - 16",
     summary:
       "An inspiring journey across India's vibrant landscapes, folklore, heroic figures, and living cultural traditions that unite a diverse nation in one heart.",
