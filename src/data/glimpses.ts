@@ -22,6 +22,28 @@ export const glimpsesData: GlimpseItem[] = [
     aspect: "poster",
   },
   {
+    id: "meet-the-author-srmu",
+    image: "/images/glimpses/glimpse-10.jpg",
+    title: "Meet the Author & Faculty Presentation",
+    category: "srmu",
+    categoryLabel: "Meet the Author",
+    date: "17 October 2026",
+    caption:
+      "Avni with SRMU faculty members, student coordinators, and young participants holding copies of 'Incredible Bharat', 'Ancient Answers', and workshop certificates under the 'Meet the Author' banner.",
+    aspect: "landscape",
+  },
+  {
+    id: "story-explorers-assembly-full",
+    image: "/images/glimpses/glimpse-11.jpg",
+    title: "Story Explorers Full Assembly",
+    category: "srmu",
+    categoryLabel: "SRMU Workshop",
+    date: "17 October 2026",
+    caption:
+      "The complete gathering of young story explorers, university club volunteers, and faculty mentors celebrating reading and creative expression.",
+    aspect: "landscape",
+  },
+  {
     id: "ancient-answers-giving",
     image: "/images/glimpses/glimpse-6.jpg",
     title: "Inspiring Wisdom & Calm",
