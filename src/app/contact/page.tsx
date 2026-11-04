@@ -7,6 +7,9 @@ import {
   Heart,
   BookOpen,
   MessageSquare,
+  Instagram,
+  Youtube,
+  ExternalLink,
 } from "lucide-react";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -61,9 +64,9 @@ export default function ContactPage() {
                     <MapPin className="w-5 h-5 text-gold" />
                   </div>
                   <div className="flex flex-col">
-                    <span className="font-semibold text-primary">Location</span>
+                    <span className="font-semibold text-primary">Location &amp; Secretariat</span>
                     <span className="text-charcoal-muted">
-                      New Delhi, India
+                      Gomti Nagar, Lucknow, India
                     </span>
                     <span className="text-xs text-charcoal-subtle pt-0.5">
                       Publishing &amp; Community Operations
@@ -110,16 +113,42 @@ export default function ContactPage() {
                 <span className="font-sans text-xs font-bold uppercase tracking-wider text-charcoal-muted">
                   Follow Our Journey
                 </span>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3.5 py-1.5 rounded-lg bg-ivory-warm border border-border text-xs font-semibold text-primary hover:bg-lavender cursor-pointer transition-colors">
-                    Instagram
-                  </span>
-                  <span className="px-3.5 py-1.5 rounded-lg bg-ivory-warm border border-border text-xs font-semibold text-primary hover:bg-lavender cursor-pointer transition-colors">
-                    YouTube
-                  </span>
-                  <span className="px-3.5 py-1.5 rounded-lg bg-ivory-warm border border-border text-xs font-semibold text-primary hover:bg-lavender cursor-pointer transition-colors">
-                    LinkedIn
-                  </span>
+                <div className="flex flex-wrap gap-2.5">
+                  <a
+                    href="https://www.instagram.com/author_avnic?srtk=bzBwcXg1ZW51M2Nt"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-ivory-warm border border-border text-xs font-semibold text-primary hover:bg-lavender hover:border-gold/40 transition-all shadow-xs"
+                    aria-label="Author Avni Chaturvedi Instagram"
+                  >
+                    <Instagram className="w-4 h-4 text-gold" />
+                    <span>Instagram</span>
+                    <ExternalLink className="w-3 h-3 text-charcoal-muted" />
+                  </a>
+
+                  <a
+                    href="https://youtube.com/@neenachaturvedi8736?si=vhHxABlHTQf8rgft"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-ivory-warm border border-border text-xs font-semibold text-primary hover:bg-lavender hover:border-gold/40 transition-all shadow-xs"
+                    aria-label="Neena Chaturvedi YouTube Channel"
+                  >
+                    <Youtube className="w-4 h-4 text-[#FF0000]" />
+                    <span>YouTube</span>
+                    <ExternalLink className="w-3 h-3 text-charcoal-muted" />
+                  </a>
+
+                  <a
+                    href="https://www.amazon.com/author/avnic.author"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-ivory-warm border border-border text-xs font-semibold text-primary hover:bg-lavender hover:border-gold/40 transition-all shadow-xs"
+                    aria-label="Verified Amazon Author Page"
+                  >
+                    <BookOpen className="w-4 h-4 text-gold" />
+                    <span>Amazon Author</span>
+                    <ExternalLink className="w-3 h-3 text-charcoal-muted" />
+                  </a>
                 </div>
               </div>
             </div>

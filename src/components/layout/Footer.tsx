@@ -8,6 +8,8 @@ import {
   Sparkles,
   Heart,
   ExternalLink,
+  Instagram,
+  Youtube,
 } from "lucide-react";
 
 export const Footer: React.FC = () => {
@@ -217,7 +219,7 @@ export const Footer: React.FC = () => {
             <div className="flex flex-col gap-3 text-sm text-white/80">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-gold shrink-0 mt-0.5" />
-                <span>New Delhi, India</span>
+                <span>Gomti Nagar, Lucknow, India</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-gold shrink-0" />
@@ -237,19 +239,40 @@ export const Footer: React.FC = () => {
 
               {/* Social Channels */}
               <div className="pt-2">
-                <span className="text-xs text-gold uppercase tracking-wider block mb-2 font-semibold">
+                <span className="text-xs text-gold uppercase tracking-wider block mb-2.5 font-semibold">
                   Connect With Us
                 </span>
-                <div className="flex items-center gap-3 text-xs">
-                  <span className="px-2.5 py-1 rounded bg-white/10 hover:bg-white/20 transition-colors cursor-pointer text-white">
-                    Instagram
-                  </span>
-                  <span className="px-2.5 py-1 rounded bg-white/10 hover:bg-white/20 transition-colors cursor-pointer text-white">
-                    YouTube
-                  </span>
-                  <span className="px-2.5 py-1 rounded bg-white/10 hover:bg-white/20 transition-colors cursor-pointer text-white">
-                    LinkedIn
-                  </span>
+                <div className="flex flex-wrap items-center gap-2 text-xs">
+                  <a
+                    href="https://www.instagram.com/author_avnic?srtk=bzBwcXg1ZW51M2Nt"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-gold hover:text-primary transition-all text-white font-medium border border-white/15"
+                    aria-label="Instagram profile of author Avni Chaturvedi"
+                  >
+                    <Instagram className="w-3.5 h-3.5" />
+                    <span>Instagram</span>
+                  </a>
+                  <a
+                    href="https://youtube.com/@neenachaturvedi8736?si=vhHxABlHTQf8rgft"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-[#FF0000] hover:text-white transition-all text-white font-medium border border-white/15"
+                    aria-label="YouTube channel of Neena Chaturvedi"
+                  >
+                    <Youtube className="w-3.5 h-3.5" />
+                    <span>YouTube</span>
+                  </a>
+                  <a
+                    href="https://www.amazon.com/author/avnic.author"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-gold hover:text-primary transition-all text-white font-medium border border-white/15"
+                    aria-label="Amazon Author profile of Avni Chaturvedi"
+                  >
+                    <BookOpen className="w-3.5 h-3.5 text-gold" />
+                    <span>Amazon</span>
+                  </a>
                 </div>
               </div>
             </div>

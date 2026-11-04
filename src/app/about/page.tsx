@@ -28,7 +28,7 @@ import { PublishWithUsButton } from "@/components/publishing/PublishWithUsButton
 export const metadata: Metadata = {
   title: "Publishing, Digital Innovation & Team | Read Pustak Publications",
   description:
-    "Explore the editorial mandate, our story, digital innovation, and the dedicated team behind Read Pustak Publications in New Delhi.",
+    "Explore the editorial mandate, our story, digital innovation, and the dedicated team behind Read Pustak Publications in Gomti Nagar, Lucknow, India.",
 };
 
 const publishingStages = [
@@ -138,7 +138,7 @@ export default function PublishingEditorialPage() {
           <div className="flex flex-col gap-3">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-lavender border border-primary/10 text-primary text-xs font-sans font-semibold tracking-wider uppercase self-start">
               <ScrollText className="w-3.5 h-3.5 text-gold" />
-              <span>Read Pustak Publications • New Delhi</span>
+              <span>Read Pustak Publications • Gomti Nagar, Lucknow</span>
             </div>
             <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-primary tracking-tight leading-[1.15]">
               Publishing &amp; Editorial Mandate
@@ -252,7 +252,7 @@ export default function PublishingEditorialPage() {
 
                 <div className="flex flex-col gap-1">
                   <span className="font-sans text-xs font-bold uppercase tracking-wider text-gold">
-                    Editorial Leadership • New Delhi
+                    Editorial Leadership • Gomti Nagar, Lucknow
                   </span>
                   <h3 className="font-serif text-xl sm:text-2xl font-bold text-primary">
                     Neena&apos;s Publishing Mandate

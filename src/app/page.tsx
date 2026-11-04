@@ -18,6 +18,9 @@ import {
   Calendar,
   Mail,
   Camera,
+  Instagram,
+  Youtube,
+  MapPin,
 } from "lucide-react";
 import { booksData } from "@/data/books";
 import { foundersData } from "@/data/founders";
@@ -833,6 +836,37 @@ export default function HomePage() {
             >
               <span>Our Vision</span>
             </Link>
+          </div>
+
+          {/* Social Links & Address Strip */}
+          <div className="pt-4 border-t border-primary/10 flex flex-col sm:flex-row items-center justify-between gap-4 w-full max-w-xl text-xs text-charcoal">
+            <div className="flex items-center gap-2 text-charcoal-muted">
+              <MapPin className="w-4 h-4 text-gold shrink-0" />
+              <span>Gomti Nagar, Lucknow, India</span>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <a
+                href="https://www.instagram.com/author_avnic?srtk=bzBwcXg1ZW51M2Nt"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/80 hover:bg-lavender border border-border text-primary font-medium transition-colors"
+                aria-label="Instagram profile of author Avni Chaturvedi"
+              >
+                <Instagram className="w-3.5 h-3.5 text-gold" />
+                <span>Instagram</span>
+              </a>
+              <a
+                href="https://youtube.com/@neenachaturvedi8736?si=vhHxABlHTQf8rgft"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/80 hover:bg-lavender border border-border text-primary font-medium transition-colors"
+                aria-label="YouTube channel of Neena Chaturvedi"
+              >
+                <Youtube className="w-3.5 h-3.5 text-[#FF0000]" />
+                <span>YouTube</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
