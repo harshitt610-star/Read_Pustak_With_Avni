@@ -136,7 +136,7 @@ export default function HomePage() {
       {/* ========================================================= */}
       {/* 2. OUR PHILOSOPHY — Communicates: Read • Write • Create • Share */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="philosophy" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
         <div className="bg-white rounded-2xl border border-border/80 shadow-editorial p-6 sm:p-10 lg:p-12 relative overflow-hidden flex flex-col gap-10">
           <SectionHeading
             eyebrow="Our Guiding Ethos"
@@ -271,7 +271,7 @@ export default function HomePage() {
       {/* ========================================================= */}
       {/* 3. MEET THE FOUNDERS — Communicates: Avni and Neena       */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="founders" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
         <div className="flex flex-col gap-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <SectionHeading
@@ -377,7 +377,7 @@ export default function HomePage() {
       {/* ========================================================= */}
       {/* 4. AVNI'S JOURNEY — Young writer to published author      */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="journey" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
         <div className="bg-gradient-to-b from-white to-[#FAF0FF]/50 rounded-2xl border border-border/80 shadow-editorial p-6 sm:p-10 lg:p-12 flex flex-col gap-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <SectionHeading
@@ -466,7 +466,7 @@ export default function HomePage() {
       {/* ========================================================= */}
       {/* 5. EXPLORE OUR BOOKS — Communicates: All Published Books  */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="books" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
         <div className="flex flex-col gap-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <SectionHeading
@@ -571,7 +571,7 @@ export default function HomePage() {
       {/* ========================================================= */}
       {/* 6. BEYOND BOOKS — Workshops, Theatre, Storytelling Circles */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="beyond-books" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
         <div className="bg-white rounded-2xl border border-border/80 shadow-editorial p-6 sm:p-10 lg:p-12 flex flex-col gap-8">
           <SectionHeading
             eyebrow="Creative Activities"
@@ -628,7 +628,7 @@ export default function HomePage() {
       {/* ========================================================= */}
       {/* 7. ACHIEVEMENTS & RECOGNITION — Awards & Honors           */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="achievements" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
         <div className="bg-primary text-white rounded-2xl p-6 sm:p-10 lg:p-12 shadow-editorial-hover relative overflow-hidden border border-gold/40">
           <div className="relative z-10 flex flex-col gap-8">
             <div className="flex flex-col gap-2">
@@ -741,7 +741,7 @@ export default function HomePage() {
       {/* ========================================================= */}
       {/* 8. OUR INITIATIVES — Encouraging Children to Read & Write */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="initiatives" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
         <div className="flex flex-col gap-8">
           <SectionHeading
             eyebrow="Community Literacy"
@@ -789,7 +789,7 @@ export default function HomePage() {
       {/* ========================================================= */}
       {/* 9. JOIN OUR COMMUNITY — Connect, Collaborate & Participate */}
       {/* ========================================================= */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+      <section id="community" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 scroll-mt-24">
         <div className="rounded-2xl bg-gradient-to-r from-lavender/80 via-ivory to-lavender/80 p-8 sm:p-12 border border-primary/10 shadow-editorial text-center flex flex-col items-center gap-5">
           <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden shadow-md ring-2 ring-gold/50 bg-white">
             <Image

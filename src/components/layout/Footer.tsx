@@ -60,7 +60,7 @@ export const Footer: React.FC = () => {
             <h3 className="font-serif text-base font-semibold text-gold tracking-wide uppercase border-b border-gold/20 pb-2">
               Folio Directory
             </h3>
-            <ul className="flex flex-col gap-2 font-sans text-sm text-white/80">
+            <ul className="grid grid-cols-1 gap-2 font-sans text-xs sm:text-sm text-white/80">
               <li>
                 <Link
                   href="/"
@@ -71,10 +71,10 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
-                  href="/about"
+                  href="/#philosophy"
                   className="hover:text-gold transition-colors inline-flex items-center gap-1.5"
                 >
-                  <span>About Us</span>
+                  <span>Our Philosophy</span>
                 </Link>
               </li>
               <li>
@@ -82,7 +82,7 @@ export const Footer: React.FC = () => {
                   href="/founders"
                   className="hover:text-gold transition-colors inline-flex items-center gap-1.5"
                 >
-                  <span>Meet Our Founders</span>
+                  <span>Meet the Founders</span>
                 </Link>
               </li>
               <li>
@@ -98,7 +98,31 @@ export const Footer: React.FC = () => {
                   href="/books"
                   className="hover:text-gold transition-colors inline-flex items-center gap-1.5"
                 >
-                  <span>Our Books</span>
+                  <span>Explore Our Books</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#beyond-books"
+                  className="hover:text-gold transition-colors inline-flex items-center gap-1.5"
+                >
+                  <span>Beyond Books</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about"
+                  className="hover:text-gold transition-colors inline-flex items-center gap-1.5"
+                >
+                  <span>Publishing &amp; Editorial</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#initiatives"
+                  className="hover:text-gold transition-colors inline-flex items-center gap-1.5"
+                >
+                  <span>Our Initiatives</span>
                 </Link>
               </li>
               <li>
@@ -106,7 +130,7 @@ export const Footer: React.FC = () => {
                   href="/achievements"
                   className="hover:text-gold transition-colors inline-flex items-center gap-1.5"
                 >
-                  <span>Achievements & Impact</span>
+                  <span>Achievements &amp; Recognition</span>
                 </Link>
               </li>
               <li>
@@ -114,7 +138,7 @@ export const Footer: React.FC = () => {
                   href="/contact"
                   className="hover:text-gold transition-colors inline-flex items-center gap-1.5"
                 >
-                  <span>Contact & Inquiries</span>
+                  <span>Join Our Community</span>
                 </Link>
               </li>
             </ul>
