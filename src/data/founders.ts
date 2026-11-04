@@ -23,21 +23,22 @@ export const foundersData: Founder[] = [
   {
     id: "neena-chaturvedi",
     name: "Neena Chaturvedi",
-    role: "Founder & Owner, Read Pustak Publications",
-    title: "Founder & Editorial Director",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBBvIgcGWKDMGZ9qmFlbLwGy3rMGa3clDm-7wbYVspQsWXzdHqqgaYifwLZqETJY2P9Ue1esboiFFZFgd76jxQ92L84JH19Id7P4h_GffoQhEaNm6qQgKMDY4_AHtqQAaw3oQT5ARry4FLyl7vqg9m1dV2Rr-NB1HaiwnWp92H7VX1H2VtRw6F4lLXETEduE1pS_A3TC9H7PmtLXaZnV_vqgGQsqxf1-SkAmntLjpA",
-    quote: "“When you nurture a child's story, you build confidence that lasts a lifetime.”",
+    role: "Founder, Read Pustak with Avni",
+    title: "Founder",
+    image: "/images/founders/neena-chaturvedi.jpg",
+    quote: "“Her vision is to make reading a habit, writing an expression and publishing an opportunity for emerging voices.”",
     bio: [
-      "With an abiding commitment to the transformative power of books, Neena guides the institutional heart of Read Pustak. She founded the imprint to cultivate mindful reading habits and creative expression from a child’s earliest formative stages.",
-      "She orchestrates publishing operations, editorial curation, school partnerships, and literary circles with meticulous care. Her mission is to create a welcoming, dignified launchpad where aspiring storytellers receive genuine respect, guidance, and lasting wings.",
-      "Under her leadership, Read Pustak Publications has expanded beyond books to active literacy initiatives, community book donations, and inclusive workshops for underprivileged young learners.",
+      "A believer in the power of books, education and creative expression, Neena Chaturvedi founded Read Pustak with Avni with a vision to revive the joy of reading in today's digital age.",
+      "With an interest in literature, publishing and nurturing young talent, she believes that books have the power to shape thoughts, develop imagination and create lifelong learners.",
+      "Through this initiative, she aims to build a literary community that encourages reading, supports aspiring writers, celebrates creativity and creates opportunities for meaningful publishing.",
+      "Her vision is to make reading a habit, writing an expression and publishing an opportunity for emerging voices.",
     ],
     responsibilities: [
-      "Oversees publishing direction and editorial curation",
-      "Spearheads social impact collaborations with educational NGOs",
-      "Fosters inclusive literacy circles for underprivileged children",
+      "Founding vision and strategic direction of Read Pustak with Avni",
+      "Building a literary community that encourages reading and creativity",
+      "Creating accessible, meaningful publishing opportunities for emerging voices",
     ],
-    highlights: ["Publishing Direction", "Author Engagement", "Inclusive Literacy"],
+    highlights: ["Literary Community", "Creative Expression", "Publishing Opportunities"],
   },
 ];
 

@@ -308,7 +308,7 @@ export default function HomePage() {
                     {avni.name}
                   </h3>
                   <span className="font-sans text-xs text-charcoal-muted">
-                    Began writing at age 10 • 3 Published Books
+                    Began writing at age 10 • 4 Published Books
                   </span>
                 </div>
               </div>
@@ -330,28 +330,31 @@ export default function HomePage() {
                     src={neena.image}
                     alt={neena.name}
                     fill
-                    className="object-cover"
+                    className="object-cover object-top"
                   />
                 </div>
                 <div className="flex flex-col">
                   <span className="font-sans text-xs font-semibold text-gold uppercase tracking-wider">
-                    Founder &amp; Owner
+                    Founder
                   </span>
                   <h3 className="font-serif text-xl sm:text-2xl font-bold text-primary">
                     {neena.name}
                   </h3>
                   <span className="font-sans text-xs text-charcoal-muted">
-                    Read Pustak Publications Imprint
+                    Read Pustak with Avni
                   </span>
                 </div>
               </div>
-              <p className="font-sans text-sm text-charcoal leading-relaxed">
-                Neena leads publishing operations and community literacy drives.
-                Her dedication to children&apos;s books builds welcoming spaces for
-                curious readers and budding writers alike.
-              </p>
+              <div className="flex flex-col gap-3 font-sans text-sm text-charcoal leading-relaxed">
+                <p>
+                  A believer in the power of books, education and creative expression, Neena Chaturvedi founded Read Pustak with Avni with a vision to revive the joy of reading in today&apos;s digital age.
+                </p>
+                <p>
+                  With an interest in literature, publishing and nurturing young talent, she believes that books have the power to shape thoughts, develop imagination and create lifelong learners. Through this initiative, she aims to build a literary community that encourages reading, supports aspiring writers, celebrates creativity and creates opportunities for meaningful publishing.
+                </p>
+              </div>
               <blockquote className="p-3.5 rounded-lg bg-lavender/50 border-l-2 border-gold font-serif italic text-xs sm:text-sm text-primary">
-                {neena.quote}
+                “Her vision is to make reading a habit, writing an expression and publishing an opportunity for emerging voices.”
               </blockquote>
             </div>
           </div>
