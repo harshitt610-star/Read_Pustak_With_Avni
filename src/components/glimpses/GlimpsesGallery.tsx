@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo, memo } from "react";
 import Image from "next/image";
 import {
   Camera,
@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 import { glimpsesData, GlimpseItem } from "@/data/glimpses";
 
-export function GlimpsesGallery() {
+const GlimpsesGalleryComponent: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>("all");
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
@@ -25,20 +25,22 @@ export function GlimpsesGallery() {
 
   const ITEMS_PER_PAGE = 6;
 
-  // Filter items by category
-  const filteredItems = glimpsesData.filter((item) => {
-    if (activeCategory === "all") return true;
-    return item.category === activeCategory;
-  });
+  // Filter items by category (memoized)
+  const filteredItems = useMemo(() => {
+    if (activeCategory === "all") return glimpsesData;
+    return glimpsesData.filter((item) => item.category === activeCategory);
+  }, [activeCategory]);
 
-  // Calculate items to show
+  // Calculate items to show (memoized)
   const totalPages = Math.ceil(filteredItems.length / ITEMS_PER_PAGE);
-  const displayedItems = isExpanded
-    ? filteredItems
-    : filteredItems.slice(
-        (currentPage - 1) * ITEMS_PER_PAGE,
-        currentPage * ITEMS_PER_PAGE
-      );
+  const displayedItems = useMemo(() => {
+    return isExpanded
+      ? filteredItems
+      : filteredItems.slice(
+          (currentPage - 1) * ITEMS_PER_PAGE,
+          currentPage * ITEMS_PER_PAGE
+        );
+  }, [isExpanded, filteredItems, currentPage]);
 
   // Keyboard navigation for lightbox
   useEffect(() => {
@@ -62,24 +64,27 @@ export function GlimpsesGallery() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [lightboxIndex]);
 
-  const categories = [
-    { id: "all", label: "All Moments", count: glimpsesData.length },
-    {
-      id: "srmu",
-      label: "SRMU Workshop",
-      count: glimpsesData.filter((g) => g.category === "srmu").length,
-    },
-    {
-      id: "giving",
-      label: "Community Giving",
-      count: glimpsesData.filter((g) => g.category === "giving").length,
-    },
-    {
-      id: "circles",
-      label: "Reading Circles",
-      count: glimpsesData.filter((g) => g.category === "circles").length,
-    },
-  ];
+  const categories = useMemo(
+    () => [
+      { id: "all", label: "All Moments", count: glimpsesData.length },
+      {
+        id: "srmu",
+        label: "SRMU Workshop",
+        count: glimpsesData.filter((g) => g.category === "srmu").length,
+      },
+      {
+        id: "giving",
+        label: "Community Giving",
+        count: glimpsesData.filter((g) => g.category === "giving").length,
+      },
+      {
+        id: "circles",
+        label: "Reading Circles",
+        count: glimpsesData.filter((g) => g.category === "circles").length,
+      },
+    ],
+    []
+  );
 
   const posterGlimpse = glimpsesData.find((g) => g.id === "srmu-poster")!;
 
@@ -451,5 +456,7 @@ export function GlimpsesGallery() {
       )}
     </div>
   );
-}
+};
+
+export const GlimpsesGallery = memo(GlimpsesGalleryComponent);
 

@@ -13,20 +13,52 @@ import {
 } from "lucide-react";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Read Pustak with Avni",
+  title: "Contact & Collaborations | Read Pustak Publications",
   description:
-    "Get in touch with young author Avni Chaturvedi and publisher Neena Chaturvedi for school reading circles, literary events, or book collaborations.",
+    "Connect with young author Avni Chaturvedi and educator Neena Chaturvedi for school workshops, author visits, book fairs, and community reading drives in Lucknow & India.",
+  alternates: {
+    canonical: "https://readpustak.com/contact",
+  },
+  openGraph: {
+    title: "Contact Read Pustak Publications | Lucknow, India",
+    description:
+      "Get in touch for school literacy sessions, author invitations, and book collaborations.",
+    url: "https://readpustak.com/contact",
+    images: [
+      {
+        url: "/images/author/meet-the-author-avni.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Contact Read Pustak with Avni",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Read Pustak with Avni",
+    description:
+      "Connect for school reading circles, author visits, and book orders.",
+    images: ["/images/author/meet-the-author-avni.jpg"],
+  },
 };
 
 export default function ContactPage() {
   return (
     <div className="flex flex-col gap-16 lg:gap-20 py-6 sm:py-10">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Contact", url: "/contact" },
+        ]}
+      />
       {/* 1. HERO INTRO */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="bg-gradient-to-b from-white to-[#FAF0FF]/50 rounded-2xl border border-border/80 shadow-editorial p-6 sm:p-12 lg:p-16 flex flex-col gap-6">
           <SectionHeading
+            as="h1"
             eyebrow="Literary Secretariat"
             title="Get in Touch"
             subtitle="“A conversation is the beginning of every shared story.”"
@@ -88,6 +120,26 @@ export default function ContactPage() {
                     </a>
                     <span className="text-xs text-charcoal-subtle pt-0.5">
                       For literary sessions, workshops &amp; book orders
+                    </span>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3.5">
+                  <div className="w-9 h-9 rounded-lg bg-[#25D366]/20 flex items-center justify-center text-[#25D366] shrink-0">
+                    <span className="w-3 h-3 rounded-full bg-[#25D366]" />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="font-semibold text-primary">WhatsApp Direct</span>
+                    <a
+                      href="https://wa.me/917068999555?text=Hello%20Read%20Pustak%20with%20Avni,%20I%20would%20like%20to%20know%20more%20about%20your%20books%20and%20initiatives."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#128C7E] font-bold hover:underline"
+                    >
+                      +91 70689 99555
+                    </a>
+                    <span className="text-xs text-charcoal-subtle pt-0.5">
+                      Instant message for orders, sessions &amp; queries
                     </span>
                   </div>
                 </div>

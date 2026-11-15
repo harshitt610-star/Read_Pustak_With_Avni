@@ -19,16 +19,44 @@ import {
   Laptop,
   Users,
   Share2,
+  Download,
 } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { teamData } from "@/data/team";
 import { TeamCard } from "@/components/team/TeamCard";
 import { PublishWithUsButton } from "@/components/publishing/PublishWithUsButton";
+import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
+import { ChildrensDaySection } from "@/components/promotions/ChildrensDaySection";
+import { WebDevelopmentSection } from "@/components/digital/WebDevelopmentSection";
 
 export const metadata: Metadata = {
-  title: "Publishing, Digital Innovation & Team | Read Pustak Publications",
+  title: "About Our Publishing & Mission | Read Pustak Publications",
   description:
     "Explore the editorial mandate, our story, digital innovation, and the dedicated team behind Read Pustak Publications in Gomti Nagar, Lucknow, India.",
+  alternates: {
+    canonical: "https://readpustak.com/about",
+  },
+  openGraph: {
+    title: "About Read Pustak Publications | Mission & Publishing",
+    description:
+      "Where young imagination meets dedicated editorial craft and the enduring permanence of print.",
+    url: "https://readpustak.com/about",
+    images: [
+      {
+        url: "/images/avni/avni-desk-writing.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Read Pustak Publications editorial desk",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Read Pustak Publications",
+    description:
+      "Explore the editorial mandate and reading initiative of Read Pustak Publications.",
+    images: ["/images/avni/avni-desk-writing.jpg"],
+  },
 };
 
 const publishingStages = [
@@ -132,6 +160,12 @@ const digitalAspirations = [
 export default function PublishingEditorialPage() {
   return (
     <div className="flex flex-col gap-16 lg:gap-24 py-6 sm:py-10">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "About", url: "/about" },
+        ]}
+      />
       {/* 1. HERO SECTION: Editorial Mandate */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="bg-gradient-to-b from-white to-[#FAF0FF]/50 rounded-2xl border border-border/80 shadow-editorial p-6 sm:p-12 lg:p-16 flex flex-col gap-6 relative overflow-hidden">
@@ -571,6 +605,12 @@ export default function PublishingEditorialPage() {
         </div>
       </section>
 
+      {/* 7.3 WEBSITE & APP DEVELOPMENT SERVICES */}
+      <WebDevelopmentSection />
+
+      {/* 7.5 CHILDREN'S DAY CAMPAIGN SPOTLIGHT */}
+      <ChildrensDaySection />
+
       {/* 8. YOUNG WRITERS MENTORSHIP & EDITORIAL INQUIRIES */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="bg-gradient-to-r from-lavender/80 via-ivory to-lavender/80 border border-gold/40 rounded-2xl p-8 sm:p-12 text-center flex flex-col items-center gap-5 shadow-editorial">
@@ -594,6 +634,16 @@ export default function PublishingEditorialPage() {
 
           <div className="flex flex-wrap gap-4 justify-center pt-2">
             <PublishWithUsButton />
+            <a
+              href="/downloads/read-pustak-publishing-brochure.pdf"
+              download="Read-Pustak-Publishing-Brochure.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3.5 rounded-lg bg-primary text-white font-sans text-sm font-semibold hover:bg-primary-hover border border-gold/40 shadow-xs transition-all flex items-center gap-2 hover:scale-105 active:scale-95"
+            >
+              <Download className="w-4 h-4 text-gold" />
+              <span>Download Publishing Brochure (PDF)</span>
+            </a>
             <Link
               href="/contact"
               className="px-6 py-3.5 rounded-lg bg-white text-primary font-sans text-sm font-semibold hover:bg-lavender/50 border border-border shadow-xs transition-colors flex items-center gap-2"

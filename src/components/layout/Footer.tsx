@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -6,22 +6,21 @@ import {
   Mail,
   MapPin,
   Sparkles,
-  Heart,
-  ExternalLink,
   Instagram,
   Youtube,
+  Download,
 } from "lucide-react";
 
-export const Footer: React.FC = () => {
+const FooterComponent: React.FC = () => {
   return (
-    <footer className="w-full bg-primary text-white pt-16 pb-24 lg:pb-16 border-t-2 border-gold/40 relative overflow-hidden">
+    <footer className="w-full bg-primary text-white pt-16 pb-24 md:pb-16 border-t-2 border-gold/40 relative overflow-hidden">
       {/* Subtle background glow */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-primary-container rounded-full blur-3xl opacity-40 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
-          {/* Column 1: Brand & Slogan */}
-          <div className="flex flex-col gap-4 lg:col-span-1">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+          {/* Column 1: Brand & Slogan (5 cols) */}
+          <div className="flex flex-col gap-4 md:col-span-5">
             <div className="flex items-center gap-3">
               <div className="relative w-12 h-12 rounded-full overflow-hidden shadow-sm ring-2 ring-gold/50 bg-white shrink-0">
                 <Image
@@ -42,14 +41,14 @@ export const Footer: React.FC = () => {
               </div>
             </div>
 
-            <p className="font-sans text-xs sm:text-sm text-white/80 leading-relaxed">
+            <p className="font-sans text-xs sm:text-sm text-white/80 leading-relaxed max-w-md">
               An independent literary and educational publishing initiative
-              founded by Neena Chaturvedi & young author Avni Chaturvedi.
+              founded by Neena Chaturvedi &amp; young author Avni Chaturvedi.
               Dedicated to cultivating reading habits, encouraging children to
               express their own stories, and nurturing the imaginative spirit.
             </p>
 
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-gold/30 self-start text-xs text-gold">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-gold/30 self-start text-xs text-gold">
               <Sparkles className="w-3.5 h-3.5" />
               <span className="font-serif italic font-medium">
                 “Ek Bachcha, Ek Pustak Padhe.”
@@ -57,66 +56,18 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Column 2: Navigation Directory */}
-          <div className="flex flex-col gap-3">
+          {/* Column 2: Primary Links (3 cols, max 6 links) */}
+          <div className="flex flex-col gap-3 md:col-span-3">
             <h3 className="font-serif text-base font-semibold text-gold tracking-wide uppercase border-b border-gold/20 pb-2">
-              Folio Directory
+              Explore
             </h3>
-            <ul className="grid grid-cols-1 gap-2 font-sans text-xs sm:text-sm text-white/80">
+            <ul className="flex flex-col gap-2.5 font-sans text-xs sm:text-sm text-white/80">
               <li>
                 <Link
                   href="/"
                   className="hover:text-gold transition-colors inline-flex items-center gap-1.5"
                 >
                   <span>Home</span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/#philosophy"
-                  className="hover:text-gold transition-colors inline-flex items-center gap-1.5"
-                >
-                  <span>Our Philosophy</span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/founders"
-                  className="hover:text-gold transition-colors inline-flex items-center gap-1.5"
-                >
-                  <span>Meet the Founders</span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/founders#our-team"
-                  className="hover:text-gold transition-colors inline-flex items-center gap-1.5 text-gold-light"
-                >
-                  <span>Our Team</span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/avni-journey"
-                  className="hover:text-gold transition-colors inline-flex items-center gap-1.5"
-                >
-                  <span>Avni&apos;s Journey</span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/books"
-                  className="hover:text-gold transition-colors inline-flex items-center gap-1.5"
-                >
-                  <span>Explore Our Books</span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/#beyond-books"
-                  className="hover:text-gold transition-colors inline-flex items-center gap-1.5"
-                >
-                  <span>Beyond Books</span>
                 </Link>
               </li>
               <li>
@@ -129,18 +80,42 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
-                  href="/#initiatives"
+                  href="/about#digital-services"
                   className="hover:text-gold transition-colors inline-flex items-center gap-1.5"
                 >
-                  <span>Our Initiatives</span>
+                  <span>Web &amp; App Development</span>
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/achievements"
+                  href="/books"
                   className="hover:text-gold transition-colors inline-flex items-center gap-1.5"
                 >
-                  <span>Achievements &amp; Recognition</span>
+                  <span>Explore Our Books</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/beyond-books"
+                  className="hover:text-gold transition-colors inline-flex items-center gap-1.5"
+                >
+                  <span>Beyond Books</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/avni-journey"
+                  className="hover:text-gold transition-colors inline-flex items-center gap-1.5"
+                >
+                  <span>Avni&apos;s Journey</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/founders"
+                  className="hover:text-gold transition-colors inline-flex items-center gap-1.5"
+                >
+                  <span>Meet the Founders &amp; Team</span>
                 </Link>
               </li>
               <li>
@@ -148,71 +123,26 @@ export const Footer: React.FC = () => {
                   href="/contact"
                   className="hover:text-gold transition-colors inline-flex items-center gap-1.5"
                 >
-                  <span>Join Our Community</span>
+                  <span>Contact &amp; Community</span>
                 </Link>
+              </li>
+              <li className="pt-1">
+                <a
+                  href="/downloads/read-pustak-publishing-brochure.pdf"
+                  download="Read-Pustak-Publishing-Brochure.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gold hover:text-gold-light transition-colors inline-flex items-center gap-1.5 font-bold"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  <span>Publishing Brochure (PDF)</span>
+                </a>
               </li>
             </ul>
           </div>
 
-          {/* Column 3: Featured Books */}
-          <div className="flex flex-col gap-3">
-            <h3 className="font-serif text-base font-semibold text-gold tracking-wide uppercase border-b border-gold/20 pb-2">
-              Published Works
-            </h3>
-            <ul className="flex flex-col gap-3 font-sans text-sm text-white/80">
-              <li className="flex flex-col">
-                <Link
-                  href="/books#emma-finds-her-solution"
-                  className="text-white hover:text-gold transition-colors font-medium flex items-center gap-1"
-                >
-                  <BookOpen className="w-3.5 h-3.5 text-gold shrink-0" />
-                  <span>Emma Finds Her Solution</span>
-                </Link>
-                <span className="text-xs text-white/60 pl-5">
-                  Debut Storybook • Ages 6-12
-                </span>
-              </li>
-              <li className="flex flex-col">
-                <Link
-                  href="/books#pancha-tatva-tales"
-                  className="text-white hover:text-gold transition-colors font-medium flex items-center gap-1"
-                >
-                  <BookOpen className="w-3.5 h-3.5 text-gold shrink-0" />
-                  <span>Pancha Tatva Tales</span>
-                </Link>
-                <span className="text-xs text-white/60 pl-5">
-                  The Five Elements • Stories of Joy & Wisdom
-                </span>
-              </li>
-              <li className="flex flex-col">
-                <Link
-                  href="/books#ancient-answers"
-                  className="text-white hover:text-gold transition-colors font-medium flex items-center gap-1"
-                >
-                  <BookOpen className="w-3.5 h-3.5 text-gold shrink-0" />
-                  <span>Ancient Answers for Modern Problems</span>
-                </Link>
-                <span className="text-xs text-white/60 pl-5">
-                  Finding Calm in a Noisy World • 2026
-                </span>
-              </li>
-              <li className="flex flex-col">
-                <Link
-                  href="/books#incredible-bharat"
-                  className="text-white hover:text-gold transition-colors font-medium flex items-center gap-1"
-                >
-                  <BookOpen className="w-3.5 h-3.5 text-gold shrink-0" />
-                  <span>Incredible Bharat</span>
-                </Link>
-                <span className="text-xs text-white/60 pl-5">
-                  Ek Desh, Anek Kahaniyaan • 2026
-                </span>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 4: Contact & Social Coordinates */}
-          <div className="flex flex-col gap-3">
+          {/* Column 3: Contact & Social Coordinates (4 cols) */}
+          <div className="flex flex-col gap-3 md:col-span-4">
             <h3 className="font-serif text-base font-semibold text-gold tracking-wide uppercase border-b border-gold/20 pb-2">
               Literary Secretariat
             </h3>
@@ -230,12 +160,6 @@ export const Footer: React.FC = () => {
                   contact@readpustak.com
                 </a>
               </div>
-              <div className="flex items-center gap-2.5 pt-2">
-                <Heart className="w-4 h-4 text-gold shrink-0" />
-                <span className="text-xs text-white/70">
-                  Read Pustak Publications Imprint
-                </span>
-              </div>
 
               {/* Social Channels */}
               <div className="pt-2">
@@ -243,6 +167,16 @@ export const Footer: React.FC = () => {
                   Connect With Us
                 </span>
                 <div className="flex flex-wrap items-center gap-2 text-xs">
+                  <a
+                    href="https://wa.me/917068999555?text=Hello%20Read%20Pustak%20with%20Avni,%20I%20would%20like%20to%20know%20more%20about%20your%20books%20and%20initiatives."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#25D366]/20 hover:bg-[#25D366] hover:text-white transition-all text-[#25D366] font-medium border border-[#25D366]/40"
+                    aria-label="WhatsApp chat with Read Pustak with Avni"
+                  >
+                    <span className="w-2 h-2 rounded-full bg-[#25D366] shrink-0" />
+                    <span>WhatsApp</span>
+                  </a>
                   <a
                     href="https://www.instagram.com/author_avnic?srtk=bzBwcXg1ZW51M2Nt"
                     target="_blank"
@@ -283,9 +217,9 @@ export const Footer: React.FC = () => {
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-white/60 gap-4">
           <p>© {new Date().getFullYear()} Read Pustak Publications. All literary rights reserved.</p>
           <div className="flex items-center gap-4 text-white/60">
-            <span>Literary & Educational Initiative</span>
+            <span>Literary &amp; Educational Initiative</span>
             <span>•</span>
-            <span className="text-gold">Avni Chaturvedi & Neena Chaturvedi</span>
+            <span className="text-gold">Avni Chaturvedi &amp; Neena Chaturvedi</span>
           </div>
         </div>
       </div>
@@ -293,3 +227,4 @@ export const Footer: React.FC = () => {
   );
 };
 
+export const Footer = memo(FooterComponent);

@@ -55,6 +55,17 @@ export const glimpsesData: GlimpseItem[] = [
     aspect: "portrait",
   },
   {
+    id: "manisha-mandir-giving",
+    image: "/images/glimpses/manisha-mandir.jpg",
+    title: "Reading Circle & Book Gifting at Manisha Mandir",
+    category: "giving",
+    categoryLabel: "Community Giving",
+    date: "2026",
+    caption:
+      "Avni with young girls and students at Manisha Mandir residential care home, holding copies of storybooks during an inspiring creative reading session.",
+    aspect: "landscape",
+  },
+  {
     id: "ancient-answers-giving",
     image: "/images/glimpses/glimpse-6.jpg",
     title: "Inspiring Wisdom & Calm",

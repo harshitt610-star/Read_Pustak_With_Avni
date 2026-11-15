@@ -15,22 +15,54 @@ import {
 } from "lucide-react";
 import { milestonesData } from "@/data/milestones";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Avni's Journey | Read Pustak with Avni",
+  title: "Avni's Journey | Young Author Path & Milestones",
   description:
-    "Follow the literary journey of young author Avni Chaturvedi, from early stories at age 10 to publishing three books and speaking at the Lucknow Book Fair.",
+    "Follow the literary journey of young author Avni Chaturvedi, from early stories at age 10 to publishing 4 books and speaking at the Lucknow Book Fair.",
+  alternates: {
+    canonical: "https://readpustak.com/avni-journey",
+  },
+  openGraph: {
+    title: "Avni's Literary Journey | Young Author Avni Chaturvedi",
+    description:
+      "From age 10 writing genesis to Amazon-verified author and national literary speaker. Discover Avni's milestones.",
+    url: "https://readpustak.com/avni-journey",
+    images: [
+      {
+        url: "/images/avni/avni-journey-hero.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Young author Avni Chaturvedi literary journey",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Avni's Literary Journey | Read Pustak",
+    description:
+      "Follow young author Avni Chaturvedi's inspiring writing milestones and publications.",
+    images: ["/images/avni/avni-journey-hero.jpg"],
+  },
 };
 
 export default function JourneyPage() {
   return (
     <div className="flex flex-col gap-16 lg:gap-24 py-6 sm:py-10">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Avni's Journey", url: "/avni-journey" },
+        ]}
+      />
       {/* 1. HERO INTRO */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="bg-gradient-to-b from-white to-[#FAF0FF]/50 rounded-2xl border border-border/80 shadow-editorial p-6 sm:p-12 lg:p-16 flex flex-col gap-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7 flex flex-col gap-4">
               <SectionHeading
+                as="h1"
                 eyebrow="Author Profile &amp; Path"
                 title="Avni's Literary Journey"
                 subtitle="“A pen guided by curiosity, wonder, and deep cultural reverence.”"

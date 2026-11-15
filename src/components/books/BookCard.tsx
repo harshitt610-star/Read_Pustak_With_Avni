@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Book } from "@/types";
 import {
   BookOpen,
@@ -16,18 +17,22 @@ import {
 interface BookCardProps {
   book: Book;
   featured?: boolean;
+  compact?: boolean;
 }
 
-export const BookCard: React.FC<BookCardProps> = ({ book, featured = false }) => {
+const BookCardComponent: React.FC<BookCardProps> = ({
+  book,
+  featured = false,
+  compact = false,
+}) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <>
       <article
         id={book.id}
-        className={`bg-white rounded-2xl border border-border/80 shadow-editorial hover:shadow-editorial-hover transition-all duration-300 flex flex-col overflow-hidden group ${
-          featured ? "ring-2 ring-gold/40" : ""
-        }`}
+        className={`bg-white rounded-2xl border border-border/80 shadow-editorial hover:shadow-editorial-hover transition-all duration-300 flex flex-col overflow-hidden group ${featured ? "ring-2 ring-gold/40" : ""
+          }`}
       >
         {/* Book Jacket Cover Display */}
         <div className="relative aspect-[3/4] w-full bg-[#FAF0FF] overflow-hidden flex items-center justify-center p-6 border-b border-border/40">
@@ -45,7 +50,7 @@ export const BookCard: React.FC<BookCardProps> = ({ book, featured = false }) =>
             <span className="px-3 py-1 rounded-full bg-primary/90 backdrop-blur-sm text-gold font-sans text-xs font-semibold shadow-xs">
               {book.ageRange}
             </span>
-            {book.publishedYear && (
+            {!compact && book.publishedYear && (
               <span className="px-2.5 py-0.5 rounded-full bg-gold text-primary font-sans text-[11px] font-bold shadow-xs">
                 {book.publishedYear}
               </span>
@@ -53,87 +58,105 @@ export const BookCard: React.FC<BookCardProps> = ({ book, featured = false }) =>
           </div>
         </div>
 
-        {/* Content Container */}
-        <div className="p-6 flex-1 flex flex-col justify-between gap-4">
-          <div className="flex flex-col gap-2">
-            <div className="flex items-center justify-between text-xs font-sans text-gold font-semibold uppercase tracking-wider">
-              <span>By {book.author}</span>
-              {book.publishedYear && (
-                <span className="text-charcoal-muted font-normal lowercase">
-                  pub. {book.publishedYear}
-                </span>
-              )}
-            </div>
-
-            <h3 className="font-serif text-xl sm:text-2xl font-bold text-primary group-hover:text-primary-hover transition-colors leading-snug">
+        {compact ? (
+          /* Compact Content Container for Streamlined Homepage */
+          <div className="p-5 flex-1 flex flex-col justify-between gap-4">
+            <h3 className="font-serif text-lg sm:text-xl font-bold text-primary group-hover:text-primary-hover transition-colors leading-snug">
               {book.title}
             </h3>
 
-            {book.subtitle && (
-              <p className="font-serif italic text-sm text-charcoal-muted leading-snug">
-                {book.subtitle}
-              </p>
-            )}
-
-            <p className="font-sans text-sm text-charcoal leading-relaxed pt-1">
-              {book.summary}
-            </p>
+            <Link
+              href={`/books#${book.id}`}
+              className="w-full py-2.5 px-4 rounded-lg bg-primary hover:bg-primary-hover text-white font-sans text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 transition-all shadow-xs group/btn"
+            >
+              <BookOpen className="w-4 h-4 text-gold group-hover/btn:scale-110 transition-transform" />
+              <span>Explore Book</span>
+              <ChevronRight className="w-4 h-4 text-white/70 group-hover/btn:translate-x-1 transition-transform" />
+            </Link>
           </div>
-
-          {/* Themes Tags & Actions */}
-          <div className="flex flex-col gap-3 pt-3 border-t border-border/60">
-            <div className="flex flex-wrap gap-1.5">
-              {book.themes.slice(0, 3).map((theme) => (
-                <span
-                  key={theme}
-                  className="px-2.5 py-0.5 rounded-full bg-lavender/60 text-primary text-[11px] font-sans font-medium"
-                >
-                  {theme}
-                </span>
-              ))}
-            </div>
-
-            {/* Purchase Direct Links (Amazon & Flipkart) */}
-            {(book.amazonUrl || book.flipkartUrl) && (
-              <div className="grid grid-cols-2 gap-2 pt-1">
-                {book.amazonUrl && (
-                  <a
-                    href={book.amazonUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="py-2 px-3 rounded-lg bg-[#FF9900]/10 hover:bg-[#FF9900]/20 text-[#8C4A00] font-sans text-xs font-bold flex items-center justify-center gap-1.5 transition-colors border border-[#FF9900]/30"
-                  >
-                    <span>Amazon</span>
-                    <ExternalLink className="w-3 h-3 text-[#8C4A00]" />
-                  </a>
-                )}
-                {book.flipkartUrl && (
-                  <a
-                    href={book.flipkartUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`py-2 px-3 rounded-lg bg-[#2874F0]/10 hover:bg-[#2874F0]/20 text-[#1250B8] font-sans text-xs font-bold flex items-center justify-center gap-1.5 transition-colors border border-[#2874F0]/30 ${
-                      !book.amazonUrl ? "col-span-2" : ""
-                    }`}
-                  >
-                    <span>Flipkart</span>
-                    <ExternalLink className="w-3 h-3 text-[#1250B8]" />
-                  </a>
+        ) : (
+          /* Detailed Content Container for /books Dedicated Page */
+          <div className="p-6 flex-1 flex flex-col justify-between gap-4">
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center justify-between text-xs font-sans text-gold font-semibold uppercase tracking-wider">
+                <span>By {book.author}</span>
+                {book.publishedYear && (
+                  <span className="text-charcoal-muted font-normal lowercase">
+                    pub. {book.publishedYear}
+                  </span>
                 )}
               </div>
-            )}
 
-            {/* Read Details Action */}
-            <button
-              onClick={() => setModalOpen(true)}
-              className="w-full py-2.5 px-4 rounded-lg bg-surface-container hover:bg-lavender text-primary font-sans text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 transition-all border border-primary/10 hover:border-primary/20"
-            >
-              <BookOpen className="w-4 h-4 text-gold" />
-              <span>Read Synopsis &amp; Themes</span>
-              <ChevronRight className="w-4 h-4 text-charcoal-muted group-hover:translate-x-1 transition-transform" />
-            </button>
+              <h3 className="font-serif text-xl sm:text-2xl font-bold text-primary group-hover:text-primary-hover transition-colors leading-snug">
+                {book.title}
+              </h3>
+
+              {book.subtitle && (
+                <p className="font-serif italic text-sm text-charcoal-muted leading-snug">
+                  {book.subtitle}
+                </p>
+              )}
+
+              <p className="font-sans text-sm text-charcoal leading-relaxed pt-1">
+                {book.summary}
+              </p>
+            </div>
+
+            {/* Themes Tags & Actions */}
+            <div className="flex flex-col gap-3 pt-3 border-t border-border/60">
+              <div className="flex flex-wrap gap-1.5">
+                {book.themes.slice(0, 3).map((theme) => (
+                  <span
+                    key={theme}
+                    className="px-2.5 py-0.5 rounded-full bg-lavender/60 text-primary text-[11px] font-sans font-medium"
+                  >
+                    {theme}
+                  </span>
+                ))}
+              </div>
+
+              {/* Purchase Direct Links (Amazon & Flipkart) */}
+              {(book.amazonUrl || book.flipkartUrl) && (
+                <div className="grid grid-cols-2 gap-2 pt-1">
+                  {book.amazonUrl && (
+                    <a
+                      href={book.amazonUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="py-2 px-3 rounded-lg bg-[#FF9900]/10 hover:bg-[#FF9900]/20 text-[#8C4A00] font-sans text-xs font-bold flex items-center justify-center gap-1.5 transition-colors border border-[#FF9900]/30"
+                    >
+                      <span>Amazon</span>
+                      <ExternalLink className="w-3 h-3 text-[#8C4A00]" />
+                    </a>
+                  )}
+                  {book.flipkartUrl && (
+                    <a
+                      href={book.flipkartUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`py-2 px-3 rounded-lg bg-[#2874F0]/10 hover:bg-[#2874F0]/20 text-[#1250B8] font-sans text-xs font-bold flex items-center justify-center gap-1.5 transition-colors border border-[#2874F0]/30 ${
+                        !book.amazonUrl ? "col-span-2" : ""
+                      }`}
+                    >
+                      <span>Flipkart</span>
+                      <ExternalLink className="w-3 h-3 text-[#1250B8]" />
+                    </a>
+                  )}
+                </div>
+              )}
+
+              {/* Read Details Action */}
+              <button
+                onClick={() => setModalOpen(true)}
+                className="w-full py-2.5 px-4 rounded-lg bg-surface-container hover:bg-lavender text-primary font-sans text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 transition-all border border-primary/10 hover:border-primary/20"
+              >
+                <BookOpen className="w-4 h-4 text-gold" />
+                <span>Read Synopsis &amp; Themes</span>
+                <ChevronRight className="w-4 h-4 text-charcoal-muted group-hover:translate-x-1 transition-transform" />
+              </button>
+            </div>
           </div>
-        </div>
+        )}
       </article>
 
       {/* Modal View for Book Synopsis */}
@@ -253,3 +276,5 @@ export const BookCard: React.FC<BookCardProps> = ({ book, featured = false }) =>
     </>
   );
 };
+
+export const BookCard = memo(BookCardComponent);

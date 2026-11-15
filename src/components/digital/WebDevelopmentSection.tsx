@@ -1,0 +1,280 @@
+import React from "react";
+import Link from "next/link";
+import {
+  Globe,
+  Smartphone,
+  Layers,
+  Sparkles,
+  CheckCircle2,
+  ArrowRight,
+  MessageCircle,
+  Download,
+  Mail,
+  ShieldCheck,
+  Zap,
+  Clock,
+} from "lucide-react";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+
+const WHATSAPP_TECH_URL =
+  "https://wa.me/917068999555?text=" +
+  encodeURIComponent(
+    "Hello Read Pustak, I am interested in your Website and App Development Services. I would like to discuss my project requirements."
+  );
+
+const websitePlans = [
+  { name: "Basic Website (1–5 Pages)", price: "₹7,999" },
+  { name: "Personal / Portfolio Website", price: "₹9,999" },
+  { name: "Business Website", price: "₹14,999" },
+  { name: "Professional Corporate Website", price: "₹24,999" },
+  { name: "Educational Website", price: "₹29,999" },
+  { name: "E-commerce Website", price: "₹39,999" },
+  { name: "Custom Web Application", price: "₹59,999" },
+];
+
+const appPlans = [
+  { name: "Basic Android App", price: "₹49,999" },
+  { name: "Business Mobile App", price: "₹59,999" },
+  { name: "Educational Mobile App", price: "₹69,999" },
+  { name: "E-commerce App", price: "₹79,999" },
+  { name: "Android + iOS Dual App", price: "₹89,999" },
+  { name: "Custom Mobile Application", price: "On Request" },
+];
+
+const additionalServices = [
+  { name: "Website Maintenance", price: "₹1,000 / mo" },
+  { name: "Website Redesign", price: "₹5,000" },
+  { name: "SEO Optimization Services", price: "₹3,000 / mo" },
+  { name: "Logo & Brand Designing", price: "₹1,000" },
+  { name: "Domain & Hosting Setup", price: "₹1,500" },
+  { name: "Business Email & Integrations", price: "On Request" },
+];
+
+const valuePillars = [
+  "Affordable & Transparent Pricing",
+  "Professional Editorial Design",
+  "100% Mobile-Friendly & Responsive",
+  "Intuitive User Experience",
+  "Reliable Technical Support",
+  "Customised Digital Solutions",
+];
+
+export const WebDevelopmentSection: React.FC = () => {
+  return (
+    <section id="digital-services" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full scroll-mt-24">
+      <div className="flex flex-col gap-10 sm:gap-14">
+        {/* 1. SECTION HEADER */}
+        <div className="flex flex-col gap-6">
+          <SectionHeading
+            eyebrow="Digital Solutions & Tech"
+            title="Website & App Development Services"
+            subtitle="“Building Digital Dreams into Reality — Affordable, professional digital solutions for creators, businesses and organisations.”"
+          />
+
+          {/* 6 Value Pillars Pills */}
+          <div className="flex flex-wrap items-center gap-2.5 pt-1">
+            {valuePillars.map((pillar) => (
+              <span
+                key={pillar}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-border/80 text-charcoal font-sans text-xs font-semibold shadow-xs"
+              >
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#25D366] shrink-0" />
+                <span>{pillar}</span>
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* 2. THREE COMPREHENSIVE PRICING CARDS */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
+          {/* Card 1: Website Development */}
+          <div className="bg-white rounded-2xl sm:rounded-3xl border-2 border-border/80 hover:border-gold/60 shadow-editorial hover:shadow-editorial-hover transition-all duration-300 p-6 sm:p-7 flex flex-col justify-between gap-6 group">
+            <div className="flex flex-col gap-4">
+              <div className="flex items-center justify-between">
+                <div className="w-12 h-12 rounded-2xl bg-lavender flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                  <Globe className="w-6 h-6 text-gold" />
+                </div>
+                <span className="px-3 py-1 rounded-full bg-ivory-warm border border-gold/40 text-primary font-sans text-xs font-bold uppercase tracking-wider">
+                  Web Development
+                </span>
+              </div>
+
+              <div>
+                <h3 className="font-serif text-2xl font-bold text-primary">
+                  Website Development
+                </h3>
+                <p className="font-sans text-xs text-charcoal-muted mt-1">
+                  From single-page portfolios to full-scale web applications.
+                </p>
+              </div>
+
+              <div className="w-full h-px bg-border/60" />
+
+              <ul className="flex flex-col gap-3 font-sans text-xs sm:text-sm">
+                {websitePlans.map((plan) => (
+                  <li
+                    key={plan.name}
+                    className="flex items-center justify-between pb-2 border-b border-border/40 gap-2"
+                  >
+                    <span className="text-charcoal font-medium">{plan.name}</span>
+                    <strong className="text-primary font-bold shrink-0">{plan.price}</strong>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <a
+              href={WHATSAPP_TECH_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full py-3 px-4 rounded-xl bg-primary text-white font-sans text-xs sm:text-sm font-semibold hover:bg-primary-hover transition-all duration-200 flex items-center justify-center gap-2 shadow-xs group-hover:shadow-md"
+            >
+              <MessageCircle className="w-4 h-4 text-gold" />
+              <span>Inquire for Website</span>
+            </a>
+          </div>
+
+          {/* Card 2: Mobile App Development (Featured) */}
+          <div className="bg-gradient-to-b from-[#FFF9F1] to-white rounded-2xl sm:rounded-3xl border-2 border-gold shadow-editorial-hover p-6 sm:p-7 flex flex-col justify-between gap-6 relative group">
+            {/* Featured Badge */}
+            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gold text-primary font-sans text-xs font-bold uppercase tracking-wider shadow-sm flex items-center gap-1.5">
+              <Sparkles className="w-3.5 h-3.5 fill-primary text-transparent" />
+              <span>Mobile First Solutions</span>
+            </div>
+
+            <div className="flex flex-col gap-4 pt-2">
+              <div className="flex items-center justify-between">
+                <div className="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+                  <Smartphone className="w-6 h-6 text-gold" />
+                </div>
+                <span className="px-3 py-1 rounded-full bg-gold/20 border border-gold/40 text-gold-dark font-sans text-xs font-bold uppercase tracking-wider">
+                  Android &amp; iOS
+                </span>
+              </div>
+
+              <div>
+                <h3 className="font-serif text-2xl font-bold text-primary">
+                  Mobile App Development
+                </h3>
+                <p className="font-sans text-xs text-charcoal-muted mt-1">
+                  High-performance native and hybrid apps built for scale.
+                </p>
+              </div>
+
+              <div className="w-full h-px bg-border/60" />
+
+              <ul className="flex flex-col gap-3 font-sans text-xs sm:text-sm">
+                {appPlans.map((plan) => (
+                  <li
+                    key={plan.name}
+                    className="flex items-center justify-between pb-2 border-b border-border/40 gap-2"
+                  >
+                    <span className="text-charcoal font-medium">{plan.name}</span>
+                    <strong className="text-primary font-bold shrink-0">{plan.price}</strong>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <a
+              href={WHATSAPP_TECH_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-primary to-[#4A1B82] text-white font-sans text-xs sm:text-sm font-semibold hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2 shadow-md"
+            >
+              <MessageCircle className="w-4 h-4 text-gold" />
+              <span>Inquire for Mobile App</span>
+            </a>
+          </div>
+
+          {/* Card 3: Additional Digital Services */}
+          <div className="bg-white rounded-2xl sm:rounded-3xl border-2 border-border/80 hover:border-gold/60 shadow-editorial hover:shadow-editorial-hover transition-all duration-300 p-6 sm:p-7 flex flex-col justify-between gap-6 group">
+            <div className="flex flex-col gap-4">
+              <div className="flex items-center justify-between">
+                <div className="w-12 h-12 rounded-2xl bg-lavender flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                  <Layers className="w-6 h-6 text-gold" />
+                </div>
+                <span className="px-3 py-1 rounded-full bg-ivory-warm border border-gold/40 text-primary font-sans text-xs font-bold uppercase tracking-wider">
+                  Care &amp; Growth
+                </span>
+              </div>
+
+              <div>
+                <h3 className="font-serif text-2xl font-bold text-primary">
+                  Additional Digital Services
+                </h3>
+                <p className="font-sans text-xs text-charcoal-muted mt-1">
+                  End-to-end design, SEO, and ongoing technical maintenance.
+                </p>
+              </div>
+
+              <div className="w-full h-px bg-border/60" />
+
+              <ul className="flex flex-col gap-3 font-sans text-xs sm:text-sm">
+                {additionalServices.map((service) => (
+                  <li
+                    key={service.name}
+                    className="flex items-center justify-between pb-2 border-b border-border/40 gap-2"
+                  >
+                    <span className="text-charcoal font-medium">{service.name}</span>
+                    <strong className="text-primary font-bold shrink-0">{service.price}</strong>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <a
+              href={WHATSAPP_TECH_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full py-3 px-4 rounded-xl bg-primary text-white font-sans text-xs sm:text-sm font-semibold hover:bg-primary-hover transition-all duration-200 flex items-center justify-center gap-2 shadow-xs group-hover:shadow-md"
+            >
+              <MessageCircle className="w-4 h-4 text-gold" />
+              <span>Inquire for Services</span>
+            </a>
+          </div>
+        </div>
+
+        {/* 3. BOTTOM CTA BANNER & DISCLAIMER */}
+        <div className="bg-gradient-to-r from-primary via-[#35105F] to-[#1C003C] text-white rounded-2xl sm:rounded-3xl p-6 sm:p-10 border border-gold/40 shadow-editorial flex flex-col lg:flex-row items-center justify-between gap-6">
+          <div className="flex flex-col gap-2 max-w-2xl text-center lg:text-left">
+            <span className="font-sans text-xs uppercase tracking-widest text-gold font-bold">
+              Let&apos;s Build Your Digital Presence!
+            </span>
+            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white">
+              Ready to Turn Your Vision into Reality?
+            </h3>
+            <p className="font-sans text-xs sm:text-sm text-ivory/80 leading-relaxed">
+              Contact us for project inquiries, customised quotations, and collaborative development.
+              Prices shown are starting rates based on project scope and features.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full lg:w-auto shrink-0">
+            <a
+              href={WHATSAPP_TECH_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white font-sans font-bold text-sm shadow-md hover:scale-105 active:scale-95 transition-all duration-200"
+            >
+              <MessageCircle className="w-4 h-4 fill-white text-transparent" />
+              <span>Chat on WhatsApp</span>
+            </a>
+
+            <a
+              href="/downloads/read-pustak-digital-services.pdf"
+              download="Read-Pustak-Digital-Services.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white border border-gold/40 font-sans font-semibold text-sm transition-all duration-200"
+            >
+              <Download className="w-4 h-4 text-gold" />
+              <span>Download Price PDF</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+

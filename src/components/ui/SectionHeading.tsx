@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Sparkles } from "lucide-react";
 
 interface SectionHeadingProps {
@@ -8,17 +8,20 @@ interface SectionHeadingProps {
   align?: "left" | "center";
   showOrnament?: boolean;
   className?: string;
+  as?: "h1" | "h2" | "h3";
 }
 
-export const SectionHeading: React.FC<SectionHeadingProps> = ({
+const SectionHeadingComponent: React.FC<SectionHeadingProps> = ({
   eyebrow,
   title,
   subtitle,
   align = "left",
   showOrnament = true,
   className = "",
+  as = "h2",
 }) => {
   const isCenter = align === "center";
+  const HeadingTag = as;
 
   return (
     <div
@@ -33,9 +36,9 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
         </div>
       )}
 
-      <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-primary tracking-tight leading-tight">
+      <HeadingTag className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-primary tracking-tight leading-tight">
         {title}
-      </h2>
+      </HeadingTag>
 
       {subtitle && (
         <p className="font-serif text-lg sm:text-xl text-gold italic font-medium leading-relaxed max-w-2xl">
@@ -57,4 +60,6 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
     </div>
   );
 };
+
+export const SectionHeading = memo(SectionHeadingComponent);
 

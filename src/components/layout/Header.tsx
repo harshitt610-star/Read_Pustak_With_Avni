@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useMemo, memo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -18,7 +18,9 @@ import {
   Award,
   Mail,
   ChevronDown,
+  Laptop,
 } from "lucide-react";
+import { TopPromoBanner } from "@/components/promotions/TopPromoBanner";
 
 export interface NavItem {
   label: string;
@@ -31,12 +33,6 @@ export interface NavItem {
 // 1. Primary Direct Links for Desktop
 export const primaryNavItems: NavItem[] = [
   { label: "Home", href: "/", icon: Home },
-  {
-    label: "Our Philosophy",
-    shortLabel: "Philosophy",
-    href: "/#philosophy",
-    icon: Sparkles,
-  },
   {
     label: "Meet the Founders",
     shortLabel: "Founders",
@@ -58,7 +54,7 @@ export const primaryNavItems: NavItem[] = [
   {
     label: "Beyond Books",
     shortLabel: "Beyond Books",
-    href: "/#beyond-books",
+    href: "/beyond-books",
     icon: Theater,
   },
 ];
@@ -72,8 +68,14 @@ export const moreNavItems: NavItem[] = [
     description: "Read Pustak Publications story & mandate",
   },
   {
+    label: "Web & App Development",
+    href: "/about#digital-services",
+    icon: Laptop,
+    description: "Websites, mobile apps & technical solutions",
+  },
+  {
     label: "Our Initiatives",
-    href: "/#initiatives",
+    href: "/beyond-books#initiatives",
     icon: Heart,
     description: "Community literacy, outreach & workshops",
   },
@@ -97,7 +99,7 @@ export const allNavItems: NavItem[] = [
   ...moreNavItems,
 ];
 
-export const Header: React.FC = () => {
+const HeaderComponent: React.FC = () => {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [moreDropdownOpen, setMoreDropdownOpen] = useState(false);
@@ -106,10 +108,18 @@ export const Header: React.FC = () => {
   const dropdownTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setScrolled(window.scrollY > 15);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const isScrolled = window.scrollY > 15;
+          setScrolled((prev) => (prev !== isScrolled ? isScrolled : prev));
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -156,8 +166,9 @@ export const Header: React.FC = () => {
     }, 150);
   };
 
-  const isMoreActive = moreNavItems.some(
-    (item) => item.href.startsWith("/") && pathname === item.href
+  const isMoreActive = useMemo(
+    () => moreNavItems.some((item) => item.href.startsWith("/") && pathname === item.href),
+    [pathname]
   );
 
   return (
@@ -169,6 +180,7 @@ export const Header: React.FC = () => {
             : "bg-[#FFF9F1]/95 backdrop-blur-sm border-b border-border/40"
         }`}
       >
+        <TopPromoBanner />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo & Brand Name */}
@@ -199,12 +211,10 @@ export const Header: React.FC = () => {
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
               {primaryNavItems.map((item) => {
-                const isAnchor = item.href.includes("#");
                 const isActive =
-                  !isAnchor &&
-                  (item.href === "/"
+                  item.href === "/"
                     ? pathname === "/"
-                    : pathname.startsWith(item.href));
+                    : pathname.startsWith(item.href);
 
                 return (
                   <Link
@@ -349,12 +359,10 @@ export const Header: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
                 {allNavItems.map((item, index) => {
                   const Icon = item.icon;
-                  const isAnchor = item.href.includes("#");
                   const isActive =
-                    !isAnchor &&
-                    (item.href === "/"
+                    item.href === "/"
                       ? pathname === "/"
-                      : pathname.startsWith(item.href));
+                      : pathname.startsWith(item.href);
 
                   return (
                     <Link
@@ -414,3 +422,5 @@ export const Header: React.FC = () => {
     </>
   );
 };
+
+export const Header = memo(HeaderComponent);

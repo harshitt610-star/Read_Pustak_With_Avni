@@ -7,11 +7,36 @@ import { teamData } from "@/data/team";
 import { FounderCard } from "@/components/founders/FounderCard";
 import { TeamCard } from "@/components/team/TeamCard";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Meet Our Founders & Team | Read Pustak with Avni",
+  title: "Meet the Founders | Avni Chaturvedi & Neena Chaturvedi",
   description:
-    "Meet young author Avni Chaturvedi, publisher Neena Chaturvedi, and the dedicated team behind Read Pustak Publications.",
+    "Meet young author Avni Chaturvedi, educator Neena Chaturvedi, and the dedicated team driving Read Pustak Publications.",
+  alternates: {
+    canonical: "https://readpustak.com/founders",
+  },
+  openGraph: {
+    title: "Meet the Founders | Read Pustak Publications",
+    description:
+      "A mother-daughter literary partnership bridging education with the vibrant imagination of young authorship.",
+    url: "https://readpustak.com/founders",
+    images: [
+      {
+        url: "/images/founders/neena-portrait.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Read Pustak Founders - Avni Chaturvedi and Neena Chaturvedi",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Meet the Founders | Read Pustak Publications",
+    description:
+      "Discover the story behind Read Pustak, founded by Avni Chaturvedi and Neena Chaturvedi.",
+    images: ["/images/founders/neena-portrait.jpg"],
+  },
 };
 
 export default function FoundersPage() {
@@ -20,10 +45,17 @@ export default function FoundersPage() {
 
   return (
     <div className="flex flex-col gap-16 lg:gap-24 py-6 sm:py-10">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Founders", url: "/founders" },
+        ]}
+      />
       {/* 1. INTRO HEADER */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="bg-gradient-to-b from-white to-[#FAF0FF]/40 rounded-2xl border border-border/80 shadow-editorial p-6 sm:p-12 lg:p-16 flex flex-col gap-4">
           <SectionHeading
+            as="h1"
             eyebrow="Founding Voices"
             title="Meet Our Founders"
             subtitle="A Shared Vision for Reading, Writing and Creative Expression."

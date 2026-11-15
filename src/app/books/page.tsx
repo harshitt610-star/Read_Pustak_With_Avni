@@ -6,20 +6,52 @@ import { BookOpen, Sparkles, Feather, Heart, Award, ArrowRight } from "lucide-re
 import { booksData } from "@/data/books";
 import { BookCard } from "@/components/books/BookCard";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "Our Books | Read Pustak Publications",
   description:
-    "Explore published titles by young author Avni Chaturvedi: Emma Finds Her Solution, Pancha Tatva Tales, and Ancient Answers for Modern Problems.",
+    "Explore published titles by young author Avni Chaturvedi: Emma Finds Her Solution, The Panch Tatva Tales, Ancient Answers for Modern Problems, and Incredible Bharat.",
+  alternates: {
+    canonical: "https://readpustak.com/books",
+  },
+  openGraph: {
+    title: "Published Books by Avni Chaturvedi | Read Pustak Publications",
+    description:
+      "Explore 4 inspiring children's books by young author Avni Chaturvedi, rooted in Indian culture, curiosity, and mindfulness.",
+    url: "https://readpustak.com/books",
+    images: [
+      {
+        url: "/images/books/pancha-tatva-tales.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Published books by young author Avni Chaturvedi",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Published Books by Avni Chaturvedi | Read Pustak",
+    description:
+      "Explore published children's titles by young author Avni Chaturvedi available on Amazon & Flipkart.",
+    images: ["/images/books/pancha-tatva-tales.jpg"],
+  },
 };
 
 export default function BooksPage() {
   return (
     <div className="flex flex-col gap-16 lg:gap-24 py-6 sm:py-10">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Books", url: "/books" },
+        ]}
+      />
       {/* 1. HERO INTRO */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="bg-gradient-to-b from-white to-[#FAF0FF]/50 rounded-2xl border border-border/80 shadow-editorial p-6 sm:p-12 lg:p-16 flex flex-col gap-6">
           <SectionHeading
+            as="h1"
             eyebrow="Published Shelf"
             title="Stories That Inspire, Books That Stay With Us"
             subtitle="“Explore the books by young author Avni Chaturvedi, featuring imagination, Indian wisdom, and meaningful life lessons.”"

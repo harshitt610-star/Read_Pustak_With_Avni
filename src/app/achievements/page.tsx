@@ -14,20 +14,52 @@ import {
 } from "lucide-react";
 import { partnersData } from "@/data/partners";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Achievements & Social Impact | Read Pustak with Avni",
+  title: "Achievements & Honors | Read Pustak with Avni",
   description:
-    "Explore verified literary milestones and community social impact with Apni Pathshala, Manisha Mandir, and Hope Foundation.",
+    "Explore verified literary honors including 'उत्तर प्रदेश की बात' Mahasangam, Lucknow Book Fair 2026 Speaker, and community literacy outreach.",
+  alternates: {
+    canonical: "https://readpustak.com/achievements",
+  },
+  openGraph: {
+    title: "Achievements & Recognition | Read Pustak with Avni",
+    description:
+      "Honors and social impact by young author Avni Chaturvedi and Read Pustak Publications across Uttar Pradesh.",
+    url: "https://readpustak.com/achievements",
+    images: [
+      {
+        url: "/images/achievements/up-ki-baat-award.jpg",
+        width: 1200,
+        height: 630,
+        alt: "'उत्तर प्रदेश की बात' Mahasangam Honoree Avni Chaturvedi",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Achievements & Honors | Read Pustak with Avni",
+    description:
+      "Verified literary milestones and institutional honors of young author Avni Chaturvedi.",
+    images: ["/images/achievements/up-ki-baat-award.jpg"],
+  },
 };
 
 export default function AchievementsPage() {
   return (
     <div className="flex flex-col gap-16 lg:gap-24 py-6 sm:py-10">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Achievements", url: "/achievements" },
+        ]}
+      />
       {/* 1. HERO INTRO */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="bg-gradient-to-b from-white to-[#FAF0FF]/50 rounded-2xl border border-border/80 shadow-editorial p-6 sm:p-12 lg:p-16 flex flex-col gap-6">
           <SectionHeading
+            as="h1"
             eyebrow="Milestones &amp; Outreach"
             title="Celebrating Creativity, Inspiring Change"
             subtitle="“Literature achieves its highest purpose when it touches lives and nurtures community.”"

@@ -19,7 +19,7 @@ export const partnersData: PartnerImpact[] = [
     id: "manisha-mandir",
     name: "Manisha Mandir",
     type: "Shelter & Residential Care Home for Young Girls",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCL65ynVKviEpx1nww4zDgLUxK5BKMPEorRkhrEiWI_9pZQBi3hzYBkEB24N4dgm0x94Q2aB0wo_TQC-H9muDH1Nw2mLkkb43Yykz3T3OyzuzwTXHEIE-nnu-gA8a3RfdktbrzjZnRNwKMzz4m04w-fkPJdxhzRMlQwnGiHhCrWraOBy7Pv76ui1yUdj1dte1A9yZNC7bevCpm43RlMb001f1uv8wmF-ixFZG3YInY",
+    image: "/images/glimpses/manisha-mandir.jpg",
     description:
       "Collaborative creative engagements and reading circles bringing storybooks and imaginative workshops to young girls in residential care.",
     initiatives: [

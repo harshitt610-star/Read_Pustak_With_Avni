@@ -1,24 +1,24 @@
 "use client";
 
-import React from "react";
+import React, { memo } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Home, BookOpen, Feather, Award, Users } from "lucide-react";
 
-export const MobileNav: React.FC = () => {
-  const pathname = usePathname();
+const tabs = [
+  { label: "Home", href: "/", icon: Home },
+  { label: "Books", href: "/books", icon: BookOpen },
+  { label: "Journey", href: "/avni-journey", icon: Feather },
+  { label: "Founders", href: "/founders", icon: Users },
+  { label: "Honors", href: "/achievements", icon: Award },
+];
 
-  const tabs = [
-    { label: "Home", href: "/", icon: Home },
-    { label: "Books", href: "/books", icon: BookOpen },
-    { label: "Journey", href: "/avni-journey", icon: Feather },
-    { label: "Founders", href: "/founders", icon: Users },
-    { label: "Honors", href: "/achievements", icon: Award },
-  ];
+const MobileNavComponent: React.FC = () => {
+  const pathname = usePathname();
 
   return (
     <nav
-      className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#FFF9F1]/95 backdrop-blur-xl border-t border-border shadow-[0_-4px_16px_rgba(53,16,95,0.06)] pb-[env(safe-area-inset-bottom,0px)]"
+      className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#FFF9F1]/95 backdrop-blur-xl border-t border-border shadow-[0_-4px_16px_rgba(53,16,95,0.06)] pb-[env(safe-area-inset-bottom,0px)]"
       aria-label="Mobile Bottom Navigation"
     >
       <div className="flex justify-around items-center h-16 max-w-md mx-auto px-2">
@@ -64,4 +64,6 @@ export const MobileNav: React.FC = () => {
     </nav>
   );
 };
+
+export const MobileNav = memo(MobileNavComponent);
 
