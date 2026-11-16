@@ -17,9 +17,9 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Achievements & Honors | Read Pustak with Avni",
+  title: "Literary Honors & Recognition in Lucknow, UP | Read Pustak with Avni",
   description:
-    "Explore verified literary honors including 'उत्तर प्रदेश की बात' Mahasangam, Lucknow Book Fair 2026 Speaker, and community literacy outreach.",
+    "Explore verified literary honors of young author Avni Chaturvedi: 'उत्तर प्रदेश की बात' Mahasangam Honoree, Lucknow Book Fair 2026 Speaker, and SRMU literary partner.",
   alternates: {
     canonical: "https://readpustak.com/achievements",
   },

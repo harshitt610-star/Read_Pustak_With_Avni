@@ -9,9 +9,9 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Our Books | Read Pustak Publications",
+  title: "Published Children's Books by Avni Chaturvedi | Read Pustak India",
   description:
-    "Explore published titles by young author Avni Chaturvedi: Emma Finds Her Solution, The Panch Tatva Tales, Ancient Answers for Modern Problems, and Incredible Bharat.",
+    "Explore 4 inspiring published children's books by young author Avni Chaturvedi: Emma Finds Her Solution, The Panch Tatva Tales, Ancient Answers for Modern Problems, and Incredible Bharat. Available on Amazon & Flipkart India.",
   alternates: {
     canonical: "https://readpustak.com/books",
   },

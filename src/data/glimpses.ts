@@ -55,6 +55,17 @@ export const glimpsesData: GlimpseItem[] = [
     aspect: "portrait",
   },
   {
+    id: "scholarship-giving-back",
+    image: "/images/glimpses/scholarship-giving.jpg",
+    title: "किताबों से मिली कमाई, किसी के सपनों की उड़ान बन गई! 📚✨",
+    category: "giving",
+    categoryLabel: "Community Giving",
+    date: "2026",
+    caption:
+      "Avni handing an education support grant from her book earnings to a student. True success is not just about achieving dreams, but helping others achieve theirs. ❤️",
+    aspect: "landscape",
+  },
+  {
     id: "manisha-mandir-giving",
     image: "/images/glimpses/manisha-mandir.jpg",
     title: "Reading Circle & Book Gifting at Manisha Mandir",

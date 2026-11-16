@@ -12,15 +12,16 @@ import {
   ArrowRight,
   Theater,
   Globe,
+  Heart,
 } from "lucide-react";
 import { milestonesData } from "@/data/milestones";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Avni's Journey | Young Author Path & Milestones",
+  title: "Avni's Literary Journey | Young Author from Lucknow, India",
   description:
-    "Follow the literary journey of young author Avni Chaturvedi, from early stories at age 10 to publishing 4 books and speaking at the Lucknow Book Fair.",
+    "Follow the inspiring journey of young author Avni Chaturvedi from age 10 in Lucknow, India: 4 published books, speaker at Lucknow Book Fair 2026, and social impact through literature.",
   alternates: {
     canonical: "https://readpustak.com/avni-journey",
   },
@@ -207,6 +208,63 @@ export default function JourneyPage() {
               <span>Explore Avni&apos;s Books</span>
               <ArrowRight className="w-4 h-4 text-gold" />
             </Link>
+          </div>
+        </div>
+      </section>
+      {/* 4. GIVING BACK & SOCIAL IMPACT SPOTLIGHT */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="rounded-2xl sm:rounded-3xl bg-gradient-to-br from-white via-[#FFF9F1] to-lavender/40 border-2 border-gold/40 shadow-editorial p-6 sm:p-10 lg:p-12 flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+          <div className="relative w-full lg:w-5/12 aspect-[4/3] rounded-2xl overflow-hidden shadow-md border-2 border-gold/30 bg-ivory shrink-0">
+            <Image
+              src="/images/glimpses/scholarship-giving.jpg"
+              alt="Avni Chaturvedi presenting education support from book royalties"
+              fill
+              sizes="(max-width: 1024px) 100vw, 40vw"
+              className="object-cover"
+            />
+            <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-primary/90 text-gold text-xs font-sans font-bold shadow-xs">
+              Giving Back
+            </span>
+          </div>
+
+          <div className="w-full lg:w-7/12 flex flex-col gap-4">
+            <div className="flex items-center gap-2">
+              <Heart className="w-4 h-4 text-rose-500 fill-rose-500" />
+              <span className="text-xs font-sans font-bold text-gold uppercase tracking-widest">
+                Philanthropy &amp; Youth Action
+              </span>
+            </div>
+
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-primary leading-tight">
+              किताबों से मिली कमाई, किसी के सपनों की उड़ान बन गई! 📚✨
+            </h2>
+
+            <blockquote className="font-serif italic text-base sm:text-lg text-charcoal border-l-4 border-gold pl-4 py-1 leading-relaxed">
+              &ldquo;Avni believes that true success is not just about achieving dreams, but helping others achieve theirs. ❤️&rdquo;
+            </blockquote>
+
+            <p className="font-sans text-xs sm:text-sm text-charcoal-muted leading-relaxed">
+              For Avni, literature is a gateway to empathy and purpose. By investing royalty earnings from her books into educational sponsorship and learning kits for young children, she puts compassion into real action.
+            </p>
+
+            {/* Hashtags Strip */}
+            <div className="flex flex-wrap gap-1.5 pt-2">
+              {[
+                "#AvniChaturvedi",
+                "#ReadPustakWithAvni",
+                "#EducationForAll",
+                "#KindnessMatters",
+                "#LittleActsBigImpact",
+                "#InspiringYoungAuthors",
+              ].map((tag) => (
+                <span
+                  key={tag}
+                  className="px-2.5 py-1 rounded-full bg-lavender/70 text-primary font-sans text-[11px] font-semibold border border-primary/10"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>

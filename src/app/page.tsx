@@ -22,11 +22,25 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ChildrensDaySection } from "@/components/promotions/ChildrensDaySection";
 
 export const metadata: Metadata = {
-  title: "Read Pustak with Avni | Turn Pages, Not Just Screens",
+  title: "Read Pustak with Avni | Book Publisher & Young Author in Lucknow, India",
   description:
-    "Official website of young author Avni Chaturvedi and Read Pustak Publications. Discover published children's books, school workshops, and literary initiatives.",
+    "Official website of young author Avni Chaturvedi and Read Pustak Publications in Gomti Nagar, Lucknow. Discover published children's books, school reading workshops, self-publishing mentorship, and digital solutions in India.",
   alternates: {
     canonical: "https://readpustak.com",
+  },
+  openGraph: {
+    title: "Read Pustak with Avni | Book Publishing & Young Author Lucknow, India",
+    description:
+      "Premier independent children's book publisher and young author platform in Gomti Nagar, Lucknow, India. Inspiring youth to read, write, and publish.",
+    url: "https://readpustak.com",
+    images: [
+      {
+        url: "/images/author/meet-the-author-avni.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Young Author Avni Chaturvedi - Read Pustak Publications Lucknow",
+      },
+    ],
   },
 };
 
@@ -297,6 +311,66 @@ export default function HomePage() {
               <span>View Honors</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================= */}
+      {/* 4.5 SOCIAL IMPACT SPOTLIGHT — Giving Back Through Books   */}
+      {/* ========================================================= */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="rounded-2xl sm:rounded-3xl bg-gradient-to-br from-white via-[#FFF9F1] to-lavender/40 border-2 border-gold/40 shadow-editorial p-6 sm:p-8 lg:p-10 flex flex-col lg:flex-row items-center gap-8">
+          <div className="relative w-full lg:w-5/12 aspect-[4/3] rounded-2xl overflow-hidden shadow-md border-2 border-gold/30 bg-ivory shrink-0">
+            <Image
+              src="/images/glimpses/scholarship-giving.jpg"
+              alt="Avni Chaturvedi presenting education support grant from book earnings"
+              fill
+              sizes="(max-width: 1024px) 100vw, 40vw"
+              className="object-cover"
+            />
+            <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-primary/90 text-gold text-xs font-sans font-bold shadow-xs">
+              Giving Back
+            </span>
+          </div>
+
+          <div className="w-full lg:w-7/12 flex flex-col gap-4">
+            <div className="flex items-center gap-2">
+              <Heart className="w-4 h-4 text-rose-500 fill-rose-500" />
+              <span className="text-xs font-sans font-bold text-gold uppercase tracking-widest">
+                Little Acts, Big Impact
+              </span>
+            </div>
+
+            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-primary leading-tight">
+              किताबों से मिली कमाई, किसी के सपनों की उड़ान बन गई! 📚✨
+            </h3>
+
+            <blockquote className="font-serif italic text-base sm:text-lg text-charcoal border-l-4 border-gold pl-4 py-1 leading-relaxed">
+              &ldquo;Avni believes that true success is not just about achieving dreams, but helping others achieve theirs. ❤️&rdquo;
+            </blockquote>
+
+            <p className="font-sans text-xs sm:text-sm text-charcoal-muted leading-relaxed">
+              Avni donates royalties and book earnings to sponsor the education, books, and dreams of deserving students.
+            </p>
+
+            {/* Hashtags Strip */}
+            <div className="flex flex-wrap gap-1.5 pt-1">
+              {[
+                "#AvniChaturvedi",
+                "#ReadPustakWithAvni",
+                "#EducationForAll",
+                "#KindnessMatters",
+                "#LittleActsBigImpact",
+                "#InspiringYoungAuthors",
+              ].map((tag) => (
+                <span
+                  key={tag}
+                  className="px-2.5 py-1 rounded-full bg-lavender/60 text-primary font-sans text-[11px] font-semibold border border-primary/10"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>

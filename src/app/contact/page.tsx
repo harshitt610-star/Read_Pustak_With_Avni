@@ -16,9 +16,9 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Contact & Collaborations | Read Pustak Publications",
+  title: "Contact & Collaborations in Lucknow | Read Pustak Publications",
   description:
-    "Connect with young author Avni Chaturvedi and educator Neena Chaturvedi for school workshops, author visits, book fairs, and community reading drives in Lucknow & India.",
+    "Connect with young author Avni Chaturvedi and educator Neena Chaturvedi for school workshops, author visits, book fairs, and publishing queries in Gomti Nagar, Lucknow & India.",
   alternates: {
     canonical: "https://readpustak.com/contact",
   },
@@ -158,6 +158,47 @@ export default function ContactPage() {
                     </span>
                   </div>
                 </div>
+              </div>
+
+              {/* Local SEO & Regional Coverage Card */}
+              <div className="pt-4 border-t border-border/80 flex flex-col gap-2.5">
+                <span className="font-sans text-xs font-bold uppercase tracking-wider text-charcoal-muted">
+                  Lucknow &amp; Uttar Pradesh Service Hub
+                </span>
+                <p className="font-sans text-xs text-charcoal leading-relaxed">
+                  Headquartered in Gomti Nagar, Lucknow. We actively serve readers, schools, and businesses across:
+                </p>
+                <div className="flex flex-wrap gap-1.5 pt-0.5">
+                  {[
+                    "Gomti Nagar",
+                    "Hazratganj",
+                    "Aliganj",
+                    "Indira Nagar",
+                    "Mahanagar",
+                    "Ashiyana",
+                    "Jankipuram",
+                    "Kanpur Road",
+                    "Lucknow City",
+                    "Uttar Pradesh",
+                  ].map((area) => (
+                    <span
+                      key={area}
+                      className="px-2 py-0.5 rounded-md bg-ivory-warm border border-gold/30 text-[11px] font-medium text-primary"
+                    >
+                      {area}
+                    </span>
+                  ))}
+                </div>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Gomti+Nagar+Lucknow+Uttar+Pradesh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 inline-flex items-center gap-1.5 text-xs font-bold text-gold hover:text-primary transition-colors"
+                >
+                  <MapPin className="w-3.5 h-3.5" />
+                  <span>View Lucknow on Google Maps</span>
+                  <ExternalLink className="w-3 h-3 text-charcoal-muted" />
+                </a>
               </div>
 
               {/* Social Channels */}

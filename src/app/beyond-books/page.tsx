@@ -19,9 +19,9 @@ import { GlimpsesGallery } from "@/components/glimpses/GlimpsesGallery";
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Beyond Books | Theatre, Model UN & Outreach",
+  title: "School Workshops, Theatre & Storytelling in Lucknow | Read Pustak",
   description:
-    "Explore theatre, Model United Nations diplomacy, storytelling circles, and community literacy workshops with young author Avni Chaturvedi.",
+    "Explore school workshops, storytelling circles, Model UN diplomacy, and community reading drives with young author Avni Chaturvedi in Lucknow & India.",
   alternates: {
     canonical: "https://readpustak.com/beyond-books",
   },
@@ -209,6 +209,62 @@ export default function BeyondBooksPage() {
             title="Our Initiatives &amp; Collaborations"
             subtitle="Partnering with universities, residential shelters, and NGOs to share the joy of books"
           />
+
+          {/* Social Impact Spotlight: Book Royalties Giving Back */}
+          <div className="rounded-2xl sm:rounded-3xl bg-gradient-to-br from-white via-[#FFF9F1] to-lavender/30 border-2 border-gold/40 shadow-editorial p-6 sm:p-8 lg:p-10 flex flex-col lg:flex-row items-center gap-8">
+            <div className="relative w-full lg:w-5/12 aspect-[4/3] rounded-2xl overflow-hidden shadow-md border-2 border-gold/30 bg-ivory shrink-0">
+              <Image
+                src="/images/glimpses/scholarship-giving.jpg"
+                alt="Avni Chaturvedi supporting education for young students from book earnings"
+                fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="object-cover"
+              />
+              <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-primary/90 text-gold text-xs font-sans font-bold shadow-xs">
+                Giving Back
+              </span>
+            </div>
+
+            <div className="w-full lg:w-7/12 flex flex-col gap-4">
+              <div className="flex items-center gap-2">
+                <Heart className="w-4 h-4 text-rose-500 fill-rose-500" />
+                <span className="text-xs font-sans font-bold text-gold uppercase tracking-widest">
+                  Little Acts, Big Impact
+                </span>
+              </div>
+
+              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-primary leading-tight">
+                किताबों से मिली कमाई, किसी के सपनों की उड़ान बन गई! 📚✨
+              </h3>
+
+              <blockquote className="font-serif italic text-base sm:text-lg text-charcoal border-l-4 border-gold pl-4 py-1 leading-relaxed">
+                &ldquo;Avni believes that true success is not just about achieving dreams, but helping others achieve theirs. ❤️&rdquo;
+              </blockquote>
+
+              <p className="font-sans text-xs sm:text-sm text-charcoal-muted leading-relaxed">
+                A portion of book proceeds and royalties from Avni&apos;s published titles is dedicated to supporting the schooling, learning materials, and dreams of deserving young children.
+              </p>
+
+              {/* Hashtags Strip */}
+              <div className="flex flex-wrap gap-1.5 pt-2">
+                {[
+                  "#AvniChaturvedi",
+                  "#ReadPustakWithAvni",
+                  "#EducationForAll",
+                  "#KindnessMatters",
+                  "#LittleActsBigImpact",
+                  "#InspiringYoungAuthors",
+                ].map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-2.5 py-1 rounded-full bg-lavender/60 text-primary font-sans text-[11px] font-semibold border border-primary/10"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {partnersData.map((partner) => (

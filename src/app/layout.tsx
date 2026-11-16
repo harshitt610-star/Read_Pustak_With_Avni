@@ -6,7 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { MobileNav } from "@/components/layout/MobileNav";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { PromoPopupModal } from "@/components/promotions/PromoPopupModal";
-import { WebsiteAndOrgJsonLd, BooksJsonLd } from "@/components/seo/JsonLd";
+import { WebsiteAndOrgJsonLd, BooksJsonLd, FAQJsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://readpustak.com"),
@@ -15,22 +15,36 @@ export const metadata: Metadata = {
     template: "%s | Read Pustak with Avni",
   },
   description:
-    "Official website of young author Avni Chaturvedi and Read Pustak Publications. Discover published children's books, school workshops, cultural storytelling, and literacy initiatives.",
+    "Official portal of young author Avni Chaturvedi and Read Pustak Publications based in Gomti Nagar, Lucknow. Discover published children's books, school reading circles, creative writing workshops, and professional web development services in Lucknow, UP, India.",
   keywords: [
     "Read Pustak",
-    "Avni Chaturvedi",
-    "Neena Chaturvedi",
+    "Read Pustak with Avni",
     "Read Pustak Publications",
+    "Avni Chaturvedi",
+    "Young Author Avni Chaturvedi",
+    "Neena Chaturvedi",
+    "Book Publisher in Lucknow",
+    "Children Book Publisher Lucknow",
+    "Publishing House in Lucknow",
+    "Self Publishing India",
     "Young Author India",
     "Children Books India",
+    "Website Development Lucknow",
+    "Website Design Company in Lucknow",
+    "App Development Services Lucknow",
+    "Creative Writing Workshops Lucknow",
+    "School Storytelling Workshops Lucknow",
+    "Gomti Nagar Book Publisher",
     "Emma Finds Her Solution",
     "Pancha Tatva Tales",
     "Ancient Answers for Modern Problems",
     "Incredible Bharat Book",
-    "Literary Initiative Lucknow",
     "Lucknow Book Fair 2026",
+    "Literary Initiative Lucknow",
     "बाल लेखक अवनि चतुर्वेदी",
     "रीड पुस्तक",
+    "किताब प्रकाशन लखनऊ",
+    "वेबसाइट डिजाइन लखनऊ",
     "एक बच्चा एक पुस्तक पढ़े",
   ],
   authors: [{ name: "Avni Chaturvedi" }, { name: "Neena Chaturvedi" }],
@@ -43,29 +57,33 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://readpustak.com",
+    languages: {
+      "en-IN": "https://readpustak.com",
+      "hi-IN": "https://readpustak.com",
+    },
   },
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: "https://readpustak.com",
     siteName: "Read Pustak with Avni",
-    title: "Read Pustak with Avni | Turn Pages, Not Just Screens",
+    title: "Read Pustak with Avni | Publishing & Literary House in Lucknow, India",
     description:
-      "Empowering children and adults through books, cultural storytelling, and creative expression. Founded by young author Avni Chaturvedi and educator Neena Chaturvedi.",
+      "Empowering young minds through books, storytelling, and digital innovation. Premier independent publishing house and young author platform in Lucknow, India.",
     images: [
       {
         url: "/images/author/meet-the-author-avni.jpg",
         width: 1200,
         height: 630,
-        alt: "Avni Chaturvedi - Young Author & Co-Founder of Read Pustak",
+        alt: "Avni Chaturvedi - Young Author & Co-Founder of Read Pustak Lucknow",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Read Pustak with Avni | A Literary Initiative",
+    title: "Read Pustak with Avni | Publishing & Literary House Lucknow",
     description:
-      "Every Child Has a Story Worth Sharing. Discover published books and community initiatives by Avni Chaturvedi.",
+      "Every child has a story worth sharing. Discover published books, school workshops, and digital solutions by Read Pustak in Lucknow, India.",
     images: ["/images/author/meet-the-author-avni.jpg"],
   },
   robots: {
@@ -81,7 +99,7 @@ export const metadata: Metadata = {
   },
   other: {
     "geo.region": "IN-UP",
-    "geo.placename": "Lucknow",
+    "geo.placename": "Lucknow, Uttar Pradesh, India",
     "geo.position": "26.8467;80.9462",
     "ICBM": "26.8467, 80.9462",
   },
@@ -107,6 +125,7 @@ export default function RootLayout({
         />
         <WebsiteAndOrgJsonLd />
         <BooksJsonLd />
+        <FAQJsonLd />
       </head>
       <body className="bg-[#FFF9F1] text-charcoal min-h-screen flex flex-col font-sans antialiased">
         <Header />

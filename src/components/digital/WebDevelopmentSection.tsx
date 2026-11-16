@@ -66,13 +66,17 @@ export const WebDevelopmentSection: React.FC = () => {
         {/* 1. SECTION HEADER */}
         <div className="flex flex-col gap-6">
           <SectionHeading
-            eyebrow="Digital Solutions & Tech"
-            title="Website & App Development Services"
-            subtitle="“Building Digital Dreams into Reality — Affordable, professional digital solutions for creators, businesses and organisations.”"
+            eyebrow="Lucknow &amp; Pan-India Tech Solutions"
+            title="Website &amp; App Development Services in Lucknow"
+            subtitle="“Building Digital Dreams into Reality — Professional, high-speed website and mobile app development for creators, educators, businesses, and startups in Lucknow &amp; across India.”"
           />
 
           {/* 6 Value Pillars Pills */}
           <div className="flex flex-wrap items-center gap-2.5 pt-1">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-lavender border border-gold/40 text-primary font-sans text-xs font-bold shadow-xs">
+              <Sparkles className="w-3.5 h-3.5 text-gold shrink-0" />
+              <span>Lucknow Local Tech Team</span>
+            </span>
             {valuePillars.map((pillar) => (
               <span
                 key={pillar}
@@ -82,6 +86,19 @@ export const WebDevelopmentSection: React.FC = () => {
                 <span>{pillar}</span>
               </span>
             ))}
+          </div>
+
+          {/* Global Terms & Conditions Notice Bar */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 px-5 py-3 rounded-2xl bg-gradient-to-r from-amber-50 via-ivory-warm to-amber-50 border border-gold/40 text-charcoal shadow-xs">
+            <div className="flex items-center gap-2.5 text-center sm:text-left">
+              <ShieldCheck className="w-5 h-5 text-gold shrink-0 hidden sm:block" />
+              <p className="font-sans text-xs sm:text-sm text-charcoal leading-relaxed">
+                <strong className="text-primary font-bold">Terms &amp; Conditions Apply:</strong> All pricing and package scopes shown below are indicative and can be customized according to specific customer requirements, features, and project scope.
+              </p>
+            </div>
+            <span className="shrink-0 px-3 py-1 rounded-full bg-gold/20 text-gold-dark font-sans text-xs font-bold uppercase tracking-wider">
+              100% Tailored Quotes
+            </span>
           </div>
         </div>
 
@@ -106,6 +123,16 @@ export const WebDevelopmentSection: React.FC = () => {
                 <p className="font-sans text-xs text-charcoal-muted mt-1">
                   From single-page portfolios to full-scale web applications.
                 </p>
+              </div>
+
+              {/* Terms & Conditions Notice on Card 1 */}
+              <div className="p-3 rounded-xl bg-amber-50/90 border border-amber-200/80 text-[11px] font-sans text-amber-950 flex items-start gap-2 leading-relaxed">
+                <span className="font-bold text-amber-800 shrink-0 uppercase tracking-wide">
+                  *T&amp;C Apply:
+                </span>
+                <span>
+                  Pricing is indicative &amp; subject to change based on custom features, page count, and your exact project needs.
+                </span>
               </div>
 
               <div className="w-full h-px bg-border/60" />
@@ -161,6 +188,16 @@ export const WebDevelopmentSection: React.FC = () => {
                 </p>
               </div>
 
+              {/* Terms & Conditions Notice on Card 2 */}
+              <div className="p-3 rounded-xl bg-amber-50/90 border border-amber-200/80 text-[11px] font-sans text-amber-950 flex items-start gap-2 leading-relaxed">
+                <span className="font-bold text-amber-800 shrink-0 uppercase tracking-wide">
+                  *T&amp;C Apply:
+                </span>
+                <span>
+                  App pricing is indicative &amp; customizable according to OS platform (Android/iOS), backend complexity, and user requirements.
+                </span>
+              </div>
+
               <div className="w-full h-px bg-border/60" />
 
               <ul className="flex flex-col gap-3 font-sans text-xs sm:text-sm">
@@ -206,6 +243,16 @@ export const WebDevelopmentSection: React.FC = () => {
                 <p className="font-sans text-xs text-charcoal-muted mt-1">
                   End-to-end design, SEO, and ongoing technical maintenance.
                 </p>
+              </div>
+
+              {/* Terms & Conditions Notice on Card 3 */}
+              <div className="p-3 rounded-xl bg-amber-50/90 border border-amber-200/80 text-[11px] font-sans text-amber-950 flex items-start gap-2 leading-relaxed">
+                <span className="font-bold text-amber-800 shrink-0 uppercase tracking-wide">
+                  *T&amp;C Apply:
+                </span>
+                <span>
+                  Services can be bundled or customized on-demand. Monthly and project pricing adapts to your specific digital goals.
+                </span>
               </div>
 
               <div className="w-full h-px bg-border/60" />

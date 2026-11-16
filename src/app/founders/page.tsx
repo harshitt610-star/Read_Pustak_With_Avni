@@ -10,9 +10,9 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Meet the Founders | Avni Chaturvedi & Neena Chaturvedi",
+  title: "Meet the Founders | Young Author Avni & Educator Neena Chaturvedi Lucknow",
   description:
-    "Meet young author Avni Chaturvedi, educator Neena Chaturvedi, and the dedicated team driving Read Pustak Publications.",
+    "Meet young author Avni Chaturvedi and educator Neena Chaturvedi, founders of Read Pustak Publications in Gomti Nagar, Lucknow, India.",
   alternates: {
     canonical: "https://readpustak.com/founders",
   },

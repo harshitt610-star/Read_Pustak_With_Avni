@@ -20,19 +20,20 @@ import {
   Users,
   Share2,
   Download,
+  HelpCircle,
 } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { teamData } from "@/data/team";
 import { TeamCard } from "@/components/team/TeamCard";
 import { PublishWithUsButton } from "@/components/publishing/PublishWithUsButton";
-import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
+import { BreadcrumbJsonLd, defaultFaqs } from "@/components/seo/JsonLd";
 import { ChildrensDaySection } from "@/components/promotions/ChildrensDaySection";
 import { WebDevelopmentSection } from "@/components/digital/WebDevelopmentSection";
 
 export const metadata: Metadata = {
-  title: "About Our Publishing & Mission | Read Pustak Publications",
+  title: "Book Publishing & Web Development in Lucknow | Read Pustak",
   description:
-    "Explore the editorial mandate, our story, digital innovation, and the dedicated team behind Read Pustak Publications in Gomti Nagar, Lucknow, India.",
+    "Explore the publishing mandate, author mentorship, and professional website and mobile app development services by Read Pustak Publications in Gomti Nagar, Lucknow, India.",
   alternates: {
     canonical: "https://readpustak.com/about",
   },
@@ -610,6 +611,38 @@ export default function PublishingEditorialPage() {
 
       {/* 7.5 CHILDREN'S DAY CAMPAIGN SPOTLIGHT */}
       <ChildrensDaySection />
+
+      {/* 7.8 FREQUENTLY ASKED QUESTIONS (LUCKNOW & INDIA SEO) */}
+      <section id="faq" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full scroll-mt-24">
+        <div className="flex flex-col gap-8">
+          <SectionHeading
+            eyebrow="Questions &amp; Clarity"
+            title="Frequently Asked Questions"
+            subtitle="Everything you need to know about publishing, reading drives, and digital services in Lucknow &amp; India"
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+            {defaultFaqs.map((faq, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-2xl border border-border/80 shadow-editorial p-6 sm:p-7 flex flex-col gap-3 hover:border-gold/50 transition-colors"
+              >
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-lavender flex items-center justify-center text-primary shrink-0 mt-0.5">
+                    <HelpCircle className="w-4 h-4 text-gold" />
+                  </div>
+                  <h3 className="font-serif text-lg font-bold text-primary leading-snug">
+                    {faq.question}
+                  </h3>
+                </div>
+                <p className="font-sans text-xs sm:text-sm text-charcoal leading-relaxed pl-11">
+                  {faq.answer}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* 8. YOUNG WRITERS MENTORSHIP & EDITORIAL INQUIRIES */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
