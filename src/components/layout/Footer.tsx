@@ -179,7 +179,7 @@ const FooterComponent: React.FC = () => {
                 <Mail className="w-4 h-4 text-gold shrink-0" />
                 <a
                   href="mailto:contact.readputakwithavni@gmail.com"
-                  className="hover:text-gold transition-colors"
+                  className="hover:text-gold transition-colors break-all"
                 >
                   contact.readputakwithavni@gmail.com
                 </a>

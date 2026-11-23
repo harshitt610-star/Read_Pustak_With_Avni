@@ -121,9 +121,9 @@ export default function ContactPage() {
                     <span className="font-semibold text-primary">Direct Email</span>
                     <a
                       href="mailto:contact.readputakwithavni@gmail.com"
-                      className="text-gold font-medium hover:underline"
+                      className="text-gold font-medium hover:underline break-all"
                     >
-                      contact@#ReadPustakWithAvni.com
+                      contact.readputakwithavni@gmail.com
                     </a>
                     <span className="text-xs text-charcoal-subtle pt-0.5">
                       For literary sessions, workshops &amp; book orders
