@@ -32,7 +32,7 @@ const HERO_SLIDES: HeroSlide[] = [
     alt: "Avni Chaturvedi holding her published book Incredible Bharat",
     badge: "Published Author",
     quote: "“Every book opens a new world to discover.”",
-    authorLabel: "Holding 'Incredible Bharat' • 4 Published Books",
+    authorLabel: "Holding 'Incredible Bharat' • 5 Published Books",
     tag: "Stories of Joy & Heritage",
     icon: BookOpen,
   },

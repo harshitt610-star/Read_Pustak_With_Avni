@@ -18,8 +18,10 @@ import {
 } from "lucide-react";
 import { booksData } from "@/data/books";
 import { BookCard } from "@/components/books/BookCard";
+import { PaginatedBookGrid } from "@/components/books/PaginatedBookGrid";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ChildrensDaySection } from "@/components/promotions/ChildrensDaySection";
+import { FeedbackSection } from "@/components/feedback/FeedbackSection";
 
 export const metadata: Metadata = {
   title: "Read Pustak with Avni | Book Publisher & Young Author in Lucknow, India",
@@ -95,7 +97,7 @@ export default function HomePage() {
               <div className="grid grid-cols-3 gap-4 pt-5 border-t border-border/80 w-full max-w-lg">
                 <div>
                   <span className="font-serif text-2xl sm:text-3xl font-bold text-primary block">
-                    4
+                    {booksData.length}
                   </span>
                   <span className="font-sans text-xs text-charcoal-muted">
                     Published Books
@@ -141,7 +143,7 @@ export default function HomePage() {
                     </span>
                   </div>
                   <span className="font-serif text-xs font-bold text-gold px-2 py-0.5 rounded-full bg-gold/10">
-                    4 Titles
+                    5 Titles
                   </span>
                 </div>
               </div>
@@ -259,11 +261,12 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {booksData.map((book) => (
-              <BookCard key={book.id} book={book} compact={true} />
-            ))}
-          </div>
+          <PaginatedBookGrid
+            books={booksData}
+            pageSize={4}
+            compact={true}
+            featuredId="my-little-squirrel"
+          />
         </div>
       </section>
 
@@ -314,6 +317,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
 
       {/* ========================================================= */}
       {/* 4.5 SOCIAL IMPACT SPOTLIGHT — Giving Back Through Books   */}
@@ -374,6 +378,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ========================================================= */}
+      {/* 4.8 SHARE YOUR FEEDBACK & GOOGLE REVIEWS                  */}
+      {/* ========================================================= */}
+      <FeedbackSection id="reviews" showTestimonials={true} />
 
       {/* ========================================================= */}
       {/* 5. COMMUNITY CTA BANNER — Ek Bachcha, Ek Pustak Padhe     */}

@@ -21,7 +21,7 @@ export const WebsiteAndOrgJsonLd: React.FC = () => {
         description:
           "Premier independent children's book publisher, author platform, and digital solutions provider in Gomti Nagar, Lucknow, Uttar Pradesh, India. Founded by educator Neena Chaturvedi and young author Avni Chaturvedi.",
         telephone: "+91-7068999555",
-        email: "contact@readpustak.com",
+        email: "contact.readputakwithavni@gmail.com",
         priceRange: "₹1,000 - ₹89,999",
         currenciesAccepted: "INR",
         paymentAccepted: "Cash, UPI, Credit Card, Net Banking",
@@ -33,6 +33,7 @@ export const WebsiteAndOrgJsonLd: React.FC = () => {
           postalCode: "226010",
           addressCountry: "IN",
         },
+        hasMap: "https://maps.app.goo.gl/XgpLQEVKXNjpvNNn8?g_st=aw",
         geo: {
           "@type": "GeoCoordinates",
           latitude: 26.8467,
@@ -141,7 +142,7 @@ export const WebsiteAndOrgJsonLd: React.FC = () => {
           "@type": "ContactPoint",
           telephone: "+91-7068999555",
           contactType: "Customer Support & Book Inquiries",
-          email: "contact@readpustak.com",
+          email: "contact.readputakwithavni@gmail.com",
           areaServed: ["IN", "IN-UP"],
           availableLanguage: ["English", "Hindi"],
         },
@@ -265,7 +266,7 @@ export const defaultFaqs: FAQItem[] = [
   {
     question: "Where is Read Pustak Publications located in Lucknow?",
     answer:
-      "Read Pustak Publications is headquartered in Gomti Nagar, Lucknow, Uttar Pradesh 226010, India. You can connect via WhatsApp or phone at +91-7068999555 or email contact@readpustak.com.",
+      "Read Pustak Publications is headquartered in Gomti Nagar, Lucknow, Uttar Pradesh 226010, India. You can connect via WhatsApp or phone at +91-7068999555 or email contact.readputakwithavni@gmail.com.",
   },
   {
     question: "How can young authors publish their books with Read Pustak in India?",
@@ -285,7 +286,7 @@ export const defaultFaqs: FAQItem[] = [
   {
     question: "Where can I purchase Avni Chaturvedi's published books in India?",
     answer:
-      "All four published titles — 'Emma Finds Her Solution', 'Pancha Tatva Tales', 'Ancient Answers for Modern Problems', and 'Incredible Bharat' — are available online on Amazon India, Flipkart, and directly through the Read Pustak official website.",
+      "All five published titles — 'Emma Finds Her Solution', 'Pancha Tatva Tales', 'Ancient Answers for Modern Problems', 'Incredible Bharat', and 'My Little Squirrel' — are available online on Amazon India, Flipkart, and directly through the Read Pustak official website.",
   },
 ];
 

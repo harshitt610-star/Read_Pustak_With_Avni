@@ -30,14 +30,15 @@ export const partnersData: PartnerImpact[] = [
   },
   {
     id: "hope-foundation",
-    name: "Hope Foundation",
-    type: "Inclusive Educational Empowerment",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCCOnlmLI7bcXlTy4XqBiejjMUswjCL3anOMvKkflSu3JsHZgovl8kGVIwxLlxDC9oWCi2Iyk9kOrq9-cZ6ykhSkShOwabvFoRYKffKmUTOJBh_JUn30rR3_1qYm2fi3nqkmHoNUnPWV8hTAPDW6F_ydxz4KxvWXG3ePpIkee90jiiACEdUH9r8Di4ihDKo_3Th16_1GC_x5UDOg9dukxiH9VxhyIME9Y1eWrewtpA",
+    name: "Let's Give Hope Foundation",
+    type: "Inclusive Educational Empowerment & Youth Literacy",
+    image: "/images/workshops/lets-give-hope-workshop.jpg",
     description:
-      "Inclusive literary outreach programmes fostering reading habits, creative confidence, and sustained educational empowerment for young minds.",
+      "Collaborative storytelling and creative writing workshops empowering young minds to listen to inspiring stories, master creative writing techniques, and turn their ideas into published books.",
     initiatives: [
-      "Peer mentorship programmes pairing older students with younger readers",
-      "Workshops encouraging children to write their own stories",
+      "Storytelling and Creative Writing Workshop (23 November 2026)",
+      "Peer mentorship programmes pairing young authors with emerging readers",
+      "Interactive sessions encouraging children to turn everyday ideas into stories",
       "Expanding access to books celebrating values, nature, and cultural tales",
     ],
   },

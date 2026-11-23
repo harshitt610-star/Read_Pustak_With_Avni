@@ -56,12 +56,12 @@ const FooterComponent: React.FC = () => {
             </div>
           </div>
 
-          {/* Column 2: Primary Links (3 cols, max 6 links) */}
+          {/* Column 2: Primary Links (3 cols, responsive 2-col on mobile) */}
           <div className="flex flex-col gap-3 md:col-span-3">
             <h3 className="font-serif text-base font-semibold text-gold tracking-wide uppercase border-b border-gold/20 pb-2">
               Explore
             </h3>
-            <ul className="flex flex-col gap-2.5 font-sans text-xs sm:text-sm text-white/80">
+            <ul className="grid grid-cols-2 md:grid-cols-1 gap-x-4 gap-y-2.5 font-sans text-xs sm:text-sm text-white/80">
               <li>
                 <Link
                   href="/"
@@ -115,7 +115,23 @@ const FooterComponent: React.FC = () => {
                   href="/founders"
                   className="hover:text-gold transition-colors inline-flex items-center gap-1.5"
                 >
-                  <span>Meet the Founders &amp; Team</span>
+                  <span>Meet the Founders</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/workshops"
+                  className="hover:text-gold transition-colors inline-flex items-center gap-1.5"
+                >
+                  <span>Workshops &amp; School Drives</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/media"
+                  className="hover:text-gold transition-colors inline-flex items-center gap-1.5"
+                >
+                  <span>Media &amp; Press Room</span>
                 </Link>
               </li>
               <li>
@@ -126,7 +142,7 @@ const FooterComponent: React.FC = () => {
                   <span>Contact &amp; Community</span>
                 </Link>
               </li>
-              <li className="pt-1">
+              <li className="col-span-2 md:col-span-1 pt-1">
                 <a
                   href="/downloads/read-pustak-publishing-brochure.pdf"
                   download="Read-Pustak-Publishing-Brochure.pdf"
@@ -149,15 +165,23 @@ const FooterComponent: React.FC = () => {
             <div className="flex flex-col gap-3 text-sm text-white/80">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-gold shrink-0 mt-0.5" />
-                <span>Gomti Nagar, Lucknow, India</span>
+                <a
+                  href="https://maps.app.goo.gl/XgpLQEVKXNjpvNNn8?g_st=aw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gold transition-colors"
+                  aria-label="Google Maps location of Read Pustak with Avni"
+                >
+                  Gomti Nagar, Lucknow, India
+                </a>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-gold shrink-0" />
                 <a
-                  href="mailto:contact@readpustak.com"
+                  href="mailto:contact.readputakwithavni@gmail.com"
                   className="hover:text-gold transition-colors"
                 >
-                  contact@readpustak.com
+                  contact.readputakwithavni@gmail.com
                 </a>
               </div>
 

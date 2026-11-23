@@ -5,20 +5,21 @@ import { Metadata } from "next";
 import { BookOpen, Sparkles, Feather, Heart, Award, ArrowRight } from "lucide-react";
 import { booksData } from "@/data/books";
 import { BookCard } from "@/components/books/BookCard";
+import { PaginatedBookGrid } from "@/components/books/PaginatedBookGrid";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "Published Children's Books by Avni Chaturvedi | Read Pustak India",
   description:
-    "Explore 4 inspiring published children's books by young author Avni Chaturvedi: Emma Finds Her Solution, The Panch Tatva Tales, Ancient Answers for Modern Problems, and Incredible Bharat. Available on Amazon & Flipkart India.",
+    "Explore 5 inspiring published children's books by young author Avni Chaturvedi: Emma Finds Her Solution, The Panch Tatva Tales, Ancient Answers for Modern Problems, Incredible Bharat, and My Little Squirrel. Available on Amazon & Flipkart India.",
   alternates: {
     canonical: "https://readpustak.com/books",
   },
   openGraph: {
     title: "Published Books by Avni Chaturvedi | Read Pustak Publications",
     description:
-      "Explore 4 inspiring children's books by young author Avni Chaturvedi, rooted in Indian culture, curiosity, and mindfulness.",
+      "Explore 5 inspiring children's books by young author Avni Chaturvedi, rooted in Indian culture, curiosity, and mindfulness.",
     url: "https://readpustak.com/books",
     images: [
       {
@@ -97,11 +98,11 @@ export default function BooksPage() {
             subtitle="Carefully written, thoughtfully edited, and crafted for growing minds"
           />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {booksData.map((book) => (
-              <BookCard key={book.id} book={book} featured={book.id === "incredible-bharat"} />
-            ))}
-          </div>
+          <PaginatedBookGrid
+            books={booksData}
+            pageSize={4}
+            featuredId="my-little-squirrel"
+          />
 
           {/* Officially Approved & Verified Amazon Author Banner */}
           <div className="mt-4 rounded-2xl border-2 border-gold/50 bg-gradient-to-br from-[#FFF9F1] via-[#FAF0FF]/80 to-[#FFF9F1] p-6 sm:p-8 lg:p-10 shadow-editorial relative overflow-hidden">

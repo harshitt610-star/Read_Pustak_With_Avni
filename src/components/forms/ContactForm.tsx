@@ -75,10 +75,10 @@ export const ContactForm: React.FC = () => {
             This informational submission has been recorded in the client session.
             For urgent collaborations, feel free to email directly at{" "}
             <a
-              href="mailto:contact@readpustak.com"
+              href="mailto:contact.readputakwithavni@gmail.com"
               className="text-gold font-bold hover:underline"
             >
-              contact@readpustak.com
+              contact.readputakwithavni@gmail.com
             </a>
             .
           </div>
@@ -122,11 +122,10 @@ export const ContactForm: React.FC = () => {
                   setFormData({ ...formData, name: e.target.value })
                 }
                 placeholder="e.g. Radhika Sharma"
-                className={`w-full px-4 py-3 rounded-lg border text-sm font-sans transition-all focus:outline-none focus:ring-2 ${
-                  errors.name
-                    ? "border-red-400 focus:ring-red-200"
-                    : "border-border focus:border-gold focus:ring-gold/20"
-                }`}
+                className={`w-full px-4 py-3 rounded-lg border text-sm font-sans transition-all focus:outline-none focus:ring-2 ${errors.name
+                  ? "border-red-400 focus:ring-red-200"
+                  : "border-border focus:border-gold focus:ring-gold/20"
+                  }`}
               />
               {errors.name && (
                 <span className="flex items-center gap-1 text-xs text-red-600">
@@ -152,11 +151,10 @@ export const ContactForm: React.FC = () => {
                   setFormData({ ...formData, email: e.target.value })
                 }
                 placeholder="name@domain.com"
-                className={`w-full px-4 py-3 rounded-lg border text-sm font-sans transition-all focus:outline-none focus:ring-2 ${
-                  errors.email
-                    ? "border-red-400 focus:ring-red-200"
-                    : "border-border focus:border-gold focus:ring-gold/20"
-                }`}
+                className={`w-full px-4 py-3 rounded-lg border text-sm font-sans transition-all focus:outline-none focus:ring-2 ${errors.email
+                  ? "border-red-400 focus:ring-red-200"
+                  : "border-border focus:border-gold focus:ring-gold/20"
+                  }`}
               />
               {errors.email && (
                 <span className="flex items-center gap-1 text-xs text-red-600">
@@ -214,11 +212,10 @@ export const ContactForm: React.FC = () => {
                 setFormData({ ...formData, message: e.target.value })
               }
               placeholder="Share your thoughts, invite us to your school, or propose a collaboration..."
-              className={`w-full px-4 py-3 rounded-lg border text-sm font-sans transition-all focus:outline-none focus:ring-2 resize-y ${
-                errors.message
-                  ? "border-red-400 focus:ring-red-200"
-                  : "border-border focus:border-gold focus:ring-gold/20"
-              }`}
+              className={`w-full px-4 py-3 rounded-lg border text-sm font-sans transition-all focus:outline-none focus:ring-2 resize-y ${errors.message
+                ? "border-red-400 focus:ring-red-200"
+                : "border-border focus:border-gold focus:ring-gold/20"
+                }`}
             />
             {errors.message && (
               <span className="flex items-center gap-1 text-xs text-red-600">

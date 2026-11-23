@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   Globe,
@@ -23,6 +24,7 @@ const WHATSAPP_TECH_URL =
   );
 
 const websitePlans = [
+  { name: "Personal Starter Website (Single Page)", price: "₹2,999" },
   { name: "Basic Website (1–5 Pages)", price: "₹7,999" },
   { name: "Personal / Portfolio Website", price: "₹9,999" },
   { name: "Business Website", price: "₹14,999" },
@@ -99,6 +101,79 @@ export const WebDevelopmentSection: React.FC = () => {
             <span className="shrink-0 px-3 py-1 rounded-full bg-gold/20 text-gold-dark font-sans text-xs font-bold uppercase tracking-wider">
               100% Tailored Quotes
             </span>
+          </div>
+        </div>
+
+        {/* 1.5 SPECIAL FEATURED OFFER: PERSONAL STARTER WEBSITE ₹2,999 */}
+        <div className="rounded-2xl sm:rounded-3xl bg-gradient-to-br from-white via-[#FFF9F1] to-lavender/30 border-2 border-gold shadow-editorial p-6 sm:p-8 lg:p-10 flex flex-col lg:flex-row items-center gap-8 relative overflow-hidden">
+          <div className="absolute top-4 right-4 px-3.5 py-1 rounded-full bg-gold text-primary font-sans text-xs font-bold uppercase tracking-wider shadow-sm flex items-center gap-1.5 z-10">
+            <Sparkles className="w-3.5 h-3.5 fill-primary text-transparent" />
+            <span>Affordable Starter Offer</span>
+          </div>
+
+          <div className="relative w-full lg:w-5/12 aspect-square max-w-sm rounded-2xl overflow-hidden shadow-md border-2 border-gold/40 bg-white shrink-0 group">
+            <Image
+              src="/images/services/starter-website-2999.jpg"
+              alt="Personal Starter Website at ₹2,999 Only - Read Pustak with Avni"
+              fill
+              sizes="(max-width: 1024px) 100vw, 40vw"
+              className="object-contain p-2 group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+
+          <div className="w-full lg:w-7/12 flex flex-col gap-4">
+            <div className="flex flex-col gap-1">
+              <span className="text-xs font-sans font-bold text-gold uppercase tracking-widest">
+                Build Your Online Identity
+              </span>
+              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-primary">
+                Personal Starter Website
+              </h3>
+              <div className="flex items-baseline gap-2 pt-1">
+                <span className="font-serif text-3xl sm:text-4xl font-extrabold text-primary">₹2,999</span>
+                <span className="font-sans text-xs text-charcoal-muted uppercase tracking-wider font-semibold">Only • Complete Package</span>
+              </div>
+            </div>
+
+            <p className="font-sans text-xs sm:text-sm text-charcoal leading-relaxed">
+              Ideal for authors, writers, students, teachers, freelancers, and young achievers looking to establish an affordable and professional digital presence.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs font-sans text-charcoal pt-1">
+              {[
+                "Single-page modern personal website",
+                "Your profile & introduction bio",
+                "Photo & key highlights display",
+                "Social links (Instagram, YouTube, LinkedIn)",
+                "Instant WhatsApp contact button",
+                "100% Mobile-responsive clean design",
+              ].map((feat, i) => (
+                <div key={i} className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#25D366] shrink-0" />
+                  <span>{feat}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="pt-3 flex flex-wrap items-center gap-3">
+              <a
+                href={
+                  "https://wa.me/917068999555?text=" +
+                  encodeURIComponent(
+                    "Hello Read Pustak, I am interested in the Personal Starter Website for Rs 2,999. Please share the details!"
+                  )
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 rounded-xl bg-gradient-to-r from-primary to-[#4A1B82] text-white font-sans text-xs sm:text-sm font-semibold hover:shadow-md transition-all flex items-center gap-2"
+              >
+                <MessageCircle className="w-4 h-4 text-gold" />
+                <span>Inquire for ₹2,999 Website</span>
+              </a>
+              <span className="text-[11px] font-sans text-charcoal-muted italic">
+                *Quick setup • Clean &amp; budget friendly
+              </span>
+            </div>
           </div>
         </div>
 

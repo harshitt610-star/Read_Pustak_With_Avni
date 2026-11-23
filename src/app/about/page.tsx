@@ -21,6 +21,7 @@ import {
   Share2,
   Download,
   HelpCircle,
+  MessageCircle,
 } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { teamData } from "@/data/team";
@@ -253,7 +254,7 @@ export default function PublishingEditorialPage() {
                 </p>
 
                 <p className="font-sans text-sm text-charcoal leading-relaxed">
-                  Now the author of four published works—including <em>Emma Finds Her Solution</em>, <em>The Panch Tatva Tales</em>, and <em>Ancient Answers for Modern Problems</em>—she proves that age should never limit the depth of an idea.
+                  Now the author of five published works—including <em>Emma Finds Her Solution</em>, <em>The Panch Tatva Tales</em>, <em>Ancient Answers for Modern Problems</em>, <em>Incredible Bharat</em>, and <em>My Little Squirrel</em>—she proves that age should never limit the depth of an idea.
                 </p>
               </div>
 
@@ -644,7 +645,104 @@ export default function PublishingEditorialPage() {
         </div>
       </section>
 
-      {/* 8. YOUNG WRITERS MENTORSHIP & EDITORIAL INQUIRIES */}
+      {/* 8. AFFORDABLE PUBLISHING OPPORTUNITY & POSTERS */}
+      <section id="publishing-plans" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full scroll-mt-24">
+        <div className="flex flex-col gap-10">
+          <SectionHeading
+            eyebrow="Turn Your Ideas Into Print"
+            title="Publish Your Book With Read Pustak"
+            subtitle="“An affordable publishing opportunity for aspiring writers, students, and first-time authors.”"
+          />
+
+          {/* 2-Poster Showcase */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+            {/* Poster 1: Publish Your Book Overview */}
+            <div className="bg-white rounded-2xl sm:rounded-3xl border-2 border-gold/40 shadow-editorial overflow-hidden flex flex-col justify-between group hover:shadow-editorial-hover transition-all">
+              <div className="relative aspect-square w-full bg-ivory-warm p-4 flex items-center justify-center">
+                <Image
+                  src="/images/publishing/publish-your-book-banner.jpg"
+                  alt="Publish Your Book with Read Pustak with Avni - Editorial, Design, Printing, ISBN & Barcode, Promotion"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-contain p-2 group-hover:scale-102 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6 bg-gradient-to-b from-white to-[#FAF0FF]/40 border-t border-border/80 flex flex-col gap-3">
+                <div className="flex items-center gap-2">
+                  <Sparkles className="w-4 h-4 text-gold" />
+                  <span className="text-xs font-sans font-bold text-gold uppercase tracking-wider">
+                    Full Authorship Support
+                  </span>
+                </div>
+                <h3 className="font-serif text-xl sm:text-2xl font-bold text-primary">
+                  Turn Your Ideas into a Published Book!
+                </h3>
+                <p className="font-sans text-xs sm:text-sm text-charcoal leading-relaxed">
+                  Complete editorial assistance, custom cover designing, quality printing, official ISBN &amp; barcode allocation, and launch guidance for creators.
+                </p>
+                <div className="pt-2">
+                  <PublishWithUsButton />
+                </div>
+              </div>
+            </div>
+
+            {/* Poster 2: ₹1,999 Basic Affordable Publishing Plan */}
+            <div className="bg-white rounded-2xl sm:rounded-3xl border-2 border-gold shadow-editorial overflow-hidden flex flex-col justify-between group hover:shadow-editorial-hover transition-all">
+              <div className="relative aspect-square w-full bg-ivory-warm p-4 flex items-center justify-center">
+                <Image
+                  src="/images/publishing/publishing-plan-1999.jpg"
+                  alt="Basic Affordable Publishing Plan ₹1,999 Only - Read Pustak with Avni"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-contain p-2 group-hover:scale-102 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6 bg-gradient-to-b from-white to-[#FFF9F1] border-t border-border/80 flex flex-col gap-3">
+                <div className="flex items-center justify-between">
+                  <span className="px-3 py-1 rounded-full bg-gold/20 text-gold-dark font-sans text-xs font-bold uppercase tracking-wider">
+                    Package Price: ₹1,999 Only
+                  </span>
+                  <span className="text-xs text-charcoal-muted font-sans font-medium">Up to 120 Pages</span>
+                </div>
+                <h3 className="font-serif text-xl sm:text-2xl font-bold text-primary">
+                  Basic Affordable Publishing Plan
+                </h3>
+                <p className="font-sans text-xs sm:text-sm text-charcoal leading-relaxed">
+                  Includes ISBN and barcode, paperback publishing (5.5 x 8.5&quot;), basic manuscript formatting, 2 complimentary author copies, and digital certificate.
+                </p>
+                <div className="pt-2 flex flex-wrap gap-3">
+                  <a
+                    href={
+                      "https://wa.me/917068999555?text=" +
+                      encodeURIComponent(
+                        "Hello Read Pustak with Avni, I want to publish my book with the Basic Affordable Publishing Plan for Rs 1,999. Please share the details!"
+                      )
+                    }
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-primary to-[#4A1B82] text-white font-sans text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 shadow-xs hover:shadow-md transition-all"
+                  >
+                    <MessageCircle className="w-4 h-4 text-gold" />
+                    <span>Inquire for ₹1,999 Plan</span>
+                  </a>
+                  <a
+                    href="/downloads/read-pustak-publishing-brochure.pdf"
+                    download="Read-Pustak-Publishing-Brochure.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="py-3 px-4 rounded-xl bg-white text-primary border border-gold/40 font-sans text-xs sm:text-sm font-semibold flex items-center justify-center gap-1.5 hover:bg-lavender/40 transition-colors"
+                  >
+                    <Download className="w-4 h-4 text-gold" />
+                    <span>PDF Leaflet</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 9. YOUNG WRITERS MENTORSHIP & EDITORIAL INQUIRIES */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="bg-gradient-to-r from-lavender/80 via-ivory to-lavender/80 border border-gold/40 rounded-2xl p-8 sm:p-12 text-center flex flex-col items-center gap-5 shadow-editorial">
           <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-primary border border-gold/30">

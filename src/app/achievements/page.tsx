@@ -91,7 +91,7 @@ export default function AchievementsPage() {
                 <BookOpen className="w-5 h-5 text-gold" />
               </div>
               <h3 className="font-serif text-lg font-bold text-primary">
-                Published Author of Four Books
+                Published Author of Five Books
               </h3>
               <p className="font-sans text-sm text-charcoal leading-relaxed">
                 Authored and published four distinct works: <em>Emma Finds Her Solution</em> (2023), <em>The Panch Tatva Tales</em> (2025), <em>Ancient Answers for Modern Problems</em> (2026), and <em>Incredible Bharat</em> (2026).

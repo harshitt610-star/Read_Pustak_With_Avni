@@ -22,6 +22,17 @@ export const glimpsesData: GlimpseItem[] = [
     aspect: "poster",
   },
   {
+    id: "lets-give-hope-poster",
+    image: "/images/workshops/lets-give-hope-workshop.jpg",
+    title: "Let's Give Hope Foundation Workshop",
+    category: "circles",
+    categoryLabel: "Foundation Collaboration",
+    date: "23 November 2026",
+    caption:
+      "Official poster for the Storytelling and Creative Writing Workshop organized by Let's Give Hope Foundation in collaboration with young author Avni Chaturvedi.",
+    aspect: "landscape",
+  },
+  {
     id: "meet-the-author-srmu",
     image: "/images/glimpses/glimpse-10.jpg",
     title: "Meet the Author & Faculty Presentation",

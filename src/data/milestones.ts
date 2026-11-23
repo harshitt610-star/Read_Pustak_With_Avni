@@ -42,6 +42,14 @@ export const milestonesData: Milestone[] = [
     badge: "Fourth Book",
   },
   {
+    yearOrAge: "Nov 2026",
+    title: "Publication of 'My Little Squirrel: A Story of an Unexpected Friend'",
+    description:
+      "Avni publishes her fifth book—a heartwarming, beautifully illustrated children's story celebrating gentle kindness, friendship, and the magical bond between a child and wildlife.",
+    category: "publication",
+    badge: "Fifth Book (Latest Release)",
+  },
+  {
     yearOrAge: "2026",
     title: "Speaker at Lucknow Book Fair 2026",
     description:
@@ -56,6 +64,14 @@ export const milestonesData: Milestone[] = [
       "Conducted a featured authors' workshop in collaboration with Shri Ramswaroop Memorial University (SRMU) and Apni Pathshaala, inspiring students with interactive storytelling, reading culture, and creative writing kits.",
     category: "community",
     badge: "University Collaboration",
+  },
+  {
+    yearOrAge: "23 Nov 2026",
+    title: "Workshop with Let's Give Hope Foundation",
+    description:
+      "Conducted a dedicated Storytelling and Creative Writing Workshop in collaboration with Let's Give Hope Foundation, inspiring children to listen to stories, learn creative writing, and turn ideas into published books.",
+    category: "community",
+    badge: "Foundation Collaboration",
   },
   {
     yearOrAge: "Ongoing",

@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { Sparkles, ArrowRight, X, Clock, Mail } from "lucide-react";
+import { Sparkles, ArrowRight, X, BookOpen, Mail, CheckCircle2, MessageCircle, Download } from "lucide-react";
 
 export const PublishWithUsButton: React.FC = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -13,76 +14,100 @@ export const PublishWithUsButton: React.FC = () => {
         onClick={() => setModalOpen(true)}
         type="button"
         className="group relative inline-flex items-center gap-3 px-6 py-3.5 rounded-xl bg-primary text-white font-sans text-sm font-semibold hover:bg-primary-hover shadow-editorial hover:shadow-editorial-hover transition-all border border-gold/50 cursor-pointer"
-        aria-label="Publish with Us - To be continued.."
+        aria-label="Publish Your Book - Affordable ₹1,999 Plan"
       >
         <Sparkles className="w-4 h-4 text-gold group-hover:rotate-12 transition-transform" />
         <span className="font-serif text-base tracking-tight">Publish with Us</span>
         <span className="px-2.5 py-0.5 rounded-full bg-gold/25 text-gold text-xs font-sans font-bold uppercase tracking-wider border border-gold/40 group-hover:bg-gold group-hover:text-primary transition-colors">
-          To be continued..
+          Plan: ₹1,999
         </span>
       </button>
 
       {/* Modal Notice */}
       {modalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#1C003C]/70 backdrop-blur-sm animate-in fade-in duration-200">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-[#1C003C]/75 backdrop-blur-sm animate-in fade-in duration-200 overflow-y-auto">
           <div
-            className="relative w-full max-w-lg rounded-2xl bg-[#FFF9F1] border-2 border-gold/60 p-6 sm:p-8 shadow-[0_25px_50px_rgba(53,16,95,0.35)] flex flex-col gap-5 text-left"
+            className="relative w-full max-w-xl max-h-[92vh] overflow-y-auto rounded-3xl bg-[#FFF9F1] border-2 border-gold/60 p-5 sm:p-7 shadow-[0_25px_50px_rgba(53,16,95,0.35)] flex flex-col gap-4 text-left"
             role="dialog"
             aria-modal="true"
           >
             {/* Close Button */}
             <button
               onClick={() => setModalOpen(false)}
-              className="absolute top-4 right-4 p-2 rounded-lg text-charcoal-muted hover:text-primary hover:bg-lavender/60 transition-colors"
+              className="absolute top-4 right-4 p-2 rounded-full text-charcoal-muted hover:text-primary hover:bg-lavender/60 transition-colors z-20"
               aria-label="Close"
             >
               <X className="w-5 h-5" />
             </button>
 
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-lavender flex items-center justify-center text-primary border border-gold/40">
-                <Clock className="w-6 h-6 text-gold" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-[10px] font-sans font-bold uppercase tracking-widest text-gold">
-                  Digital Portal In Development
-                </span>
-                <h3 className="font-serif text-xl sm:text-2xl font-bold text-primary">
-                  Publish with Us
-                </h3>
-              </div>
+            {/* Poster Image Preview */}
+            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-gold/40 shadow-sm bg-white">
+              <Image
+                src="/images/publishing/publishing-plan-1999.jpg"
+                alt="Basic Affordable Publishing Plan ₹1,999 - Read Pustak with Avni"
+                fill
+                sizes="(max-width: 640px) 100vw, 600px"
+                className="object-contain"
+              />
             </div>
 
-            <div className="p-4 rounded-xl bg-white border border-border flex flex-col gap-2">
-              <div className="inline-flex items-center gap-2 text-xs font-sans font-bold text-gold uppercase tracking-wider">
-                <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
-                <span>Status: To be continued..</span>
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] sm:text-xs font-sans font-bold uppercase tracking-widest text-gold">
+                  Basic Affordable Publishing Plan
+                </span>
+                <span className="font-serif text-lg sm:text-xl font-extrabold text-primary">
+                  ₹1,999 Only
+                </span>
               </div>
-              <p className="font-sans text-xs sm:text-sm text-charcoal leading-relaxed">
-                Our technical team is actively building the dedicated digital submission and manuscript tracking portal. Soon, young authors and parents will be able to submit drafts, track editorial feedback, and participate directly through our upcoming web and mobile application.
+              <h3 className="font-serif text-xl sm:text-2xl font-bold text-primary leading-tight">
+                Turn Your Manuscript into a Published Book!
+              </h3>
+              <p className="font-sans text-xs text-charcoal leading-relaxed">
+                An affordable publishing opportunity for aspiring writers, students, and first-time authors. Includes full ISBN allocation, paperback printing, and 2 complimentary author copies.
               </p>
             </div>
 
-            <p className="font-sans text-xs sm:text-sm text-charcoal-muted leading-relaxed">
-              In the meantime, our editorial board welcomes manuscript inquiries and story ideas via direct correspondence.
-            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-sans text-charcoal bg-white/80 p-3.5 rounded-2xl border border-border/80">
+              {[
+                "ISBN and barcode allocation",
+                "Paperback book publishing (up to 120 pages)",
+                "Full-colour professional basic cover",
+                "2 Complimentary author copies",
+                "Digital publishing certificate",
+                "Author & book details setup",
+              ].map((feat, i) => (
+                <div key={i} className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#25D366] shrink-0" />
+                  <span>{feat}</span>
+                </div>
+              ))}
+            </div>
 
-            <div className="flex flex-wrap gap-3 pt-2">
+            <div className="flex flex-wrap gap-2.5 pt-2">
+              <a
+                href={
+                  "https://wa.me/917068999555?text=" +
+                  encodeURIComponent(
+                    "Hello Read Pustak with Avni, I want to publish my book with the Basic Affordable Publishing Plan for Rs 1,999. Please guide me on the next steps!"
+                  )
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 min-w-[200px] py-3 px-4 rounded-xl bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white font-sans text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shadow-md hover:scale-102 transition-transform"
+              >
+                <MessageCircle className="w-4 h-4 fill-white text-transparent" />
+                <span>Publish for ₹1,999 on WhatsApp</span>
+              </a>
+
               <Link
                 href="/contact"
                 onClick={() => setModalOpen(false)}
-                className="flex-1 py-3 px-4 rounded-xl bg-primary text-white font-sans text-sm font-semibold flex items-center justify-center gap-2 hover:bg-primary-hover shadow-sm border border-gold/40 transition-colors"
+                className="py-3 px-4 rounded-xl bg-primary text-white font-sans text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 hover:bg-primary-hover shadow-xs border border-gold/40 transition-colors"
               >
                 <Mail className="w-4 h-4 text-gold" />
-                <span>Send Manuscript Inquiry</span>
+                <span>Contact Form</span>
               </Link>
-              <button
-                type="button"
-                onClick={() => setModalOpen(false)}
-                className="py-3 px-5 rounded-xl bg-white text-charcoal font-sans text-sm font-semibold hover:bg-lavender/40 border border-border transition-colors"
-              >
-                Close
-              </button>
             </div>
           </div>
         </div>

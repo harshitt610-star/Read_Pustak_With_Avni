@@ -12,6 +12,7 @@ import {
   ArrowRight,
   Mail,
   BookOpen,
+  School,
 } from "lucide-react";
 import { partnersData } from "@/data/partners";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -347,18 +348,18 @@ export default function BeyondBooksPage() {
 
           <div className="pt-2 flex flex-wrap justify-center gap-3">
             <Link
-              href="/contact"
+              href="/workshops"
               className="px-6 py-3 rounded-lg bg-primary text-white font-sans text-sm font-semibold hover:bg-primary-hover shadow-sm transition-colors flex items-center gap-2"
             >
-              <Mail className="w-4 h-4 text-gold" />
-              <span>Contact for Workshops</span>
+              <School className="w-4 h-4 text-gold" />
+              <span>Explore Workshops</span>
             </Link>
             <Link
-              href="/books"
+              href="/contact"
               className="px-6 py-3 rounded-lg bg-white text-primary font-sans text-sm font-semibold hover:bg-lavender border border-border shadow-xs transition-colors flex items-center gap-2"
             >
-              <BookOpen className="w-4 h-4 text-gold" />
-              <span>Explore Our Books</span>
+              <Mail className="w-4 h-4 text-gold" />
+              <span>Invite via Contact Form</span>
             </Link>
           </div>
         </div>

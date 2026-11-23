@@ -19,6 +19,8 @@ import {
   Mail,
   ChevronDown,
   Laptop,
+  School,
+  Newspaper,
 } from "lucide-react";
 import { TopPromoBanner } from "@/components/promotions/TopPromoBanner";
 
@@ -57,10 +59,22 @@ export const primaryNavItems: NavItem[] = [
     href: "/beyond-books",
     icon: Theater,
   },
+  {
+    label: "Workshops",
+    shortLabel: "Workshops",
+    href: "/workshops",
+    icon: School,
+  },
 ];
 
 // 2. Editorial & Community Dropdown Links for Desktop
 export const moreNavItems: NavItem[] = [
+  {
+    label: "Media & Press Room",
+    href: "/media",
+    icon: Newspaper,
+    description: "Newspaper clippings, press features & event videos",
+  },
   {
     label: "Publishing & Editorial",
     href: "/about",
@@ -209,7 +223,7 @@ const HeaderComponent: React.FC = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
+            <nav className="hidden lg:flex items-center gap-0.5 xl:gap-2">
               {primaryNavItems.map((item) => {
                 const isActive =
                   item.href === "/"
@@ -220,7 +234,7 @@ const HeaderComponent: React.FC = () => {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`px-2.5 xl:px-3 py-2 rounded-md font-sans text-[13px] xl:text-sm font-medium transition-all relative ${
+                    className={`px-2 xl:px-3 py-2 rounded-md font-sans text-xs xl:text-sm font-medium transition-all relative ${
                       isActive
                         ? "text-primary font-bold"
                         : "text-charcoal-muted hover:text-primary hover:bg-lavender/40"
@@ -229,7 +243,7 @@ const HeaderComponent: React.FC = () => {
                     <span className="hidden xl:inline">{item.label}</span>
                     <span className="xl:hidden">{item.shortLabel || item.label}</span>
                     {isActive && (
-                      <span className="absolute bottom-0 left-2.5 right-2.5 h-[2px] bg-gold rounded-full" />
+                      <span className="absolute bottom-0 left-2 right-2 xl:left-2.5 xl:right-2.5 h-[2px] bg-gold rounded-full" />
                     )}
                   </Link>
                 );
@@ -247,7 +261,7 @@ const HeaderComponent: React.FC = () => {
                   onClick={() => setMoreDropdownOpen(!moreDropdownOpen)}
                   aria-expanded={moreDropdownOpen}
                   aria-haspopup="true"
-                  className={`px-2.5 xl:px-3 py-2 rounded-md font-sans text-[13px] xl:text-sm font-medium transition-all flex items-center gap-1 ${
+                  className={`px-2 xl:px-3 py-2 rounded-md font-sans text-xs xl:text-sm font-medium transition-all flex items-center gap-1 ${
                     isMoreActive || moreDropdownOpen
                       ? "text-primary font-bold bg-lavender/50"
                       : "text-charcoal-muted hover:text-primary hover:bg-lavender/40"
@@ -255,7 +269,7 @@ const HeaderComponent: React.FC = () => {
                 >
                   <span>More</span>
                   <ChevronDown
-                    className={`w-4 h-4 transition-transform duration-200 ${
+                    className={`w-3.5 h-3.5 xl:w-4 xl:h-4 transition-transform duration-200 ${
                       moreDropdownOpen ? "rotate-180 text-gold" : "text-charcoal-muted"
                     }`}
                   />
@@ -314,12 +328,12 @@ const HeaderComponent: React.FC = () => {
             </nav>
 
             {/* Desktop Right CTA */}
-            <div className="hidden lg:flex items-center gap-3">
+            <div className="hidden lg:flex items-center gap-2 xl:gap-3">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-4 xl:px-5 py-2.5 rounded-lg bg-primary text-white font-sans text-xs xl:text-sm font-semibold hover:bg-primary-hover shadow-sm hover:shadow-editorial-hover transition-all duration-200 border border-gold/30 hover:border-gold"
+                className="inline-flex items-center gap-1.5 xl:gap-2 px-3.5 xl:px-5 py-2 xl:py-2.5 rounded-lg bg-primary text-white font-sans text-xs xl:text-sm font-semibold hover:bg-primary-hover shadow-sm hover:shadow-editorial-hover transition-all duration-200 border border-gold/30 hover:border-gold shrink-0"
               >
-                <Sparkles className="w-4 h-4 text-gold" />
+                <Sparkles className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-gold" />
                 <span>Join Community</span>
               </Link>
             </div>
@@ -342,16 +356,16 @@ const HeaderComponent: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Full 10-Item Drawer */}
+        {/* Mobile Full Structured Drawer */}
         {mobileMenuOpen && (
-          <div className="lg:hidden fixed inset-x-0 top-20 bg-[#FFF9F1] border-b-2 border-gold/40 shadow-[0_25px_50px_rgba(53,16,95,0.25)] z-50 overflow-y-auto max-h-[calc(100vh-5rem)]">
+          <div className="lg:hidden absolute top-full inset-x-0 bg-[#FFF9F1] border-b-2 border-gold/40 shadow-[0_25px_50px_rgba(53,16,95,0.25)] z-50 overflow-y-auto max-h-[calc(100vh-5rem)]">
             <div className="max-w-md mx-auto px-5 py-6 flex flex-col gap-4 bg-[#FFF9F1]">
               <div className="flex items-center justify-between pb-3 border-b border-border/80">
                 <span className="font-serif text-lg font-bold text-primary">
                   Navigation Folio
                 </span>
                 <span className="font-sans text-[10px] font-semibold text-gold tracking-widest uppercase">
-                  10 Editorial Sections
+                  {allNavItems.length} Editorial Sections
                 </span>
               </div>
 

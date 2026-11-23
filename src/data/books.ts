@@ -85,4 +85,24 @@ export const booksData: Book[] = [
       "Fosters cultural pride, harmony, and empathy among young readers",
     ],
   },
+  {
+    id: "my-little-squirrel",
+    title: "My Little Squirrel",
+    subtitle: "A Story of an Unexpected Friend",
+    author: "Avni Chaturvedi",
+    publishedYear: "2026",
+    amazonUrl: "https://amzn.in/d/0hl2jrBv",
+    coverImage: "/images/books/my-little-squirrel.jpg",
+    ageRange: "Ages 3 - 7",
+    summary:
+      "A heartwarming children's story celebrating friendship, kindness, love for nature, and the magical bond between a little girl and a squirrel who visits her balcony.",
+    fullDescription:
+      "Written by young author Avni Chaturvedi, 'My Little Squirrel' is a delightful, tender narrative that captures the pure wonder of childhood observation. When an unexpected little squirrel begins visiting a young girl's balcony, what begins as quiet curiosity blossoms into an endearing bond of patience, gentle care, and daily joy. Through cheerful moments and sweet discoveries, this story teaches early readers the values of compassion toward small creatures, mindfulness in nature, and the beauty of quiet friendships.",
+    themes: ["Friendship & Kindness", "Nature & Animals", "Patience & Empathy", "Balcony Garden Adventures"],
+    features: [
+      "Heartwarming story tailored for early readers (ages 3–7)",
+      "Inspires kindness, compassion, and love for nature and animals",
+      "Celebrates patience and the quiet magic of simple, unexpected friendships",
+    ],
+  },
 ];

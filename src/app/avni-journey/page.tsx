@@ -21,7 +21,7 @@ import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 export const metadata: Metadata = {
   title: "Avni's Literary Journey | Young Author from Lucknow, India",
   description:
-    "Follow the inspiring journey of young author Avni Chaturvedi from age 10 in Lucknow, India: 4 published books, speaker at Lucknow Book Fair 2026, and social impact through literature.",
+    "Follow the inspiring journey of young author Avni Chaturvedi from age 10 in Lucknow, India: 5 published books, speaker at Lucknow Book Fair 2026, and social impact through literature.",
   alternates: {
     canonical: "https://readpustak.com/avni-journey",
   },
@@ -89,7 +89,7 @@ export default function JourneyPage() {
                   Author at Age 10
                 </span>
                 <span className="px-3 py-1 rounded-full bg-lavender text-primary font-sans text-xs font-semibold">
-                  4 Published Books
+                  5 Published Books
                 </span>
                 <span className="px-3 py-1 rounded-full bg-lavender text-primary font-sans text-xs font-semibold">
                   Speaker, Lucknow Book Fair 2026

@@ -47,6 +47,11 @@ const BookCardComponent: React.FC<BookCardProps> = ({
           </div>
 
           <div className="absolute top-4 right-4 flex flex-col items-end gap-1.5">
+            {book.id === "my-little-squirrel" && (
+              <span className="px-2.5 py-0.5 rounded-full bg-gold text-primary font-sans text-[11px] font-bold shadow-xs">
+                ✨ New Release
+              </span>
+            )}
             <span className="px-3 py-1 rounded-full bg-primary/90 backdrop-blur-sm text-gold font-sans text-xs font-semibold shadow-xs">
               {book.ageRange}
             </span>
@@ -123,7 +128,9 @@ const BookCardComponent: React.FC<BookCardProps> = ({
                       href={book.amazonUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="py-2 px-3 rounded-lg bg-[#FF9900]/10 hover:bg-[#FF9900]/20 text-[#8C4A00] font-sans text-xs font-bold flex items-center justify-center gap-1.5 transition-colors border border-[#FF9900]/30"
+                      className={`py-2 px-3 rounded-lg bg-[#FF9900]/10 hover:bg-[#FF9900]/20 text-[#8C4A00] font-sans text-xs font-bold flex items-center justify-center gap-1.5 transition-colors border border-[#FF9900]/30 ${
+                        !book.flipkartUrl ? "col-span-2" : ""
+                      }`}
                     >
                       <span>Amazon</span>
                       <ExternalLink className="w-3 h-3 text-[#8C4A00]" />

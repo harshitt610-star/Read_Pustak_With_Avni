@@ -14,6 +14,7 @@ import {
 import { ContactForm } from "@/components/forms/ContactForm";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
+import { FeedbackSection } from "@/components/feedback/FeedbackSection";
 
 export const metadata: Metadata = {
   title: "Contact & Collaborations in Lucknow | Read Pustak Publications",
@@ -97,9 +98,15 @@ export default function ContactPage() {
                   </div>
                   <div className="flex flex-col">
                     <span className="font-semibold text-primary">Location &amp; Secretariat</span>
-                    <span className="text-charcoal-muted">
-                      Gomti Nagar, Lucknow, India
-                    </span>
+                    <a
+                      href="https://maps.app.goo.gl/XgpLQEVKXNjpvNNn8?g_st=aw"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-charcoal-muted hover:text-gold transition-colors inline-flex items-center gap-1.5"
+                    >
+                      <span>Gomti Nagar, Lucknow, India</span>
+                      <ExternalLink className="w-3 h-3 text-gold" />
+                    </a>
                     <span className="text-xs text-charcoal-subtle pt-0.5">
                       Publishing &amp; Community Operations
                     </span>
@@ -113,10 +120,10 @@ export default function ContactPage() {
                   <div className="flex flex-col">
                     <span className="font-semibold text-primary">Direct Email</span>
                     <a
-                      href="mailto:contact@readpustak.com"
+                      href="mailto:contact.readputakwithavni@gmail.com"
                       className="text-gold font-medium hover:underline"
                     >
-                      contact@readpustak.com
+                      contact@#ReadPustakWithAvni.com
                     </a>
                     <span className="text-xs text-charcoal-subtle pt-0.5">
                       For literary sessions, workshops &amp; book orders
@@ -190,13 +197,13 @@ export default function ContactPage() {
                   ))}
                 </div>
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=Gomti+Nagar+Lucknow+Uttar+Pradesh"
+                  href="https://maps.app.goo.gl/XgpLQEVKXNjpvNNn8?g_st=aw"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-1 inline-flex items-center gap-1.5 text-xs font-bold text-gold hover:text-primary transition-colors"
                 >
                   <MapPin className="w-3.5 h-3.5" />
-                  <span>View Lucknow on Google Maps</span>
+                  <span>View Location on Google Maps</span>
                   <ExternalLink className="w-3 h-3 text-charcoal-muted" />
                 </a>
               </div>
@@ -266,6 +273,9 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* 3. SHARE YOUR FEEDBACK & GOOGLE REVIEWS */}
+      <FeedbackSection id="feedback" showTestimonials={true} />
     </div>
   );
 }
