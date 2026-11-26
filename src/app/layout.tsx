@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileNav } from "@/components/layout/MobileNav";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
-import { PromoPopupModal } from "@/components/promotions/PromoPopupModal";
 import { WebsiteAndOrgJsonLd, BooksJsonLd, FAQJsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
@@ -133,7 +132,6 @@ export default function RootLayout({
         <Footer />
         <MobileNav />
         <WhatsAppButton />
-        <PromoPopupModal />
         <Analytics />
       </body>
     </html>

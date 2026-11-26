@@ -20,7 +20,7 @@ import { booksData } from "@/data/books";
 import { BookCard } from "@/components/books/BookCard";
 import { PaginatedBookGrid } from "@/components/books/PaginatedBookGrid";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { ChildrensDaySection } from "@/components/promotions/ChildrensDaySection";
+import { LittleInkBigDreamsSection } from "@/components/home/LittleInkBigDreamsSection";
 import { FeedbackSection } from "@/components/feedback/FeedbackSection";
 
 export const metadata: Metadata = {
@@ -242,6 +242,11 @@ export default function HomePage() {
       </section>
 
       {/* ========================================================= */}
+      {/* 2.5 SPECIAL FEATURE: LITTLE INK, BIG DREAMS ANTHOLOGY     */}
+      {/* ========================================================= */}
+      <LittleInkBigDreamsSection />
+
+      {/* ========================================================= */}
       {/* 3. EXPLORE OUR BOOKS — Clean, Scannable 4-Book Grid       */}
       {/* ========================================================= */}
       <section id="books" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
@@ -269,11 +274,6 @@ export default function HomePage() {
           />
         </div>
       </section>
-
-      {/* ========================================================= */}
-      {/* 3.5 CHILDREN'S DAY CAMPAIGN SPOTLIGHT                    */}
-      {/* ========================================================= */}
-      <ChildrensDaySection />
 
       {/* ========================================================= */}
       {/* 4. SLIM RECOGNITION STRIP — Trust & Accolades Bar         */}

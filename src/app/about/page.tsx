@@ -28,7 +28,6 @@ import { teamData } from "@/data/team";
 import { TeamCard } from "@/components/team/TeamCard";
 import { PublishWithUsButton } from "@/components/publishing/PublishWithUsButton";
 import { BreadcrumbJsonLd, defaultFaqs } from "@/components/seo/JsonLd";
-import { ChildrensDaySection } from "@/components/promotions/ChildrensDaySection";
 import { WebDevelopmentSection } from "@/components/digital/WebDevelopmentSection";
 
 export const metadata: Metadata = {
@@ -609,9 +608,6 @@ export default function PublishingEditorialPage() {
 
       {/* 7.3 WEBSITE & APP DEVELOPMENT SERVICES */}
       <WebDevelopmentSection />
-
-      {/* 7.5 CHILDREN'S DAY CAMPAIGN SPOTLIGHT */}
-      <ChildrensDaySection />
 
       {/* 7.8 FREQUENTLY ASKED QUESTIONS (LUCKNOW & INDIA SEO) */}
       <section id="faq" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full scroll-mt-24">
